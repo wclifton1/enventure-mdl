@@ -813,31 +813,31 @@ h1, h2, h3, h4, h5, h6, .mdl-typography--display-1, .mdl-typography--display-1-c
   background-size: cover;
   height: 150px; }
   .enventure-card-container .mdl-card__media.dialog {
-    background-image: -webkit-linear-gradient(bottom, rgba(0, 145, 234, 0.4), rgba(0, 145, 234, 0.4), rgba(0, 145, 234, 0.6)), url("../images/billy-sm.jpg");
-    background-image: linear-gradient(0deg, rgba(0, 145, 234, 0.4), rgba(0, 145, 234, 0.4), rgba(0, 145, 234, 0.6)), url("../images/billy-sm.jpg");
-    background-image: linear-gradient(0deg, rgba(0, 145, 234, 0.4), rgba(0, 145, 234, 0.4), rgba(0, 145, 234, 0.6)), url("../images/billy-sm.jpg"); }
+    background-image: -webkit-linear-gradient(bottom, rgba(0, 145, 234, 0.4), rgba(0, 145, 234, 0.4), rgba(0, 145, 234, 0.6)), url("images/billy-sm.jpg");
+    background-image: linear-gradient(0deg, rgba(0, 145, 234, 0.4), rgba(0, 145, 234, 0.4), rgba(0, 145, 234, 0.6)), url("images/billy-sm.jpg");
+    background-image: linear-gradient(0deg, rgba(0, 145, 234, 0.4), rgba(0, 145, 234, 0.4), rgba(0, 145, 234, 0.6)), url("images/billy-sm.jpg"); }
   .enventure-card-container .mdl-card__media.byob {
-    background-image: -webkit-linear-gradient(bottom, rgba(251, 192, 45, 0.4), rgba(251, 192, 45, 0.4), rgba(251, 192, 45, 0.6)), url("../images/byob-sm.jpg");
-    background-image: linear-gradient(0deg, rgba(251, 192, 45, 0.4), rgba(251, 192, 45, 0.4), rgba(251, 192, 45, 0.6)), url("../images/byob-sm.jpg");
-    background-image: linear-gradient(0deg, rgba(251, 192, 45, 0.4), rgba(251, 192, 45, 0.4), rgba(251, 192, 45, 0.6)), url("../images/byob-sm.jpg"); }
+    background-image: -webkit-linear-gradient(bottom, rgba(251, 192, 45, 0.4), rgba(251, 192, 45, 0.4), rgba(251, 192, 45, 0.6)), url("images/byob-sm.jpg");
+    background-image: linear-gradient(0deg, rgba(251, 192, 45, 0.4), rgba(251, 192, 45, 0.4), rgba(251, 192, 45, 0.6)), url("images/byob-sm.jpg");
+    background-image: linear-gradient(0deg, rgba(251, 192, 45, 0.4), rgba(251, 192, 45, 0.4), rgba(251, 192, 45, 0.6)), url("images/byob-sm.jpg"); }
   .enventure-card-container .mdl-card__media.bioventures {
-    background-image: -webkit-linear-gradient(bottom, rgba(179, 157, 219, 0.4), rgba(179, 157, 219, 0.4), rgba(179, 157, 219, 0.6)), url("../images/tmc-sm.jpg");
-    background-image: linear-gradient(0deg, rgba(179, 157, 219, 0.4), rgba(179, 157, 219, 0.4), rgba(179, 157, 219, 0.6)), url("../images/tmc-sm.jpg");
-    background-image: linear-gradient(0deg, rgba(179, 157, 219, 0.4), rgba(179, 157, 219, 0.4), rgba(179, 157, 219, 0.6)), url("../images/tmc-sm.jpg"); }
+    background-image: -webkit-linear-gradient(bottom, rgba(179, 157, 219, 0.4), rgba(179, 157, 219, 0.4), rgba(179, 157, 219, 0.6)), url("images/tmc-sm.jpg");
+    background-image: linear-gradient(0deg, rgba(179, 157, 219, 0.4), rgba(179, 157, 219, 0.4), rgba(179, 157, 219, 0.6)), url("images/tmc-sm.jpg");
+    background-image: linear-gradient(0deg, rgba(179, 157, 219, 0.4), rgba(179, 157, 219, 0.4), rgba(179, 157, 219, 0.6)), url("images/tmc-sm.jpg"); }
   .enventure-card-container .mdl-card__media.meetups {
-    background-image: -webkit-linear-gradient(bottom, rgba(239, 108, 0, 0.4), rgba(239, 108, 0, 0.4), rgba(239, 108, 0, 0.6)), url("../images/morning-meetup-sm.jpg");
-    background-image: linear-gradient(0deg, rgba(239, 108, 0, 0.4), rgba(239, 108, 0, 0.4), rgba(239, 108, 0, 0.6)), url("../images/morning-meetup-sm.jpg");
-    background-image: linear-gradient(0deg, rgba(239, 108, 0, 0.4), rgba(239, 108, 0, 0.4), rgba(239, 108, 0, 0.6)), url("../images/morning-meetup-sm.jpg"); }
+    background-image: -webkit-linear-gradient(bottom, rgba(239, 108, 0, 0.4), rgba(239, 108, 0, 0.4), rgba(239, 108, 0, 0.6)), url("images/morning-meetup-sm.jpg");
+    background-image: linear-gradient(0deg, rgba(239, 108, 0, 0.4), rgba(239, 108, 0, 0.4), rgba(239, 108, 0, 0.6)), url("images/morning-meetup-sm.jpg");
+    background-image: linear-gradient(0deg, rgba(239, 108, 0, 0.4), rgba(239, 108, 0, 0.4), rgba(239, 108, 0, 0.6)), url("images/morning-meetup-sm.jpg"); }
   .enventure-card-container .mdl-card__media.foundations {
-    background-image: -webkit-linear-gradient(bottom, rgba(63, 81, 181, 0.4), rgba(63, 81, 181, 0.4), rgba(63, 81, 181, 0.6)), url("../images/possibilities-sm.jpg");
-    background-image: linear-gradient(0deg, rgba(63, 81, 181, 0.4), rgba(63, 81, 181, 0.4), rgba(63, 81, 181, 0.6)), url("../images/possibilities-sm.jpg");
-    background-image: linear-gradient(0deg, rgba(63, 81, 181, 0.4), rgba(63, 81, 181, 0.4), rgba(63, 81, 181, 0.6)), url("../images/possibilities-sm.jpg"); }
+    background-image: -webkit-linear-gradient(bottom, rgba(63, 81, 181, 0.4), rgba(63, 81, 181, 0.4), rgba(63, 81, 181, 0.6)), url("images/possibilities-sm.jpg");
+    background-image: linear-gradient(0deg, rgba(63, 81, 181, 0.4), rgba(63, 81, 181, 0.4), rgba(63, 81, 181, 0.6)), url("images/possibilities-sm.jpg");
+    background-image: linear-gradient(0deg, rgba(63, 81, 181, 0.4), rgba(63, 81, 181, 0.4), rgba(63, 81, 181, 0.6)), url("images/possibilities-sm.jpg"); }
   .enventure-card-container .mdl-card__media.mgmt {
-    background-image: -webkit-linear-gradient(bottom, rgba(173, 20, 87, 0.4), rgba(173, 20, 87, 0.4), rgba(173, 20, 87, 0.6)), url("../images/jack-sm.jpg");
-    background-image: linear-gradient(0deg, rgba(173, 20, 87, 0.4), rgba(173, 20, 87, 0.4), rgba(173, 20, 87, 0.6)), url("../images/jack-sm.jpg");
-    background-image: linear-gradient(0deg, rgba(173, 20, 87, 0.4), rgba(173, 20, 87, 0.4), rgba(173, 20, 87, 0.6)), url("../images/jack-sm.jpg"); }
+    background-image: -webkit-linear-gradient(bottom, rgba(173, 20, 87, 0.4), rgba(173, 20, 87, 0.4), rgba(173, 20, 87, 0.6)), url("images/jack-sm.jpg");
+    background-image: linear-gradient(0deg, rgba(173, 20, 87, 0.4), rgba(173, 20, 87, 0.4), rgba(173, 20, 87, 0.6)), url("images/jack-sm.jpg");
+    background-image: linear-gradient(0deg, rgba(173, 20, 87, 0.4), rgba(173, 20, 87, 0.4), rgba(173, 20, 87, 0.6)), url("images/jack-sm.jpg"); }
   .enventure-card-container .mdl-card__media.blank {
-    background-image: url(../images/byob-trans-24.png); }
+    background-image: url(images/byob-trans-24.png); }
 
 .demo-card-event.mdl-card {
   background: rgba(1, 87, 155, 0.9);
