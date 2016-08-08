@@ -1,0 +1,711 @@
+//NOTE: inport custom variables immediately after materialize variables
+//NOTE: get rid of roboto from materialize
+//NOTE: materialize.js is a compiled version of all the separate *.js files, can slim it down. init.js initializes all of them, or you can do it individually
+
+/* Disable ugly boxes around images in IE10 */
+a img{
+  border: 0px;
+}
+
+//nav
+nav{
+  //background-color:$w3-color;
+  @extend .z-depth-1;
+}
+
+img.responsive-img, video.responsive-video {
+  max-width: 100%;
+  height: auto;
+}
+
+//_global
+blockquote {
+  border-left: 5px solid $env-color;
+}
+
+#subscribe{
+  //border-left: 5px solid #0091ea;
+  margin-bottom: 0;
+}
+
+#social{
+  position:absolute;
+  bottom:1rem;
+  a{
+    display:inline-block;
+    object{
+      height:32px;
+      display:inline-block;
+      @include transition(.25s ease);
+      &:hover{
+      @extend .z-depth-4;
+    }
+    }
+    
+  }
+  &:hover, &.active {
+    background-color: white;
+  }
+}
+
+//_typography
+html{ 
+  @media only screen and (min-width: 0) {
+    font-size: 14px;
+  }
+  
+  @media only screen and (min-width: $medium-screen) {
+    font-size: 15px;
+  }
+  
+  @media only screen and (min-width: $large-screen) {
+    font-size: 16px;
+  }
+  
+  font-family: $sans-serif;
+  font-weight: $nl-weight;
+  color: $off-black;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: $sans-serif;
+  font-weight: 300;
+}
+
+h1{
+  @extend .light;
+  @extend .heavy;
+}
+
+
+// only needed for offline use, see docs for correct use (stylesheet in header)
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(http://fonts.gstatic.com/s/materialicons/v10/2fcrYFNaTjcS6g4U3t-Y5UEw0lE80llgEseQY3FEmqw.woff2) format('woff2');
+}
+
+.material-icons {
+  vertical-align: bottom;
+}
+
+//flex cards
+.cards-flex{
+  display:flex;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+  .col-flex{
+    display: flex;
+    padding: 0 0.75rem;
+    flex:(1,1,1.5rem);
+    @media only screen and (min-width: 601px){
+      width: 50%;
+    }
+    @media only screen and (min-width: 993px){
+      width: 33.333333333333%;
+    }
+    .card{
+      width:100%;
+    }
+  }
+  .big-card{
+    flex-grow: 4;
+    @media only screen and (min-width: 601px){
+      width: 50%;
+    }
+    @media only screen and (min-width: 993px){
+      width: 66.666666666%;
+    }
+  }
+}
+
+//_cards
+.card{
+  $card-height:22rem;
+  color: $font-color;
+
+  .btn,.btn-flat{
+    min-width: 64px;
+    padding: 0 16px;
+    height:36px;
+    &.disabled{
+      color:$b3-color;
+      &:hover{
+        color:$b3-color;
+      }
+    }
+  }
+
+  .card-title{
+    color: $b2-color;
+    font-weight:900;
+  }
+
+  h1 {
+    font-size: 1.71rem;
+    line-height:1.5;
+  }
+  h2 {
+    font-size: 1.14rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 0.9rem;
+    display: block;
+  }
+
+  .card-content{
+    padding:16px;
+    margin-bottom: 52px;
+
+    p {
+      margin: 1em 0 0 0;
+      width:90%;
+    }
+    .card-title{
+      line-height: 1.2em;
+    }
+  }
+  .card-action{
+    position: absolute;
+    bottom:0;
+    width:100%;
+    font-size: 1em;
+    line-height: normal;
+    background-color: rgba(0,0,0,0);
+    padding: 8px;
+    box-sizing: border-box;
+    a{
+      transition: all cubic-bezier(0.62, 0.28, 0.23, 0.99) 0.2s;
+    }
+  }
+
+
+
+//make them 780px wide
+  .card-image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height:$card-height*.4472;
+
+    &.dialog{//enventure
+      $hero-background-top: rgba($env-color, .6); 
+      $hero-background-bottom: rgba($env-color, .4);
+      $gradient-angle: 0deg;
+      $hero-image: '../img/billy-sm.jpg';
+      @include background-image(linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-bottom, $hero-background-top), url($hero-image));
+    }
+    &.byob{
+      $hero-background-top: rgba($banana, .6); 
+      $hero-background-bottom: rgba($banana, .4);
+      $gradient-angle: 0deg;
+      $hero-image: '../img/byob-sm.jpg';
+      @include background-image(linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-bottom, $hero-background-top), url($hero-image));
+    }
+    &.bioventures{
+      $hero-background-top: rgba($wisteria, .6); 
+      $hero-background-bottom: rgba($wisteria, .4);
+      $gradient-angle: 0deg;
+      $hero-image: '../img/tmc-sm.jpg';
+      @include background-image(linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-bottom, $hero-background-top), url($hero-image));
+    }
+    &.meetups{//pumpkin
+      $hero-background-top: rgba($pumpkin, .6); 
+      $hero-background-bottom: rgba($pumpkin, .4);
+      $gradient-angle: 0deg;
+      $hero-image: '../img/morning-meetup-sm.jpg';
+      @include background-image(linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-bottom, $hero-background-top), url($hero-image));
+    }
+    &.foundations{//indigo
+      $hero-background-top: rgba($indigo, .6); 
+      $hero-background-bottom: rgba($indigo, .4);
+      $gradient-angle: 0deg;
+      $hero-image: '../img/possibilities-sm.jpg';
+      @include background-image(linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-bottom, $hero-background-top), url($hero-image));
+    }
+    &.mgmt{//radish
+      $hero-background-top: rgba($radish, .6); 
+      $hero-background-bottom: rgba($radish, .4);
+      $gradient-angle: 0deg;
+      $hero-image: '../img/jack-sm.jpg';
+      @include background-image(linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-bottom, $hero-background-top), url($hero-image));
+    }
+    &.blank{
+      background-image: url(../img/byob-trans-24.png);
+      @extend .blue-grey, .lighten-3;
+    }
+  }
+  
+  .card-reveal{
+    width:100%;
+    p {
+      margin: 1em 0 0 0;
+      width:90%;
+    }
+  }
+}
+
+
+//@media #{$large-and-down} {
+  header, main, footer {
+    padding-left: 0;
+  }
+//}
+
+//_form
+.input-field label{
+  top: .6rem;
+  font-size: 1.25rem;
+}
+input[type=text], input[type=password], input[type=email], input[type=date], input[type=tel], input[type=number], textarea.materialize-textarea {
+  font-size: 1.25rem;
+}
+form.subscribe{
+  padding-top:1em
+}
+.input-field {
+  .prefix.active{
+    color:$env-color;
+  }
+  input[type=text]:focus,
+  input[type=password]:focus,
+  input[type=email]:focus,
+  input[type=url]:focus,
+  input[type=date]:focus,
+  input[type=tel]:focus,
+  input[type=number]:focus,
+  input[type=search]:focus,
+  textarea:focus.materialize-textarea {
+    border-bottom: 1px solid color("light-blue", "lighten-3");
+    box-shadow:(0 1px 0 0 $env-color);
+  }
+  input[type=text]:focus + label,
+  input[type=password]:focus + label,
+  input[type=email]:focus + label,
+  input[type=url]:focus + label,
+  input[type=date]:focus + label,
+  input[type=tel]:focus + label,
+  input[type=number]:focus + label,
+  input[type=search]:focus + label,
+  textarea:focus.materialize-textarea + label {
+    color: $env-color;
+  }
+}
+
+//mdl buttons
+.btn,.btn-flat {
+  position: relative;
+  overflow: hidden;
+  will-change: box-shadow, transform;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  //line-height: 36px;
+}
+
+//_buttons
+.btn{
+  transition: all cubic-bezier(.62,.28,.23,.99) 0.2s;
+  background-color: $btn-color;
+  &:hover {
+    background-color: lighten($btn-color, 5%);
+  }
+}
+
+.btn-floating{
+  transition: all cubic-bezier(.62,.28,.23,.99) 0.3s;
+  background-color:$accent-color;
+  &:hover {
+    background-color: lighten($accent-color, 5%);
+  }
+}
+
+.fixed-action-btn{
+  bottom: 45px;
+  right: 16px;  
+  @media #{$medium-and-up} {
+    right:24px;
+  }  
+}
+
+.fixed-action-btn>ul>li>a{
+  background-color:$env-light-color;
+  &:hover {
+    background-color: darken($env-light-color, 5%);
+    color:white;
+  }
+}
+
+a.btn{
+  &:hover, &:active, &:focus {
+    color: white;
+  }
+}
+
+.btn-flat{
+  color:$env-color;
+  &:hover {
+    background-color: rgba(158,158,158,.2);
+  }
+  &:active{
+    background-color: rgba(158,158,158,.4);
+  }
+}
+
+.card .card-action a:hover {
+    color: $env-color;
+}
+
+.footer-copyright{
+  object{height:32px}
+}
+
+.frosted{
+  background:none;
+  border:white;
+  text-transform:none;
+  &:hover {
+    background-color: $w4-color;
+  }
+}
+
+#about{
+  float:right;
+}
+
+#hamburger{
+  float:left;
+}
+
+a.button-collapse.top-nav{
+  position: relative;
+  left: 0;
+  margin-left: 0;
+  margin-top: 1rem;
+  display:none;
+  @media #{$large-and-down} {
+    display:inherit;
+  }
+}
+
+
+#download-button {
+  background-color: color("light-blue", "lighten-3");
+  &:hover {
+    background-color: lighten(color("light-blue", "base"), 30%);
+  }
+}
+
+
+//WILL's styles
+#enventure, enventure {
+  font-family: $serif;
+  font-size:1.1em;
+  color:$env-color;
+  font-weight:300;
+}
+
+.env-color{
+  color:$env-color;
+}
+
+#title{
+  font-size:1.45em;
+}
+
+.thin, thin {font-weight: 300}
+.medium, medium {font-weight: 500}
+.heavy, heavy {font-weight: 700; color:$b2-color}
+.light, light {color:$b2-color}
+
+accent{
+  color:$accent-color;
+}
+
+.event{
+  h3{
+    margin-top:.2rem;
+    margin-bottom:.5rem
+  }
+  h5{
+    margin-top :0
+  }
+  .card-panel{
+    transition: all cubic-bezier(.62,.28,.23,.99) 0.3s;
+    &:hover{
+      @extend .z-depth-2;
+    }
+    .frosted{
+      background-color:rgba(255, 255, 255, 0.15);
+      box-shadow:none;
+      &:hover{
+        background-color:rgba(255, 255, 255, 0.25);
+      }
+    }
+    h5{
+      margin-top:.2rem
+    }
+  }
+}
+
+a {
+  color:$env-color;
+  &:hover, &:active, &:focus{
+    color:$accent-color;
+  }
+  font-weight:500;
+  &.white-link{
+    color:$w1-color;
+    &:hover, &:active, &:focus{
+      color:$accent-color;
+    }
+  }
+}
+
+#index-banner {
+  .container {
+    position: static;
+  }
+  position:relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: .1em;
+  height:400px;
+  background-color:$env-color;
+}
+.index-banner{
+  $gradient-angle: 0deg;
+  $hero-background-top: rgba(white, 0.9); 
+  $hero-background-bottom: rgba($env-color, .25);
+  $hero-image: '../img/sky.jpg';
+  @include background-image(linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-bottom, $hero-background-top), url($hero-image));
+  background-position: center, center;
+}
+
+.bioventures-banner{
+  $gradient-angle: 0deg;
+  $hero-background-top: rgba($indigo, .33); 
+  $hero-background-bottom: rgba(white, .9);
+  $hero-image: '../img/possibilities-web.jpg';
+  @include background-image(linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top, $hero-background-top), url($hero-image));
+  background-position: center, center;
+}
+
+.foundations-banner{
+  $gradient-angle: 0deg;
+  $hero-background-top: rgba($wisteria, .33);
+  $hero-background-bottom: rgba(white, .9);
+  $hero-image: '../img/foundations.jpg';
+  @include background-image(linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top, $hero-background-top), url($hero-image));
+  background-position: center, center;
+}
+
+.about-banner{
+  $gradient-angle: 0deg;
+  $hero-background-top: rgba($env-color, .33);
+  $hero-background-bottom: rgba(white, .9);
+  $hero-image: '../img/morning-meetup-sm.jpg';
+  @include background-image(linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top, $hero-background-top), url($hero-image));
+  background-position: center, center;
+}
+
+.env-header{
+  position:absolute;
+  padding-right: 1.5rem;
+  bottom:0;
+  color: #FFF;
+  h2{font-size: $h2-fontsize*.8; line-height: 1.1*$h2-fontsize*.8; margin: 0 0 ($h2-fontsize*.8 / 2.5) 0;}
+  h4 {
+    @media #{$smallest-and-down}{
+      display:none;
+    }
+  }
+  light.hide-me{
+    @media #{$smallest-and-down}{
+      display:none;
+    }
+  }
+}
+
+.mission {
+    padding-top:2rem;
+    .bullets {
+      //$icon-bullet-size: 3.5em;
+      margin-bottom: 1.5em;
+
+      .bullet-icon {
+        @extend .btn, .btn-floating, .btn-large;
+        float:left;
+      }
+
+      .bullet-icon-1 {
+        $bullet-color:color("purple", "base");
+        background-color: darken($bullet-color, 5%);
+
+        &:hover, &:active, &:focus {
+          background-color: $bullet-color;
+        }
+      }
+
+      .bullet-icon-2 {
+        $bullet-color:color("pink", "base");
+        background-color: darken($bullet-color, 5%);
+
+        &:hover, &:active, &:focus {
+          background-color: $bullet-color;
+        }
+      }
+
+      .bullet-icon-3 {
+        $bullet-color:color("indigo", "base");
+        background-color: $bullet-color;
+
+        &:hover, &:active, &:focus {
+          background-color: lighten($bullet-color,5%);
+        }
+      }
+
+      .bullet-content {
+      margin-left: $icon-size *1.4;
+      margin-bottom: 2em;
+      }
+
+      h4 {
+      //font-size: $icon-size /2.5;
+      //padding-top: $icon-size /7;
+      margin-top: 0;
+      margin-bottom: $icon-size /6;
+      //border-bottom: 1px solid $b3-color;
+      display: inline-block;
+      color:$b2-color;
+      }
+    }
+  }
+  .modal{
+    position:absolute;
+    top:500;
+  }
+
+footer, .light-blue {
+  background-color: color("light-blue", "lighten-4");
+}
+
+footer .footer-copyright {
+  background-color: $env-color;
+}
+
+nav {
+  ul li:hover, ul li.active {
+    background-color: color("light-blue", "lighten-3");
+  }
+}
+
+.header {
+  color: color("light-blue", "lighten-2");
+}
+
+.collapsible{
+  background-color:white;
+}
+
+.collapsible-body {
+  border-bottom: none;
+  padding:0 1rem;
+  p{
+    margin:15px 0;
+    padding:0;
+  }
+}
+
+.collapsible-header {
+  border-bottom: none;
+  border-top: 1px solid #ddd;
+}
+
+ul.side-nav .collapsible-body li.active {
+  background-color: color("light-blue", "lighten-3");
+}
+
+.promo{
+  i {
+    color: $b2-color;
+    margin:1.5rem 0;
+  }
+}
+
+#front-page-nav {
+  a {
+      color: color("light-blue", "lighten-3");
+    }
+  li {
+    &:hover {
+      background-color: color("light-blue", "lighten-5");
+    }
+    &.active {
+      background-color: color("light-blue", "lighten-5");
+    }
+  }
+}
+
+ul li.bullet{
+  list-style-type: initial;
+}
+
+ul.table-of-contents a {
+  color: $b2-color;
+  &:hover{
+    color: $b3-color;
+    border-left: 1px solid $accent-color;
+  }
+}
+
+.switch label input[type=checkbox]:checked + .lever {
+  background-color:color("light-blue", "lighten-3");
+}
+.switch label input[type=checkbox]:checked + .lever:after {
+  background-color:color("light-blue", "lighten-2");
+}
+button:focus {
+  background-color:rgba($env-dark-color,.5)
+}
+//animation
+//transition: all cubic-bezier(.62,.28,.23,.99) 0.7s;
+
+.logo-plus-button, .logo-plus-button>div {
+    display: inline-block;
+}
+.logo-plus-button {
+    height: 18px;
+    background-color: #fff;
+    padding-right: 2px;
+}
+.logo-plus-button-plus-icon {
+    font-family: Arial;
+    background-color: #4285f4;
+    background-image: url("//calendar.google.com/googlecalendar/images/logo-plus.png");
+    background-position: center center;
+    width: 18px;
+    height: 18px;
+}
+.logo-plus-button-lockup {
+    padding-left: 46px;
+    background-image: url("//www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_46x16dp.png");
+    background-size: 46px 16px;
+    background-repeat: no-repeat;
+    background-position-y: 4px;
+    position: relative;
+    top: -4px;
+    margin-left: 2px;
+    margin-right: 1px;
+}
+.logo-plus-button-lockup-text {
+    font-family: 'Product Sans',Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    opacity: .54;
+}
