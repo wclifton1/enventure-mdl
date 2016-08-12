@@ -167,7 +167,7 @@ a img{
   height: 800px;
   //width: auto;
   background-color: #f3f3f3;
-  background: url('images/houston.svg') center center no-repeat;
+  background: url('../images/houston.svg') center center no-repeat;
   background-size: cover;
 
   // $gradient-angle: 0deg;
@@ -308,7 +308,7 @@ a img{
 
 .enventure-wear-section {
   position: relative;
-  background: url('images/sky.jpg') center center no-repeat;
+  background: url('../images/sky.jpg') center center no-repeat;
   background-size: cover;
   height: 800px;
 }
@@ -318,7 +318,11 @@ a img{
   bottom: 0;
   width: 100%;
   text-align: center;
-  background-color: rgba(#37474f,.8);
+  $band-color:color("blue-grey","darken-3");
+  $hero-background-top: rgba($band-color, .2); 
+  $hero-background-bottom: rgba($band-color, .7);
+  $gradient-angle: 0deg;
+  @include background-image(linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top));
 }
 
 .enventure-wear-band-text {
@@ -383,7 +387,7 @@ a img{
   }
 
 .enventure-customized-section-image {
-  background: url('images/devices.jpg') center top no-repeat;
+  background: url('../images/devices.jpg') center top no-repeat;
   background-size: cover;
   height: 400px;
 }
@@ -697,7 +701,7 @@ h1, h2, h3, h4, h5, h6, .mdl-typography--display-1, .mdl-typography--display-1-c
     color: #00bcd4;
     text-align: center;
 }
-.formbox__errors, .formbox__success {
+.formbox__errors, .formbox__success { 
     display: none;
     padding: 10px 0;
 }
@@ -791,7 +795,7 @@ h1, h2, h3, h4, h5, h6, .mdl-typography--display-1, .mdl-typography--display-1-c
 //     left: 0;
 //     height: 100%;
 //     width: 100%;
-//     mask: url('images/check.svg');
+//     mask: url('../images/check.svg');
 //     background: 0 0;
 //     transition-duration: .28s;
 //     transition-timing-function: cubic-bezier(.4,0,.2,1);
@@ -808,46 +812,46 @@ h1, h2, h3, h4, h5, h6, .mdl-typography--display-1, .mdl-typography--display-1-c
       $hero-background-top: rgba($enventure-color, .6); 
       $hero-background-bottom: rgba($enventure-color, .4);
       $gradient-angle: 0deg;
-      $hero-image: 'images/billy-sm.jpg';
+      $hero-image: '../images/billy-sm.jpg';
       @include background-image(linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-bottom, $hero-background-top), url($hero-image));
     }
     &.byob{
       $hero-background-top: rgba($banana, .6); 
       $hero-background-bottom: rgba($banana, .4);
       $gradient-angle: 0deg;
-      $hero-image: 'images/byob-sm.jpg';
+      $hero-image: '../images/byob-sm.jpg';
       @include background-image(linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-bottom, $hero-background-top), url($hero-image));
     }
     &.bioventures{
       $hero-background-top: rgba($wisteria, .6); 
       $hero-background-bottom: rgba($wisteria, .4);
       $gradient-angle: 0deg;
-      $hero-image: 'images/tmc-sm.jpg';
+      $hero-image: '../images/tmc-sm.jpg';
       @include background-image(linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-bottom, $hero-background-top), url($hero-image));
     }
     &.meetups{//pumpkin
       $hero-background-top: rgba($pumpkin, .6); 
       $hero-background-bottom: rgba($pumpkin, .4);
       $gradient-angle: 0deg;
-      $hero-image: 'images/morning-meetup-sm.jpg';
+      $hero-image: '../images/morning-meetup-sm.jpg';
       @include background-image(linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-bottom, $hero-background-top), url($hero-image));
     }
     &.foundations{//indigo
       $hero-background-top: rgba($indigo, .6); 
       $hero-background-bottom: rgba($indigo, .4);
       $gradient-angle: 0deg;
-      $hero-image: 'images/possibilities-sm.jpg';
+      $hero-image: '../images/possibilities-sm.jpg';
       @include background-image(linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-bottom, $hero-background-top), url($hero-image));
     }
     &.mgmt{//radish
       $hero-background-top: rgba($radish, .6); 
       $hero-background-bottom: rgba($radish, .4);
       $gradient-angle: 0deg;
-      $hero-image: 'images/jack-sm.jpg';
+      $hero-image: '../images/jack-sm.jpg';
       @include background-image(linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-bottom, $hero-background-top), url($hero-image));
     }
     &.blank{
-      background-image: url(images/byob-trans-24.png);
+      background-image: url(../images/byob-trans-24.png);
       @extend .blue-grey, .lighten-3;
     }
   }
