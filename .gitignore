@@ -2,3 +2,5 @@
 materialize-env-archive/
 
 *.scssc
+
+*.codekit

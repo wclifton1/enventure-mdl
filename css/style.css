@@ -239,6 +239,55 @@
   color: transparent !important; }
 
 /*
+ * Keyframes
+ */
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+/*
  * CSS Page Transitions
  * Don't forget to add vendor prefixes!
  */
@@ -270,6 +319,35 @@
   .m-scene.is-exiting .scene_element {
     -webkit-animation-direction: alternate-reverse;
             animation-direction: alternate-reverse; }
+
+/* overrides */
+h1, h2, h3, h4, h5, h6, .mdl-typography--display-1, .mdl-typography--display-1-color-contrast, .mdl-typography--display-2, .mdl-typography--display-2-color-contrast, .mdl-typography--headline, .mdl-typography--headline-color-contrast, .mdl-typography--subhead, .mdl-typography--subhead-color-contrast, .mdl-button {
+  font-family: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.lora, .enventure, .mdl-layout-title, .mdl-layout__title, .logo-font, enventure, .enventure-sub-slogan {
+  font-family: Lora, Georgia, Times, "Times New Roman", serif;
+  letter-spacing: normal; }
+
+.enventure, .mdl-layout-title, .mdl-layout__title, .logo-font, enventure {
+  color: #0091ea; }
+
+.mdl-layout-title, .mdl-layout__title {
+  font-size: 30px; }
+
+.enventure-color--light {
+  color: #4fc3f7; }
+
+.enventure--icon-size {
+  font-size: 16px; }
+  .enventure--icon-size .material-icons {
+    position: relative;
+    top: 6px; }
+
+.mdl-button {
+  font-weight: 700; }
+
+.fixed-width {
+  max-width: 1200px; }
 
 body {
   margin: 0;
@@ -321,7 +399,12 @@ a img {
 
 .enventure-header {
   overflow: visible;
-  background-color: white; }
+  background-color: white;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+              -ms-grid-row-align: center;
+          align-items: center; }
 
 .enventure-header .material-icons {
   color: #767777 !important; }
@@ -422,22 +505,16 @@ a img {
   background: url("../images/houston.svg") center center no-repeat;
   background-size: cover; }
 
-.logo-font {
-  font-family: Georgia, Times, "Times New Roman", serif;
-  line-height: 1;
-  color: #0091ea;
-  font-weight: normal; }
-
 .enventure-slogan {
   font-weight: 300;
   padding-bottom: 20px;
   color: white; }
 
 .enventure-sub-slogan {
-  font-weight: 400;
-  padding-top: 24px;
-  padding-left: 20%;
-  padding-right: 20%; }
+  color: white;
+  font-weight: 700;
+  margin-bottom: 30%;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.14), 0 3px 1px rgba(0, 0, 0, 0.2), 0 1px 5px rgba(0, 0, 0, 0.12); }
 
 .enventure-create-character {
   padding-top: 400px; }
@@ -675,7 +752,7 @@ a img {
   /* WebViews in iOS 9 break the "~" operator, and WebViews in OS X 10.10 break
      consecutive "+" operators in some cases. Therefore, we need to use both
      here to cover all the bases. */
-  .enventure.enventure-search-box.is-focused ~ .enventure-mobile-title,
+  .enventure.enventure-search-box.is-focused ~ .enventure-mobile-title, .enventure-search-box.is-focused.mdl-layout-title ~ .enventure-mobile-title, .enventure-search-box.is-focused.mdl-layout__title ~ .enventure-mobile-title,
   .enventure-search-box.is-focused + .enventure-navigation-container + .enventure-mobile-title {
     opacity: 0; }
 
@@ -697,7 +774,7 @@ a img {
     bottom: 0; }
 
   .enventure-sub-slogan {
-    font-size: 16px;
+    font-size: 48px;
     margin: 0 16px;
     padding-top: 8px; }
 
@@ -719,37 +796,6 @@ a img {
   padding-left: 20px;
   line-height: 28px;
   list-style-type: none; }
-
-/* overrides */
-h1, h2, h3, h4, h5, h6, .mdl-typography--display-1, .mdl-typography--display-1-color-contrast, .mdl-typography--display-2, .mdl-typography--display-2-color-contrast, .mdl-typography--headline, .mdl-typography--headline-color-contrast, .mdl-typography--subhead, .mdl-typography--subhead-color-contrast, .mdl-button {
-  font-family: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; }
-
-.mdl-layout-title, .mdl-layout__title {
-  font-family: Lora, Georgia, Times, "Times New Roman", serif;
-  color: #0091ea;
-  font-size: 30px; }
-
-.enventure, enventure {
-  font-family: Lora, Georgia, Times, "Times New Roman", serif;
-  color: #0091ea; }
-
-.lora {
-  font-family: Lora, Georgia, Times, "Times New Roman", serif; }
-
-.enventure-color--light {
-  color: #4fc3f7; }
-
-.enventure--icon-size {
-  font-size: 16px; }
-  .enventure--icon-size .material-icons {
-    position: relative;
-    top: 6px; }
-
-.mdl-button {
-  font-weight: 700; }
-
-.fixed-width {
-  max-width: 1200px; }
 
 .section, .section__block {
   box-sizing: border-box;
@@ -779,6 +825,7 @@ h1, h2, h3, h4, h5, h6, .mdl-typography--display-1, .mdl-typography--display-1-c
   .hide-small {
     display: none !important; } }
 .enventure-top-section .mdl-grid .section__block.section__block--left {
+  padding: 50px;
   -webkit-align-self: flex-end;
       -ms-flex-item-align: end;
           align-self: flex-end; }
@@ -1015,5 +1062,14 @@ h1, h2, h3, h4, h5, h6, .mdl-typography--display-1, .mdl-typography--display-1-c
     color: rgba(0, 0, 0, 0.54);
     font-size: 7rem;
     display: block; }
+
+.demo-card-event .mdl-card__title {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .demo-card-event .mdl-card__title p {
+    margin: 0; }
 
 /*# sourceMappingURL=style.css.map */
