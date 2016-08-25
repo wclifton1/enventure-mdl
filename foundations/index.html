@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Foundations is...">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Foundations | Enventure</title>
+    <title>Foundations</title>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="57x57" href="../apple-touch-icon-57x57.png">
@@ -31,10 +31,16 @@
 
     <!-- Page styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.2.0/material.blue-pink.min.css" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.0/material.blue-pink.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700|Lora&amp;lang=en">
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://code.getmdl.io/1.2.0/material.min.js"></script>
+
+    <!-- offline -->
+    <!-- <link rel="stylesheet" href="../node_modules/material-design-lite/dist/material.blue-pink.min.css"> -->
+    <!-- <link rel="stylesheet" href="../bower_components/material-design-lite/material.css"> -->
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <!-- <script src="../bower_components/material-design-lite/material.min.js"></script> -->
 
     <!--  calendar-->
     <script type="text/javascript">
@@ -150,20 +156,32 @@
                             // }
                             html.push("</h4>")
 
+                          html.push("</div>")
+                          html.push("<div class=\"mdl-card__supporting-text\">")
+                            
+
+                            html.push("<i class=\"material-icons\">watch</i>&nbsp" + time)
+
+
+
                             // fix for absent location
                             if (location) {
                               html.push("<p class=\"enventure--icon-size\"><i class=\"material-icons\">location_on</i>&nbsp" + location + "</p>")
                             }
-                          html.push("</div>")
-                          html.push("<div class=\"mdl-card__supporting-text\">")
                             html.push("<p>" + description + "</p>")
                           html.push("</div>")
                           html.push("<div class=\"mdl-card__actions mdl-card--border\">")
                           if (link != 'javascript:;'){
                             html.push("<a class=\"mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect\" href=\"" + link + "\"" + " target=\"_blank\">Learn More + RSVP</a>")
                           }
+
                           html.push("<div class=\"mdl-layout-spacer\"></div>")
-                          html.push("<p class=\"enventure--icon-size\">" + time + "&nbsp<i class=\"material-icons\">watch</i></p>")
+
+                          if (featuredFutureEvents[i].summary.indexOf('[')>-1) {
+                              html.push("<span class=\"mdl-chip mdl-chip--contact\"><img class=\"mdl-chip__contact\" src=\"../images/"+label+".jpg\" alt=\""+label+"\" onerror=\"this.src='images/default.png'\"></img><span class=\"mdl-chip__text\">" + label + "</span></span>")
+                            }
+                          
+                          
                         html.push("</div>")
                       html.push("</div>")
 
@@ -176,25 +194,39 @@
         }
     </script>
     <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+    
+    <!-- <span class="mdl-chip mdl-chip--contact">
+        <img class="mdl-chip__contact" src="/templates/dashboard/images/user.jpg"></img>
+        <span class="mdl-chip__text">Deletable Contact Chip</span>
+    </span> -->
 
 
-
-  </head><body class="env-course foundations mdl-color--grey-100 mdl-color-text--grey-700">
+  </head><body class="env-course foundations mdl-color--grey-100">
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header mdl-layout__header--waterfall mdl-layout__header--waterfall-hide-top mdl-color--primary">
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-	        <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect mdl-layout-icon" onclick="history.go(-1);"">
-	            <i class="material-icons">arrow_back</i>
-	          </button>
+        <div class="mdl-layout__header-row">
+	        <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" onclick="history.go(-1);""><i class="material-icons">arrow_back</i></button>
+          <div class="mdl-layout--small-screen-only">
+            <div class="mdl-layout__title">&nbsp<enventure>enventure</enventure>&nbspFoundations</div>
+          </div>
+          <div class="mdl-layout-spacer"></div>
+          <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="share1">
+                <i class="material-icons">share</i>
+          </button>
+          <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+              for="share1">
+            <li class="mdl-menu__item"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fenventure.org/foundations%2F" target="_blank">Facebook</a></li>
+            <li class="mdl-menu__item"><a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fenventure.org/foundations%2F&title=Foundations&source=https%3A%2F%2Fenventure.org/foundations%2F&summary=Free%20course%20from%20Enventure" target="_blank">LinkedIn</a></li>
+            <li class="mdl-menu__item"><a href="http://twitter.com/intent/tweet/?text=Check%20out%his%20course%20from%20@enventuremed&url=&via=enventuremed&hashtags=education,houston,entrepreneurship" target="_blank">Twitter</a></li>
+          </ul>
+        </div>
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">   
+          <div class="mdl-typography--display-2"><enventure>enventure</enventure>&nbspFoundations</div>
         </div>
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-          
-          <h3>Foundations | Enventure</h3>
         </div>
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-        </div>
-        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
 
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
           <a href="#overview" class="mdl-layout__tab is-active">Overview</a>
           <a href="#details" class="mdl-layout__tab">Details</a>
           <a href="#schedule" class="mdl-layout__tab">Schedule</a>
@@ -210,16 +242,15 @@
       <main class="mdl-layout__content">
       	<a name="top"></a>
         <div class="mdl-layout__tab-panel is-active" id="overview">
-        	<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
+        	<section class="section--center mdl-grid">
+            <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp">
+            	<div class="mdl-card__title">
+          			<div class="mdl-card__title-text">Overview</div>
+          			<div class="mdl-card__subtitle-text">free + open course</div>
+            	</div>
               <div class="mdl-card__supporting-text">
-                <h4>Overview</h4>
-                <h5>free + open course</h5>
-                Foundations is designed to provide new entrepreneurs with an understanding of the innovation process, teaching them how to evaluate a life science technology as the basis for starting a new business. Learn how you can turn your creativity loose to design the future of healthcare. Whether you're an engineer, scientist, physician, or business expert, this class will bring you up to speed on the medical innovation industry.
+                <p>Foundations is designed to provide new entrepreneurs with an understanding of the innovation process, teaching them how to evaluate a life science technology as the basis for starting a new business. Learn how you can turn your creativity loose to design the future of healthcare. Whether you're an engineer, scientist, physician, or business expert, this class will bring you up to speed on the medical innovation industry.</p>
               </div>
-              <!-- <div class="mdl-card__actions">
-                <a href="#" class="mdl-button">YouTube Channel</a>
-              </div> -->
             </div>
            <!--  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn3">
               <i class="material-icons">more_vert</i>
@@ -232,66 +263,60 @@
           </section>
 
           <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-            <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
-              <i class="material-icons">play_circle_filled</i>
-            </header>
-            <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
-              <div class="mdl-card__supporting-text">
-                <h4>Featured Session</h4>
-                Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse.
-              </div>
-              <div class="mdl-card__actions">
-                <a href="#" class="mdl-button mdl-js-button"><i class="material-icons">video_library</i>&nbspYouTube</a>
-              </div>
-            </div>
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn1">
-              <i class="material-icons">more_vert</i>
-            </button>
-            <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn1">
-              <li class="mdl-menu__item">Lorem</li>
-              <li class="mdl-menu__item" disabled>Ipsum</li>
-              <li class="mdl-menu__item">Dolor</li>
-            </ul>
+	            <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--light-blue-100 mdl-color-text--white">
+	              <i class="material-icons">play_circle_filled</i>
+	            </header>
+	            <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+	              <div class="mdl-card__title"><div class="mdl-card__title-text">Featured Session</div></div>
+	              <div class="mdl-card__supporting-text">
+	                <p>Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse.</p>
+	              </div>
+	              <div class="mdl-card__actions">
+	                <a href="#" class="mdl-button mdl-button--colored mdl-js-button"><i class="material-icons">video_library</i>&nbspYouTube</a>
+	              </div>
+	            </div>
           </section>
 
-          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-              <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
-                <h4 class="mdl-cell mdl-cell--12-col">Speakers</h4>
+          <section class="section--center mdl-grid">
+            <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col">
+            	<div class="mdl-card__title"><div class="mdl-card__title-text">Featured Speakers</div></div>
+              <div class="mdl-card__supporting-text mdl-grid">
                 <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                  <div class="section__circle-container__circle mdl-color--primary photo-gray">\</div>
+                  <div class="section__circle-container__circle mdl-color--primary photo-gray"></div>
                 </div>
                 <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
                   <h5>Lorem ipsum dolor sit amet</h5>
-                  Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
+                  <p>Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.</p>
                 </div>
                 <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
                   <div class="section__circle-container__circle mdl-color--primary photo-will"></div>
                 </div>
                 <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
                   <h5>Lorem ipsum dolor sit amet</h5>
-                  Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
+                  <p>Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.</p>
                 </div>
                 <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
                   <div class="section__circle-container__circle mdl-color--primary photo-bryan"></div>
                 </div>
                 <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
                   <h5>Lorem ipsum dolor sit amet</h5>
-                  Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
+                  <p>Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.</p>
                 </div>
               </div>
               <div class="mdl-card__actions">
-                <a href="#" class="mdl-button">Read our features</a>
+                <a href="#" class="mdl-button mdl-button--colored">Read our features</a>
               </div>
+              <!-- <div class="mdl-card__menu">
+		            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn2">
+		              <i class="material-icons">more_vert</i>
+		            </button>
+		            <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn2">
+		              <li class="mdl-menu__item">Lorem</li>
+		              <li class="mdl-menu__item" disabled>Ipsum</li>
+		              <li class="mdl-menu__item">Dolor</li>
+		            </ul>
+		          </div> -->
             </div>
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn2">
-              <i class="material-icons">more_vert</i>
-            </button>
-            <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn2">
-              <li class="mdl-menu__item">Lorem</li>
-              <li class="mdl-menu__item" disabled>Ipsum</li>
-              <li class="mdl-menu__item">Dolor</li>
-            </ul>
           </section>
           
           <section class="section--footer mdl-color--white mdl-grid">
@@ -313,10 +338,9 @@
         </div>
 
         <div class="mdl-layout__tab-panel" id="details">
-          <section class="section--center mdl-grid mdl-grid--no-spacing">
+          <section class="section--center mdl-grid">
             <div class="mdl-cell mdl-cell--12-col">
               
-							
 					  	<h5>One liner about the class</h5>
 
 							<ul class="toc">
@@ -327,7 +351,7 @@
 	            </ul>
 
 
-					  	<h4>Class Format</h4>
+					  	<!-- <h4>Class Format</h4>
 
 							<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
 								<tbody>
@@ -335,28 +359,50 @@
 									<tr><td class="mdl-data-table__cell--non-numeric">20 min</td><td class="mdl-data-table__cell--non-numeric">Case Study</td></tr>
 									<tr><td class="mdl-data-table__cell--non-numeric">20 min</td><td class="mdl-data-table__cell--non-numeric">Discussion</td></tr>
 								</tbody>
-							</table>
+							</table> -->
 						</div>
-						<div class="mdl-cell mdl-cell--2-col mdl-layout--large-screen-only"><h3>24</h3><h5>Aug</h5></div>
-						<div class="mdl-cell mdl-cell--2-col mdl-cell--hide-desktop"><h5>Wed, August 24</h5></div>
-						<div class="mdl-cell mdl-cell--12-col-tablet mdl-cell--10-col">
-							<h5>Startup Structure: Building Your Company with Limited Resources</h5>
-							<p>In this session, we'll discuss the basics of forming and structuring a company. What kind of people should you hire early and which roles can wait until your company is more mature? How do you pay people and how much equity do you give your earliest employees? During this workshop, you'll work with a team to divide up a company among founders, employees, and investors.</p>
-							<ul>
-								<li class="bullet">Dividing Equity</li>
-								<li class="bullet">Startup Roles</li>
-								<li class="bullet">Resource Allocation</li>
-							</ul>
+
+						<div class="mdl-cell mdl-cell--1-col mdl-cell--1-offset mdl-cell--hide-tablet mdl-cell--hide-phone mdl-layout"><h3>24</h3><h5>Aug</h5></div>
+						<div class="mdl-cell mdl-cell--12-col mdl-cell--hide-desktop"><h5>Wed, August 24</h5></div>
+						<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col-tablet mdl-cell--10-col">
+							<div class="mdl-card__title">
+								<div class="mdl-card__title-text">Startup Structure: Building Your Company with Limited Resources</div>
+							</div>
+							<div class="mdl-card__supporting-text">
+								<p>In this session, we'll discuss the basics of forming and structuring a company. What kind of people should you hire early and which roles can wait until your company is more mature? How do you pay people and how much equity do you give your earliest employees? During this workshop, you'll work with a team to divide up a company among founders, employees, and investors.</p>
+								<ul>
+									<li class="bullet">Dividing Equity</li>
+									<li class="bullet">Startup Roles</li>
+									<li class="bullet">Resource Allocation</li>
+								</ul>
+							</div>
+							<div class="mdl-card__actions">
+	              <a href="#gray" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Gray Hancock, MBA</a>
+	              <div class="mdl-layout-spacer"></div>
+	              <a class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect" href="https://www.eventbrite.com/e/startup-structure-building-your-company-with-limited-resources-tickets-26992390968" target="_blank">Register</a>
+	            </div>
+						</div>
+
+						<div class="mdl-cell mdl-cell--1-col mdl-cell--1-offset mdl-cell--hide-tablet mdl-cell--hide-phone mdl-layout"><h5>Sept</h5></div>
+						<div class="mdl-cell mdl-cell--12-col mdl-cell--hide-desktop"><h5>September</h5></div>
+						<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col-tablet mdl-cell--10-col">
+							<div class="mdl-card__title">
+						    <h2 class="mdl-card__title-text">Pitching: How to sell your ideas</h2>
+						  </div>
+						  <!-- <div class="mdl-card__media">
+						    <img src="photo.jpg" width="220" height="140" border="0" alt="" style="padding:20px;">
+						  </div> -->
+							<div class="mdl-card__supporting-text">
+								<p>Before you ever sell to a single customer, you'll have to pitch your startup to investors, partners, and potential employees. We'll discuss the key elements of a great pitch whether it is a one-liner, elevator pitch, or a full slide deck for investors. How do you tailor your talk to the audience? What do they want to know? We'll wrap up with a quick elevator pitch competition, where your team will have 90 seconds to deliver a pitch.</p>
+							</div>
+							<div class="mdl-card__actions">
+	              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"></a>
+						    <div class="mdl-layout-spacer"></div>
+						    <a class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect" href="" target="_blank">Register</a>
+	            </div>
 						</div>
 					  
-
-
 					  <div class="mdl-cell mdl-cell--12-col">
-					  	
-							  	
-              
-              
-
               <h5 id="lorem1">Topics</h5>
               Excepteur et pariatur officia veniam anim culpa cupidatat consequat ad velit culpa est non.
               <ul>
@@ -400,7 +446,7 @@
         </div>
 				
 				<div class="mdl-layout__tab-panel" id="schedule">
-          <section class="section--center mdl-grid mdl-grid--no-spacing">
+          <section class="section--center mdl-grid">
             <div class="mdl-cell mdl-cell--12-col">
               <h4>Features</h4>
               Minim duis incididunt est cillum est ex occaecat consectetur. Qui sint ut et qui nisi cupidatat. Reprehenderit nostrud proident officia exercitation anim et pariatur ex.

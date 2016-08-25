@@ -1,19 +1,29 @@
 <body class="<!-- @body_class -->">
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header mdl-layout__header--waterfall mdl-layout__header--waterfall-hide-top mdl-color--primary">
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-	        <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect mdl-layout-icon" onclick="history.go(-1);"">
-	            <i class="material-icons">arrow_back</i>
-	          </button>
+        <div class="mdl-layout__header-row">
+	        <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" onclick="history.go(-1);""><i class="material-icons">arrow_back</i></button>
+          <div class="mdl-layout--small-screen-only">
+            <div class="mdl-layout__title">&nbsp<enventure>enventure</enventure>&nbsp<!-- @page_name --></div>
+          </div>
+          <div class="mdl-layout-spacer"></div>
+          <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="share1">
+                <i class="material-icons">share</i>
+          </button>
+          <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+              for="share1">
+            <li class="mdl-menu__item"><a href="https://www.facebook.com/sharer/sharer.php?u=<!-- @share_url -->" target="_blank">Facebook</a></li>
+            <li class="mdl-menu__item"><a href="https://www.linkedin.com/shareArticle?mini=true&url=<!-- @share_url -->&title=<!-- @page_name -->&source=<!-- @share_url -->&summary=Free%20course%20from%20Enventure" target="_blank">LinkedIn</a></li>
+            <li class="mdl-menu__item"><a href="http://twitter.com/intent/tweet/?text=Check%20out%his%20course%20from%20@enventuremed&url=<!-- @share_url -->&via=enventuremed&hashtags=education,houston,entrepreneurship" target="_blank">Twitter</a></li>
+          </ul>
+        </div>
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">   
+          <div class="mdl-typography--display-2"><enventure>enventure</enventure>&nbsp<!-- @page_name --></div>
         </div>
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-          
-          <h3><!-- @page_name --></h3>
         </div>
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-        </div>
-        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
 
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
           <a href="#overview" class="mdl-layout__tab is-active">Overview</a>
           <a href="#details" class="mdl-layout__tab">Details</a>
           <a href="#schedule" class="mdl-layout__tab">Schedule</a>

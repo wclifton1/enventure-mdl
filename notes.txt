@@ -1,0 +1,274 @@
+standard
+section
+	padding 8
+	margin l97 97 t0 b48
+
+	card-shadow
+		margin 8
+		padding 0
+
+moved shadow
+section-shadow
+	padding 8
+	margin l97 97 t0 b48
+
+no spacing
+	padding 0
+	margin l105 r105 t0 b48
+
+mdl-cell--hide-desktop 840 and up
+mdl-cell--hide-tablet 840 and down to phone
+mdl-layout--small-screen-only
+mdl-layout--large-screen-only
+	toggles js is-small-screen @1024
+
+/* Typography */
+// h and p's just add margins
+
+typo-display-4
+typo-display-3 h1
+typo-display-2 h2
+typo-display-1 h3
+typo-headline  h4
+typo-title     h5
+typo-subhead   h6
+typo-subhead-2
+typo-body-2
+typo-body-1    p
+typo-caption
+
+typo-display-4 {
+  font-size: 112px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.04em;
+
+  $colorContrast {
+    opacity: 0.54;
+  }
+}
+
+typo-display-3 {
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+
+  $colorContrast {
+    opacity: 0.54;
+  }
+}
+
+	h1 {
+	  @include typo-display-3;
+
+	  margin-top: 24px;
+	  margin-bottom: 24px;
+	}
+
+	h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+	  @include typo-display-3($colorContrast: true);
+	  font-size: 0.6em;
+	}
+
+typo-display-2 {
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 48px;
+
+  $colorContrast {
+    opacity: 0.54;
+  }
+}
+
+	h2 {
+	  @include typo-display-2;
+
+	  margin-top: 24px;
+	  margin-bottom: 24px;
+	}
+
+typo-display-1 {
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 40px;
+
+  $colorContrast {
+    opacity: 0.54;
+  }
+}
+
+	h3 {
+	  @include typo-display-1;
+
+	  margin-top: 24px;
+	  margin-bottom: 24px;
+	}
+
+
+typo-headline {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+
+  $colorContrast {
+    opacity: 0.87;
+  }
+}
+
+	h4 {
+	  @include typo-headline;
+
+	  margin-top: 24px;
+	  margin-bottom: 16px;
+	}
+
+typo-title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.02em;
+
+  $colorContrast {
+    opacity: 0.87;
+  }
+}
+
+	h5 {
+	  @include typo-title;
+
+	  margin-top: 24px;
+	  margin-bottom: 16px;
+	}
+
+typo-subhead {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+
+  $colorContrast {
+    opacity: 0.87;
+  }
+}
+
+	h6 {
+	  @include typo-subhead;
+
+	  margin-top: 24px;
+	  margin-bottom: 16px;
+	}
+
+typo-subhead-2 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+
+  $colorContrast {
+    opacity: 0.87;
+  }
+}
+
+typo-body-2 {
+  font-size: 14px;
+  $usePreferred {
+    font-weight: 500;
+  } @else {
+    font-weight: bold;
+  }
+  line-height: 24px;
+  letter-spacing: 0;
+
+  $colorContrast {
+    opacity: 0.87;
+  }
+}
+
+typo-body-1 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+
+  $colorContrast {
+    opacity: 0.87;
+  }
+}
+
+	p {
+	  @include typo-body-1;
+
+	  margin-bottom: 16px;
+	}
+
+typo-caption {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+
+  $colorContrast {
+    opacity: 0.54;
+  }
+}
+
+typo-blockquote {
+  position: relative;
+  font-size: 24px;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+
+  &:before {
+    position: absolute;
+    left: -0.5em;
+    content: '“';
+  }
+
+  &:after {
+    content: '”';
+    margin-left: -0.05em;
+  }
+
+  $colorContrast {
+    opacity: 0.54;
+  }
+}
+
+typo-menu {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0;
+
+  $colorContrast {
+    opacity: 0.87;
+  }
+}
+
+typo-button {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0;
+
+  $colorContrast {
+    opacity: 0.87;
+  }
+}
+
+typo-icon() {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  word-wrap: normal;
+  font-feature-settings: 'liga';
+}

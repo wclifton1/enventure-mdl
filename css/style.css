@@ -321,48 +321,88 @@
             animation-direction: alternate-reverse; }
 
 /* overrides */
-h1, h2, h3, h4, h5, h6, .mdl-typography--display-1, .mdl-typography--display-1-color-contrast, .mdl-typography--display-2, .mdl-typography--display-2-color-contrast, .mdl-typography--headline, .mdl-typography--headline-color-contrast, .mdl-typography--subhead, .mdl-typography--subhead-color-contrast, .mdl-button {
+h1, h2, h3, h4, h5, h6, .mdl-typography--display-1, .mdl-typography--display-1-color-contrast, .mdl-typography--display-2, .mdl-typography--display-2-color-contrast, .mdl-typography--display-3, .mdl-typography--display-3-color-contrast, .mdl-typography--display-4, .mdl-typography--display-4-color-contrast, .mdl-typography--headline, .mdl-typography--headline-color-contrast, .mdl-typography--subhead, .mdl-typography--subhead-color-contrast, .mdl-typography--title, .mdl-typography--title-color-contrast, .mdl-typography--body-1, .mdl-typography--body-2, .mdl-typography--body-2-color-contrast-color-contrast, .mdl-typography--body-2-force-preferred-font, .mdl-typography--caption, .mdl-typography--caption-color-contrast, .mdl-typography--menu, .mdl-button, .mdl-layout__title, .mdl-chip, .mdl-layout__title, .mdl-layout-title {
   font-family: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-.lora, .enventure, .mdl-layout-title, .mdl-layout__title, .logo-font, enventure, .enventure-sub-slogan {
-  font-family: Lora, Georgia, Times, "Times New Roman", serif;
-  letter-spacing: normal; }
+.mdl-typography--display-1-color-contrast {
+  color: rgba(0, 0, 0, 0.54);
+  opacity: 1; }
 
-.enventure, .mdl-layout-title, .mdl-layout__title, .logo-font, enventure {
-  color: #0091ea; }
-
-.mdl-layout-title, .mdl-layout__title {
-  font-size: 30px; }
-
-.enventure-color--light {
-  color: #4fc3f7; }
-
-.enventure--icon-size {
-  font-size: 16px; }
-  .enventure--icon-size .material-icons {
-    position: relative;
-    top: 6px; }
-
-.mdl-button {
+.mdl-typography--headline {
   font-weight: 700; }
 
-.fixed-width {
-  max-width: 1200px; }
+.mdl-typography--headline-color-contrast {
+  color: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+  font-weight: 700; }
 
 body {
   margin: 0;
   font-family: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300; }
 
-lato, .lato {
+.enventure-drawer lato {
+  color: white; }
+
+lato, .lato, lato-sm, .lato-sm {
   font-family: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 80%;
-  color: rgba(0, 0, 0, 0.26); }
+  font-weight: 300; }
+
+lato-sm, .lato-sm {
+  font-size: 80%; }
 
 a {
   color: #0091ea;
   text-decoration: none; }
+
+lora, .lora, .enventure, .logo-font, enventure, .enventure-sub-slogan {
+  font-family: Lora, Georgia, Times, "Times New Roman", serif;
+  letter-spacing: normal; }
+
+.enventure, .logo-font, enventure {
+  color: #0091ea; }
+
+.env-color--light {
+  color: #00b0ff; }
+
+.env-typography--icon-size {
+  font-size: 16px; }
+  .env-typography--icon-size .material-icons {
+    position: relative;
+    top: 6px; }
+
+.fixed-width {
+  max-width: 1200px; }
+
+.mdl-card__actions {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.mdl-card__actions > .material-icons {
+  padding-right: 10px; }
+
+.mdl-card__title {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+
+.mdl-card__title-text, .mdl-card__subtitle-text {
+  -webkit-align-self: flex-start;
+      -ms-flex-item-align: start;
+          align-self: flex-start; }
 
 /* Disable ugly boxes around images in IE10 */
 a img {
@@ -421,9 +461,9 @@ a img {
 .enventure-navigation-container {
   /* Simple hack to make the overflow happen to the left instead... */
   direction: rtl;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
   -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
           order: 1;
   width: 500px;
   -webkit-transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1), width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -432,9 +472,9 @@ a img {
 .enventure-navigation {
   /* ... and now make sure the content is actually LTR */
   direction: ltr;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
   -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
           justify-content: flex-end;
   width: 800px; }
 
@@ -527,7 +567,7 @@ a img {
 .enventure-screen-section {
   position: relative;
   padding-top: 60px;
-  padding-bottom: 80px;
+  padding-bottom: 60px;
   padding-left: 10%;
   padding-right: 10%; }
 
@@ -637,12 +677,7 @@ a img {
 
 .enventure-alt-link {
   text-decoration: none;
-  color: #4fc3f7 !important;
-  font-size: 16px; }
-
-.enventure-alt-link {
-  text-decoration: none;
-  color: #4fc3f7 !important;
+  color: #00b0ff !important;
   font-size: 16px; }
 
 .enventure-alt-link:hover {
@@ -653,7 +688,10 @@ a img {
   top: 6px; }
 
 .enventure-customized-section {
-  text-align: center; }
+  text-align: center;
+  background: url("../images/grass.svg") center bottom no-repeat;
+  background-size: 100%;
+  height: 450px; }
 
 .enventure-customized-section-text {
   max-width: 500px;
@@ -665,7 +703,7 @@ a img {
   padding-top: 16px; }
 
 .enventure-customized-section-image {
-  background: url("../images/devices.jpg") center top no-repeat;
+  background: url("../images/grass.svg") center top no-repeat;
   background-size: cover;
   height: 400px; }
 
@@ -676,7 +714,7 @@ a img {
   margin-right: auto; }
 
 .enventure-more-section .enventure-section-title {
-  margin-left: 12px;
+  margin-left: 16px;
   padding-bottom: 24px; }
 
 .enventure-card-container .mdl-card__media {
@@ -708,7 +746,11 @@ a img {
   font-size: 16px; }
 
 .enventure-footer {
+  color: inherit;
   background-color: #fafafa;
+  background-image: -webkit-linear-gradient(bottom, rgba(84, 110, 122, 0.3), #546e7a);
+  background-image: linear-gradient(0deg, rgba(84, 110, 122, 0.3), #546e7a);
+  background-image: linear-gradient(0deg, rgba(84, 110, 122, 0.3), #546e7a);
   position: relative; }
 
 .enventure-footer a:hover {
@@ -752,7 +794,7 @@ a img {
   /* WebViews in iOS 9 break the "~" operator, and WebViews in OS X 10.10 break
      consecutive "+" operators in some cases. Therefore, we need to use both
      here to cover all the bases. */
-  .enventure.enventure-search-box.is-focused ~ .enventure-mobile-title, .enventure-search-box.is-focused.mdl-layout-title ~ .enventure-mobile-title, .enventure-search-box.is-focused.mdl-layout__title ~ .enventure-mobile-title,
+  .enventure.enventure-search-box.is-focused ~ .enventure-mobile-title,
   .enventure-search-box.is-focused + .enventure-navigation-container + .enventure-mobile-title {
     opacity: 0; }
 
@@ -792,7 +834,7 @@ a img {
     display: none; } }
 /* unfiled */
 .docs-toc ul {
-  border-left: solid 3px #4fc3f7;
+  border-left: solid 3px #00b0ff;
   padding-left: 20px;
   line-height: 28px;
   list-style-type: none; }
@@ -922,7 +964,7 @@ a img {
     background-image: url(../images/byob-trans-24.png); }
 
 .demo-card-event.mdl-card {
-  background: rgba(1, 87, 155, 0.9);
+  background: rgba(2, 119, 189, 0.9);
   width: 100%; }
 
 .demo-card-event > .mdl-card__actions {
@@ -942,8 +984,8 @@ a img {
 .demo-card-event > .mdl-card__title > h4 {
   margin-top: 0; }
 
-.demo-card-event > .mdl-card__supporting-text > p {
-  color: rgba(255, 255, 255, 0.87); }
+.demo-card-event > .mdl-card__supporting-text {
+  color: white; }
 
 .demo-card-event > .mdl-card__actions {
   display: -webkit-box;
@@ -1053,13 +1095,10 @@ a img {
   font-size: 14px;
   color: #757575; }
 
-.mdl-card__actions > p {
-  margin: 0 0 6px; }
-
 .promo {
   padding-bottom: 40px; }
   .promo i {
-    color: rgba(0, 0, 0, 0.54);
+    color: #00b0ff;
     font-size: 7rem;
     display: block; }
 
@@ -1074,9 +1113,9 @@ a img {
 
 .env-course .mdl-layout__header-row {
   padding-left: 40px; }
-
-.env-course .mdl-layout.is-small-screen .mdl-layout__header-row h3 {
-  font-size: inherit; }
+  @media screen and (max-width: 1024px) {
+    .env-course .mdl-layout__header-row {
+      padding-left: 16px; } }
 
 .env-course .mdl-layout__tab-bar-button {
   display: none; }
@@ -1107,7 +1146,6 @@ a img {
   height: 4px; }
 
 .env-course main > .mdl-layout__tab-panel {
-  padding: 8px;
   padding-top: 48px; }
 
 .env-course .mdl-card {
@@ -1125,6 +1163,15 @@ a img {
 .env-course .mdl-card > * {
   height: auto; }
 
+.env-course .mdl-card .mdl-card__title {
+  margin: 40px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0;
+  width: calc(100% - 80px); }
+
 .env-course .mdl-card .mdl-card__supporting-text {
   margin: 40px;
   -webkit-box-flex: 1;
@@ -1132,7 +1179,6 @@ a img {
       -ms-flex-positive: 1;
           flex-grow: 1;
   padding: 0;
-  color: inherit;
   width: calc(100% - 80px); }
 
 .env-course.env-course .mdl-card__supporting-text h4 {
@@ -1141,17 +1187,7 @@ a img {
 
 .env-course .mdl-card__actions {
   margin: 0;
-  padding: 4px 40px;
-  color: inherit; }
-
-.env-course .mdl-card__actions a {
-  margin: 0;
-  color: #0091ea; }
-
-.env-course .mdl-card__actions a:hover,
-.env-course .mdl-card__actions a:active {
-  color: inherit;
-  background-color: transparent; }
+  padding: 4px 40px; }
 
 .env-course .mdl-card__supporting-text + .mdl-card__actions {
   border-top: 1px solid rgba(0, 0, 0, 0.12); }
@@ -1300,7 +1336,7 @@ a img {
   margin-bottom: 16px; }
 
 .env-course .toc {
-  border-left: 4px solid #C1EEF4;
+  border-left: 4px solid #00b0ff;
   margin: 24px;
   padding: 0;
   padding-left: 8px;
@@ -1319,7 +1355,6 @@ a img {
   margin-top: 0; }
 
 .env-course .toc a {
-  color: #4DD0E1;
   text-decoration: none;
   font-size: 16px;
   line-height: 28px;
@@ -1336,5 +1371,28 @@ a img {
   color: #616161 !important; }
 .foundations .mdl-layout.is-upgraded .mdl-layout__tab.is-active {
   color: rgba(0, 0, 0, 0.5) !important; }
+
+.env-layout__title, .env-layout-title {
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.4); }
+  .env-layout__title enventure, .env-layout-title enventure {
+    font-size: 32px; }
+
+.env-course .mdl-grid.mdl-grid--no-spacing {
+  max-width: 844px; }
+
+@media (max-width: 839px) {
+  .mdl-grid.mdl-grid--no-spacing {
+    margin: 16px; } }
+.mdl-grid.mdl-grid--no-spacing .mdl-cell {
+  background: white; }
+
+.mdl-card__supporting-text .material-icons {
+  line-height: inherit;
+  font-size: inherit; }
+
+.mdl-chip {
+  background: #01579b;
+  color: white; }
 
 /*# sourceMappingURL=style.css.map */

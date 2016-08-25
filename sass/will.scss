@@ -1,28 +1,63 @@
 /* overrides */
-h1, h2, h3, h4, h5, h6, .mdl-typography--display-1, .mdl-typography--display-1-color-contrast, .mdl-typography--display-2, .mdl-typography--display-2-color-contrast, .mdl-typography--headline, .mdl-typography--headline-color-contrast, .mdl-typography--subhead, .mdl-typography--subhead-color-contrast, .mdl-button {
+h1, h2, h3, h4, h5, h6, .mdl-typography--display-1, .mdl-typography--display-1-color-contrast, .mdl-typography--display-2, .mdl-typography--display-2-color-contrast, .mdl-typography--display-3, .mdl-typography--display-3-color-contrast, .mdl-typography--display-4, .mdl-typography--display-4-color-contrast, .mdl-typography--headline, .mdl-typography--headline-color-contrast, .mdl-typography--subhead, .mdl-typography--subhead-color-contrast, .mdl-typography--title, .mdl-typography--title-color-contrast, .mdl-typography--body-1, .mdl-typography--body-2, .mdl-typography--body-2-color-contrast-color-contrast, .mdl-typography--body-2-force-preferred-font, .mdl-typography--caption, .mdl-typography--caption-color-contrast, .mdl-typography--menu, .mdl-button, .mdl-layout__title, .mdl-chip, .mdl-layout__title, .mdl-layout-title {
   font-family: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.lora{
+.mdl-typography--display-1-color-contrast{
+  color:$env-color--b2;
+  opacity:1;
+}
+
+.mdl-typography--headline{
+  font-weight: 700;
+}
+
+.mdl-typography--headline-color-contrast{
+  color: $env-color--b3;
+  opacity: 1;
+  font-weight: 700;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+  font-weight: 300;
+}
+
+.enventure-drawer lato {
+  color: $env-color--w1;
+}
+
+lato, .lato {
+  font-family: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+lato-sm, .lato-sm{
+  @extend .lato;
+  font-size: 80%;
+}
+
+a{
+  color: $env-color;
+  text-decoration: none;
+}
+
+lora, .lora {
   font-family: Lora, Georgia, Times, "Times New Roman", serif;
   letter-spacing: normal;
 }
 
 .enventure, .logo-font, enventure{
   @extend .lora;
-  color: $enventure-color;
+  color: $env-color;
 }
 
-.mdl-layout-title, .mdl-layout__title {
-  @extend .enventure;
-  font-size: 30px;
+.env-color--light{
+  color: $env-color--light;
 }
 
-.enventure-color--light{
-  color: $enventure-color--light;
-}
-
-.enventure--icon-size{
+.env-typography--icon-size{
   font-size: 16px;
   .material-icons {
     position: relative;
@@ -30,12 +65,26 @@ h1, h2, h3, h4, h5, h6, .mdl-typography--display-1, .mdl-typography--display-1-c
   }
 }
 
-.mdl-button {
-  font-weight: 700;
-}
-
 .fixed-width {
   max-width: 1200px;
+}
+
+.mdl-card__actions {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.mdl-card__actions > .material-icons {
+    padding-right: 10px;
+}
+
+.mdl-card__title {
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.mdl-card__title-text, .mdl-card__subtitle-text {
+  align-self: flex-start;
 }
 
 // | MDL class | Effect | Remarks |
@@ -69,24 +118,6 @@ h1, h2, h3, h4, h5, h6, .mdl-typography--display-1, .mdl-typography--display-1-c
 // | `mdl-typography--text-uppercase` | Uppercased text | Optional |
 // | `mdl-typography--title` | Medium 20px | Optional |
 // | `mdl-typography--title-color-contrast` | Title with color contrast | Optional |
-
-body {
-  margin: 0;
-  font-family: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; 
-  font-weight: 300;
-}
-
-lato, .lato{
-font-family: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; 
-  font-weight: 300;
-  font-size: 80%;
-  color:$enventure-color--b3;
-}
-
-a{
-  color: $enventure-color;
-  text-decoration: none;
-}
 
 /* Disable ugly boxes around images in IE10 */
 a img{
@@ -151,8 +182,6 @@ a img{
   .enventure-navigation-container {
     /* Simple hack to make the overflow happen to the left instead... */
     direction: rtl;
-    -webkit-order: 1;
-        -ms-flex-order: 1;
             order: 1;
     width: 500px;
     transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
@@ -162,8 +191,6 @@ a img{
   .enventure-navigation {
     /* ... and now make sure the content is actually LTR */
     direction: ltr;
-    -webkit-justify-content: flex-end;
-        -ms-flex-pack: end;
             justify-content: flex-end;
     width: 800px;
   }
@@ -183,7 +210,7 @@ a img{
   }
 
     .enventure-navigation .mdl-navigation__link:hover {
-      border-bottom: 4px solid $enventure-color;
+      border-bottom: 4px solid $env-color;
     }
 
   .enventure-search-box {
@@ -213,12 +240,12 @@ a img{
   }
 
   .enventure-drawer span.mdl-navigation__link.mdl-navigation__link {
-    color: $enventure-color;
+    color: $env-color;
   }
 
   .enventure-drawer .mdl-layout-title {
     position: relative;
-    background: $enventure-color;
+    background: $env-color;
     height: 160px;
     color: white;
   }
@@ -245,7 +272,7 @@ a img{
 
   // $gradient-angle: 0deg;
   // $hero-background-top: rgba(white, 0.9); 
-  // $hero-background-bottom: rgba($enventure-color, .25);
+  // $hero-background-bottom: rgba($env-color, .25);
   // $hero-image: '../images/houston.svg';
   // @include background-image(linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-bottom, $hero-background-top), url($hero-image));
 }
@@ -281,7 +308,7 @@ a img{
 .enventure-screen-section {
   position: relative;
   padding-top: 60px;
-  padding-bottom: 80px;
+  padding-bottom: 60px;
   padding-left:10%;
   padding-right:10%;
 }
@@ -405,7 +432,7 @@ a img{
 
 .enventure-link {
   text-decoration: none;
-  color: $enventure-color !important;
+  color: $env-color !important;
 }
 
   .enventure-link:hover {
@@ -416,20 +443,16 @@ a img{
     position: relative;
     top: -1px;
     vertical-align: middle;
-  }.enventure-alt-link {
-  text-decoration: none;
-  color: $enventure-color--light !important;
-  font-size: 16px;
-}
+  }
 
 .enventure-alt-link {
   text-decoration: none;
-  color: $enventure-color--light !important;
+  color: $env-color--light !important;
   font-size: 16px;
 }
 
   .enventure-alt-link:hover {
-    color: $enventure-color !important;
+    color: $env-color !important;
   }
 
   .enventure-alt-link .material-icons {
@@ -439,6 +462,9 @@ a img{
 
 .enventure-customized-section {
   text-align: center;
+  background: url('../images/grass.svg') center bottom no-repeat;
+  background-size: 100%;
+  height: 450px;
 }
 
 .enventure-customized-section-text {
@@ -450,10 +476,11 @@ a img{
 
   .enventure-customized-section-text p {
     padding-top: 16px;
+
   }
 
 .enventure-customized-section-image {
-  background: url('../images/devices.jpg') center top no-repeat;
+  background: url('../images/grass.svg') center top no-repeat;
   background-size: cover;
   height: 400px;
 }
@@ -464,9 +491,8 @@ a img{
   margin-left: auto;
   margin-right: auto;
 }
-
   .enventure-more-section .enventure-section-title {
-    margin-left: 12px;
+    margin-left: 16px;
     padding-bottom: 24px;
   }
 
@@ -509,12 +535,18 @@ a img{
   }
 
 .enventure-footer {
+  color: inherit;
   background-color: #fafafa;
+  $band-color:color("blue-grey","darken-1");
+  $hero-background-top: rgba($band-color, 1); 
+  $hero-background-bottom: rgba($band-color, .3);
+  $gradient-angle: 0deg;
+  @include background-image(linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top));
   position: relative;
 }
 
   .enventure-footer a:hover {
-    color: $enventure-color;
+    color: $env-color;
   }
 
   .enventure-footer .mdl-mega-footer--top-section::after {
@@ -626,7 +658,7 @@ a img{
 
 /* unfiled */
 .docs-toc ul {
-    border-left: solid 3px $enventure-color--light;
+    border-left: solid 3px $env-color--light;
     padding-left: 20px;
     line-height: 28px;
     list-style-type: none;
@@ -733,7 +765,7 @@ a img{
 }
 
 .section--pre-footer .sign-up__form .mdl-textfield__input, .section--pre-footer .sign-up__form .mdl-textfield__label {
-    color: $enventure-color--w1;
+    color: $env-color--w1;
 }
 
 .section--pre-footer .sign-up__form .mdl-textfield__input{
@@ -804,8 +836,8 @@ a img{
     background-size: cover;
     height: 150px;
     &.dialog{
-      $hero-background-top: rgba($enventure-color, .6); 
-      $hero-background-bottom: rgba($enventure-color, .4);
+      $hero-background-top: rgba($env-color, .6); 
+      $hero-background-bottom: rgba($env-color, .4);
       $gradient-angle: 0deg;
       $hero-image: '../images/billy-sm.jpg';
       @include background-image(linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-bottom, $hero-background-top), url($hero-image));
@@ -852,7 +884,7 @@ a img{
   }
 
 .demo-card-event.mdl-card {
-  background: rgba($enventure-color--dark,.9);
+  background: rgba($env-color--dark,.9);
   width:100%;
 }
 .demo-card-event > .mdl-card__actions {
@@ -866,8 +898,8 @@ a img{
   margin-top: 0;
 }
 
-.demo-card-event > .mdl-card__supporting-text > p {
-  color:$enventure-color--w2;
+.demo-card-event > .mdl-card__supporting-text {
+  color:$env-color--w1;
 }
 
 .demo-card-event > .mdl-card__actions {
@@ -983,18 +1015,18 @@ a img{
   color: #757575;
 }
 
-.mdl-card__actions>p{
-  margin: 0 0 6px;
-}
+// .mdl-card__actions>p{
+//   margin: 0 0 6px;
+// }
 
 .promo {
-
-    padding-bottom:40px;
+  padding-bottom:40px;
   i {
-    color: rgba(0, 0, 0, 0.54);
+    color: $env-color--light;
     font-size: 7rem;
     display: block;
-}}
+  }
+}
 
 .demo-card-event{
   .mdl-card__title{
@@ -1005,9 +1037,9 @@ a img{
 
 .env-course .mdl-layout__header-row {
   padding-left: 40px;
-}
-.env-course .mdl-layout.is-small-screen .mdl-layout__header-row h3 {
-  font-size: inherit;
+  @media screen and (max-width: 1024px){
+    padding-left: 16px;
+  }
 }
 .env-course .mdl-layout__tab-bar-button {
   display: none;
@@ -1038,7 +1070,6 @@ a img{
   height: 4px;
 }
 .env-course main > .mdl-layout__tab-panel {
-  padding: 8px;
   padding-top: 48px;
 }
 .env-course .mdl-card {
@@ -1049,11 +1080,18 @@ a img{
 .env-course .mdl-card > * {
   height: auto;
 }
+
+.env-course .mdl-card .mdl-card__title {
+  margin: 40px;
+  flex-grow: 1;
+  padding: 0;
+  width: calc(100% - 80px);
+}
+
 .env-course .mdl-card .mdl-card__supporting-text {
   margin: 40px;
           flex-grow: 1;
   padding: 0;
-  color: inherit;
   width: calc(100% - 80px);
 }
 .env-course.env-course .mdl-card__supporting-text h4 {
@@ -1063,17 +1101,15 @@ a img{
 .env-course .mdl-card__actions {
   margin: 0;
   padding: 4px 40px;
-  color: inherit;
 }
-.env-course .mdl-card__actions a {
-  margin: 0;
-  color:$enventure-color;
-}
-.env-course .mdl-card__actions a:hover,
-.env-course .mdl-card__actions a:active {
-  color: inherit;
-  background-color: transparent;
-}
+// .env-course .mdl-card__actions a {
+//   margin: 0;
+//   color:$env-color;
+// }
+// .env-course .mdl-card__actions a:hover,
+// .env-course .mdl-card__actions a:active {
+//   background-color: transparent;
+// }
 .env-course .mdl-card__supporting-text + .mdl-card__actions {
   border-top: 1px solid rgba(0, 0, 0, 0.12);
 }
@@ -1180,7 +1216,7 @@ $avatars: (bryan, gray, will, amy, trip, sarah, joanna);
   margin-bottom: 16px;
 }
 .env-course .toc {
-  border-left: 4px solid #C1EEF4;
+  border-left: 4px solid $env-color--light;
   margin: 24px;
   padding: 0;
   padding-left: 8px;
@@ -1192,7 +1228,6 @@ $avatars: (bryan, gray, will, amy, trip, sarah, joanna);
   margin-top: 0;
 }
 .env-course .toc a {
-  color: #4DD0E1;
   text-decoration: none;
   font-size: 16px;
   line-height: 28px;
@@ -1215,4 +1250,40 @@ $avatars: (bryan, gray, will, amy, trip, sarah, joanna);
   .mdl-layout.is-upgraded .mdl-layout__tab.is-active {
     color:rgba(black,.5)!important;
   }
+}
+
+.env-layout__title, .env-layout-title {
+  font-size: 25px;
+  color:$env-color--b3;
+  enventure{
+    font-size: 32px;
+  }
+}
+
+.env-grid--no-spacing {
+  // padding:0;
+  //margin:8px;
+}
+
+.env-course .mdl-grid.mdl-grid--no-spacing {
+    max-width: 844px;
+}
+
+@media (max-width: 839px){
+.mdl-grid.mdl-grid--no-spacing {
+  margin:16px;
+}}
+
+.mdl-grid.mdl-grid--no-spacing .mdl-cell {
+  background:white;
+}
+
+.mdl-card__supporting-text .material-icons {
+  line-height: inherit;
+  font-size: inherit;
+}
+
+.mdl-chip{
+  background:color(light-blue,darken-4);
+  color: white;
 }

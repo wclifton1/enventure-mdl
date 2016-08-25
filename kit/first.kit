@@ -33,10 +33,16 @@
 
     <!-- Page styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.2.0/material.blue-pink.min.css" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.0/material.blue-pink.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700|Lora&amp;lang=en">
-    <link rel="stylesheet" href="<!-- @path_css -->style.css">
+    <link rel="stylesheet" href="<!-- @path_css-->style.css">
     <script src="https://code.getmdl.io/1.2.0/material.min.js"></script>
+
+    <!-- offline -->
+    <!-- <link rel="stylesheet" href="../node_modules/material-design-lite/dist/material.blue-pink.min.css"> -->
+    <!-- <link rel="stylesheet" href="../bower_components/material-design-lite/material.css"> -->
+    <!-- <link rel="stylesheet" href="<!-- @path_css -->style.css"> -->
+    <!-- <script src="../bower_components/material-design-lite/material.min.js"></script> -->
 
     <!--  calendar-->
     <script type="text/javascript">
@@ -152,20 +158,32 @@
                             // }
                             html.push("</h4>")
 
+                          html.push("</div>")
+                          html.push("<div class=\"mdl-card__supporting-text\">")
+                            
+
+                            html.push("<i class=\"material-icons\">watch</i>&nbsp" + time)
+
+
+
                             // fix for absent location
                             if (location) {
                               html.push("<p class=\"enventure--icon-size\"><i class=\"material-icons\">location_on</i>&nbsp" + location + "</p>")
                             }
-                          html.push("</div>")
-                          html.push("<div class=\"mdl-card__supporting-text\">")
                             html.push("<p>" + description + "</p>")
                           html.push("</div>")
                           html.push("<div class=\"mdl-card__actions mdl-card--border\">")
                           if (link != 'javascript:;'){
                             html.push("<a class=\"mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect\" href=\"" + link + "\"" + " target=\"_blank\">Learn More + RSVP</a>")
                           }
+
                           html.push("<div class=\"mdl-layout-spacer\"></div>")
-                          html.push("<p class=\"enventure--icon-size\">" + time + "&nbsp<i class=\"material-icons\">watch</i></p>")
+
+                          if (featuredFutureEvents[i].summary.indexOf('[')>-1) {
+                              html.push("<span class=\"mdl-chip mdl-chip--contact\"><img class=\"mdl-chip__contact\" src=\"../images/"+label+".jpg\" alt=\""+label+"\" onerror=\"this.src='images/default.png'\"></img><span class=\"mdl-chip__text\">" + label + "</span></span>")
+                            }
+                          
+                          
                         html.push("</div>")
                       html.push("</div>")
 
@@ -178,7 +196,11 @@
         }
     </script>
     <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
-
+    
+    <!-- <span class="mdl-chip mdl-chip--contact">
+        <img class="mdl-chip__contact" src="/templates/dashboard/images/user.jpg"></img>
+        <span class="mdl-chip__text">Deletable Contact Chip</span>
+    </span> -->
 
 
   </head>

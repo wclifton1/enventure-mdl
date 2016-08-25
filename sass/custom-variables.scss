@@ -102,30 +102,30 @@ $colors: (
   @return null;
 }
 
-$enventure-color:#0091ea;
-$enventure-color--dark:#01579B;
-$enventure-color--light: color("light-blue", "lighten-2");
-$enventure-color--accent:#FF4081;
-$enventure-color--b1:rgba(black,.87);
-$enventure-color--b2:rgba(black,.54);
-$enventure-color--b3:rgba(black,.26);
-$enventure-color--b4:rgba(black,.12);
-$enventure-color--w1:white;
-$enventure-color--w2:rgba(white,.87);
-$enventure-color--w3:rgba(white,.54);
-$enventure-color--w4:rgba(white,.26);
-$background-color:#ebebeb;
-$btn-color:color("light-blue","base");
+$env-color:color("light-blue", "accent-4");;
+$env-color--dark:color("light-blue", "darken-3");
+$env-color--light: color("light-blue", "accent-3");
+$env-color--accent:#FF4081;
+$env-color--b1:rgba(black,.87);
+$env-color--b2:rgba(black,.54);
+$env-color--b3:rgba(black,.40);
+$env-color--b4:rgba(black,.12);
+$env-color--w1:white;
+$env-color--w2:rgba(white,.87);
+$env-color--w3:rgba(white,.54);
+$env-color--w4:rgba(white,.26);
+$env-color--bg-color:#ebebeb;
+$env-color--btn-color:color("light-blue","base");
 
 //_typography
 $nl-weight: 300;
-$base-font-color:$enventure-color--b2;
+$base-font-color:$env-color--b2;
 
-$sliding-menu-border-color: $enventure-color--b1;
+$sliding-menu-border-color: $env-color--b1;
 $sliding-menu-background: lighten($sliding-menu-border-color, 5);
 $sliding-menu-color: #fff;
 $sliding-menu-border: 1px solid $sliding-menu-border-color;
-$sliding-menu-background-hover: $enventure-color--accent;
+$sliding-menu-background-hover: $env-color--accent;
 $sliding-menu-color-hover: #fff;
 
 $footer-height:75px;
@@ -140,16 +140,16 @@ $pumpkin:#ef6c00; //orange darken-3
 $grid-item-colors: $radish, $wisteria, $teal, $sage, $indigo, $banana, $pumpkin, $radish, $wisteria, $teal, $sage, $indigo, $banana, $pumpkin;
 
 $sans-serif: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$serif: 'Georgia', Times, "Times New Roman", serif;
+$serif: 'Lora', 'Georgia', Times, "Times New Roman", serif;
 
 $icon-size: 56px;
 
 //_cards
-$default-color: $enventure-color;
+$default-color: $env-color;
 $card-color: #FFF;
-$font-color: $enventure-color--b1;
-$footer-font-color: $enventure-color--b1;
-$card-link-color: $enventure-color;
-$card-link-hover: $enventure-color--accent;
+$font-color: $env-color--b1;
+$footer-font-color: $env-color--b1;
+$card-link-color: $env-color;
+$card-link-hover: $env-color--accent;
 $card-height:150px;
 
