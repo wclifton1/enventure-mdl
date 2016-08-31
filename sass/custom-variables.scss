@@ -1,3 +1,5 @@
+$images:'./images';
+
 $light-blue: (
   "lighten-5":  #e1f5fe,
   "lighten-4":  #b3e5fc,
@@ -114,8 +116,8 @@ $env-color--w1:white;
 $env-color--w2:rgba(white,.87);
 $env-color--w3:rgba(white,.54);
 $env-color--w4:rgba(white,.26);
-$env-color--bg-color:#ebebeb;
-$env-color--btn-color:color("light-blue","base");
+$env-color--bg: #f5f5f5;
+$env-color--btn:color("light-blue","base");
 
 //_typography
 $nl-weight: 300;

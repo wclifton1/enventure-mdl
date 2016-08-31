@@ -9,22 +9,22 @@
     <title>Enventure | Houston's Guide for Medical Entrepreneurs</title>
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="57x57" href="../apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="../apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="../apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="../apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="../apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="../apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="../apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="../apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" href="../favicon-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="../favicon-160x160.png" sizes="160x160">
-    <link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="../favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" sizes="57x57" href="./apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="./favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="./favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32">
     <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-TileImage" content="../mstile-144x144.png">
+    <meta name="msapplication-TileImage" content="./mstile-144x144.png">
 
     <!-- Android 5 Chrome Color -->
     <meta name="theme-color" content="#0091ea">
@@ -33,14 +33,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.0/material.blue-pink.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700|Lora&amp;lang=en">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="https://code.getmdl.io/1.2.0/material.min.js"></script>
 
     <!-- offline -->
-    <!-- <link rel="stylesheet" href="../node_modules/material-design-lite/dist/material.blue-pink.min.css"> -->
-    <!-- <link rel="stylesheet" href="../bower_components/material-design-lite/material.css"> -->
-    <!-- <link rel="stylesheet" href="../css/style.css"> -->
-    <!-- <script src="../bower_components/material-design-lite/material.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="./node_modules/material-design-lite/dist/material.blue-pink.min.css"> -->
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <!-- <script src="./bower_components/material-design-lite/material.min.js"></script> -->
 
     <!--  calendar-->
     <script type="text/javascript">
@@ -152,7 +151,7 @@
                           html.push("<div class=\"mdl-card__title mdl-card--expand\">")
                             html.push("<h4>" + summary)
                             // if (featuredFutureEvents[i].summary.indexOf('[')>-1) {
-                            //   html.push("<div class=\"chip right\"><img src=\"../images//"+label+".jpg\" alt=\""+label+"\" onerror=\"this.src='../images//default.png'\">" + label + "</div>")
+                            //   html.push("<div class=\"chip right\"><img src=\"./images//"+label+".jpg\" alt=\""+label+"\" onerror=\"this.src='./images//default.png'\">" + label + "</div>")
                             // }
                             html.push("</h4>")
 
@@ -178,7 +177,7 @@
                           html.push("<div class=\"mdl-layout-spacer\"></div>")
 
                           if (featuredFutureEvents[i].summary.indexOf('[')>-1) {
-                              html.push("<span class=\"mdl-chip mdl-chip--contact\"><img class=\"mdl-chip__contact\" src=\"../images/"+label+".jpg\" alt=\""+label+"\" onerror=\"this.src='images/default.png'\"></img><span class=\"mdl-chip__text\">" + label + "</span></span>")
+                              html.push("<span class=\"mdl-chip mdl-chip--contact\"><img class=\"mdl-chip__contact\" src=\"./images/"+label+".jpg\" alt=\""+label+"\" onerror=\"this.src='images/default.png'\"></img><span class=\"mdl-chip__text\">" + label + "</span></span>")
                             }
                           
                           
@@ -203,8 +202,8 @@
 
   </head><body class="home">
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-
       <header class="enventure-header mdl-layout__header mdl-layout__header--waterfall">
+        <div id="primaryButton" aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button mdl-layout--small-screen-only"><i class="material-icons">menu</i></div>
         <div class="mdl-layout__header-row">
           <span class="mdl-layout-title env-layout-title">
             <enventure>enventure.</enventure>2016
@@ -225,14 +224,14 @@
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/about/index.html">About</a>
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="https://sites.google.com/site/mgmt633/">ENTR 101</a>
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/foundations/index.html">Foundations</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/bioventures/index.html">BioVentures</a>
+              <!-- <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/bioventures/index.html">BioVentures</a> -->
               <!-- <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">BYOBrainstorm</a> -->
             </nav>
           </div>
           <!-- <span class="enventure-mobile-title mdl-layout-title">
             enventure.
           </span> -->
-          <div aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button mdl-layout--small-screen-only"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored"><i class="material-icons">event</i></button></div>
+          <!-- <div aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button mdl-layout--small-screen-only"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored"><i class="material-icons">event</i></button></div> -->
           <!-- <button class="enventure-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
             <i class="material-icons">more_vert</i>
           </button>
@@ -247,13 +246,13 @@
 
       <div class="enventure-drawer mdl-layout__drawer mdl-layout--small-screen-only">
         <span class="mdl-layout-title">
-          <span><lora>enventure.</lora><lato>2016</lato></span>
+          <span><lora>enventure.</lora><lato-sm>2016</lato-sm></span>
         </span>
         <nav class="mdl-navigation">
           <a class="mdl-navigation__link" href=""><i class="material-icons mdl-list__item-icon">event</i> Calendar</a>
           <a class="mdl-navigation__link" href="https://sites.google.com/site/mgmt633/"><i class="material-icons mdl-list__item-icon">school</i> ENTR 101</a>
           <a class="mdl-navigation__link" href="/foundations/index.html"><i class="material-icons mdl-list__item-icon">account_balance</i> Foundations</a>
-          <a class="mdl-navigation__link" href="/bioventures/index.html"><i class="material-icons mdl-list__item-icon">spa</i> BioVentures</a>
+          <!-- <a class="mdl-navigation__link" href="/bioventures/index.html"><i class="material-icons mdl-list__item-icon">spa</i> BioVentures</a> -->
           <!-- <a class="mdl-navigation__link" href=""><i class="material-icons">lightbulb_outline</i> BYOBrainstorm</a> -->
           <div class="enventure-drawer-separator"></div>
           <div class="enventure-drawer--calendar">
@@ -270,121 +269,114 @@
           <div class="mdl-grid fixed-width">
             <div class="mdl-cell mdl-cell--7-col section__block section__block--left mdl-cell--12-col-tablet">
               <div class="mdl-typography mdl-typography--display-4 enventure-sub-slogan">Let's start something together.</div>
-              <div class="enventure-slogan mdl-typography--display-1 mdl-typography--text-left"><enventure>Houston's</enventure> Guide for Medical Entrepreneurs</div>
+              <div class="mdl-layout-spacer"></div>
+              <div class="enventure-slogan mdl-typography--display-1 mdl-typography--text-left"><enventure>Houston's</enventure>&nbspGuide for Medical Entrepreneurs</div>
             </div>
             <div class="mdl-cell mdl-cell--5-col hide-small section__block section__block--right">
-              <a href="#screens">
-                <button class="enventure-fab mdl-button mdl-button--colored mdl-js-button mdl-button--fab mdl-js-ripple-effect"><i class="material-icons">event</i>
-                </button>
-              </a>
               <h3 class="lora">Upcoming Events</h3>
               <div id="myEvent" class="event scene_element scene_element--fadeinup"></div>
               <a href="https://calendar.google.com/calendar/render?cid=40gskl3c1kh46nrbeg9p1gnlj0%40group.calendar.google.com"><div class="subscribe-image" style="display:inline-block;" title="Add to Google Calendar"><div class="logo-plus-button"><div class="logo-plus-button-plus-icon"></div><div class="logo-plus-button-lockup"><span class="logo-plus-button-lockup-text">Calendar</span></div></div></div></a>
             </div>
+            <button aria-expanded="false" tabindex="0" class="enventure-fab mdl-button mdl-button--colored mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-layout--drawer-button mdl-layout--small-screen-only" onclick="document.getElementById('primaryButton').click()"><i class="material-icons">event</i></button>
+          </div>
+        </div>
+        <div class="env-bg--fade">
+          <div class="mdl-grid fixed-width enventure-screen-section mdl-typography--text-center">
+            <a name="screens"></a>
+            <div class="mdl-cell--12-col">
+              <h2 class="mdl-typography--text-center"><enventure>mission.</enventure></h2>
+            </div>
+
+            <div class="mdl-cell--4-col mdl-cell--12-col-tablet">
+              <div class="promo">
+                <i class="material-icons">power</i>
+                <span class="mdl-typography--title-color-contrast">Power Houston</span>
+              </div>
+            </div>
+            <div class="mdl-cell--4-col mdl-cell--12-col-tablet">
+              <div class="promo">
+                <i class="material-icons">group_add</i>
+                <span class="mdl-typography--title-color-contrast">Retain Talent</span>
+              </div>
+            </div>
+            <div class="mdl-cell--4-col mdl-cell--12-col-tablet">
+              <div class="promo">
+                <i class="material-icons">healing</i>
+                <span class="mdl-typography--title-color-contrast">Improve Healthcare</span>
+              </div>
+            </div>
+            <div class="mdl-typography--headline-color-contrast">Enventure helps students and medical entrepreneurs succeed by connecting them to the city's resources and by providing free classes, networking events, and accelerator programs.</div>
           </div>
         </div>
 
-        <div class="mdl-grid fixed-width enventure-screen-section mdl-typography--text-center">
-          <a name="screens"></a>
-                  <h2 class="mdl-typography--text-center"><enventure>mission.</enventure></h2>
+        
 
-          <div class="mdl-typography--headline-color-contrast">Enventure helps students and medical entrepreneurs succeed by connecting them to the city's resources and by providing free classes, networking events, and accelerator programs.</div>
-        </div>
+        <div class="mdl-color--grey-100">
+          <div class="enventure-more-section">
+            <div class="enventure-section-title mdl-typography--display-1"><enventure>enventure.</enventure> <span class="mdl-typography--display-1-color-contrast">Programming</span></div>
+            <div class="enventure-card-container mdl-grid">
+              <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__media mgmt"></div>
+                <div class="mdl-card__title">
+                   <h4 class="mdl-card__title-text">ENTR 101</h4>
+                </div>
+                <div class="mdl-card__supporting-text">
+                  <span class="mdl-typography--font-light mdl-typography--subhead">The class that started it all. Jack Gill, Silicon Valley VC, introduces medical entrepreneurship with top notch entrepreneurs from Houston's past, present, and future.</span>
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                   <a class="enventure-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
+                     Learn More
+                     <i class="material-icons">chevron_right</i>
+                   </a>
+                </div>
+              </div>
 
-        <div class="mdl-grid fixed-width enventure-screen-section mdl-typography--text-center">
+              <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__media foundations"></div>
+                <div class="mdl-card__title">
+                   <h4 class="mdl-card__title-text">Foundations</h4>
+                </div>
+                <div class="mdl-card__supporting-text">
+                  <span class="mdl-typography--font-light mdl-typography--subhead">Practical skills for budding entrepreneurs. Foundations is designed to provide new entrepreneurs with an understanding of the innovation process, teaching them how to evaluate life science technology as the basis for starting a new business.</span>
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                   <a class="enventure-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
+                     Register
+                     <i class="material-icons">chevron_right</i>
+                   </a>
+                </div>
+              </div>
 
-          <div class="mdl-cell--4-col mdl-cell--12-col-tablet">
-            <div class="promo">
-              <i class="material-icons">power</i>
-              <span class="mdl-typography--title-color-contrast">Power Houston</span>
-            </div>
-          </div>
-          <div class="mdl-cell--4-col mdl-cell--12-col-tablet">
-            <div class="promo">
-              <i class="material-icons">group_add</i>
-              <span class="mdl-typography--title-color-contrast">Retain Talent</span>
-            </div>
-          </div>
-          <div class="mdl-cell--4-col mdl-cell--12-col-tablet">
-            <div class="promo">
-              <i class="material-icons">healing</i>
-              <span class="mdl-typography--title-color-contrast">Improve Healthcare</span>
-            </div>
-          </div>
-        </div>
+              <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__media bioventures"></div>
+                <div class="mdl-card__title">
+                   <h4 class="mdl-card__title-text">BioVentures</h4>
+                </div>
+                <div class="mdl-card__supporting-text">
+                  <span class="mdl-typography--font-light mdl-typography--subhead">BioVentures gives students practical experience commercializing their ideas or existing IP. Local life science mentors coach each team to develop a business plan for our investor pitch day.</span>
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                   <a class="enventure-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
+                     Apply
+                     <i class="material-icons">chevron_right</i>
+                   </a>
+                </div>
+              </div>
 
-        <div class="enventure-more-section">
-          <div class="enventure-section-title mdl-typography--display-1"><enventure>enventure.</enventure> <span class="mdl-typography--display-1-color-contrast">Programming</span></div>
-          <div class="enventure-card-container mdl-grid">
-            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-              <div class="mdl-card__media mgmt">
-                <!-- <img src="../images//more-from-1.png"> -->              
-              </div>
-              <div class="mdl-card__title">
-                 <h4 class="mdl-card__title-text">ENTR 101</h4>
-              </div>
-              <div class="mdl-card__supporting-text">
-                <span class="mdl-typography--font-light mdl-typography--subhead">The class that started it all. Jack Gill, Silicon Valley VC, introduces medical entrepreneurship with top notch entrepreneurs from Houston's past, present, and future.</span>
-              </div>
-              <div class="mdl-card__actions">
-                 <a class="enventure-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
-                   Learn More
-                   <i class="material-icons">chevron_right</i>
-                 </a>
-              </div>
-            </div>
-
-            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-              <div class="mdl-card__media foundations">
-                <!-- <img src="../../images//possibilities-sm.jpg"> -->
-              </div>
-              <div class="mdl-card__title">
-                 <h4 class="mdl-card__title-text">Foundations</h4>
-              </div>
-              <div class="mdl-card__supporting-text">
-                <span class="mdl-typography--font-light mdl-typography--subhead">Practical skills for budding entrepreneurs. Foundations is designed to provide new entrepreneurs with an understanding of the innovation process, teaching them how to evaluate life science technology as the basis for starting a new business.</span>
-              </div>
-              <div class="mdl-card__actions">
-                 <a class="enventure-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
-                   Register
-                   <i class="material-icons">chevron_right</i>
-                 </a>
-              </div>
-            </div>
-
-            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-              <div class="mdl-card__media bioventures">
-                <!-- <img src="../images//more-from-2.png"> -->
-              </div>
-              <div class="mdl-card__title">
-                 <h4 class="mdl-card__title-text">BioVentures</h4>
-              </div>
-              <div class="mdl-card__supporting-text">
-                <span class="mdl-typography--font-light mdl-typography--subhead">BioVentures gives students practical experience commercializing their ideas or existing IP. Local life science mentors coach each team to develop a business plan for our investor pitch day.</span>
-              </div>
-              <div class="mdl-card__actions">
-                 <a class="enventure-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
-                   Apply
-                   <i class="material-icons">chevron_right</i>
-                 </a>
-              </div>
-            </div>
-
-            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-              <div class="mdl-card__media byob">
-                <!-- <img src="../images//more-from-3.png"> -->
-              </div>
-              <div class="mdl-card__title">
-                 <h4 class="mdl-card__title-text">BYOBrainstorm</h4>
-              </div>
-              <div class="mdl-card__supporting-text">
-                <span class="mdl-typography--font-light mdl-typography--subhead">BYOBrainstorms are mini-hack events centered around medical topics that need fresh and creative solutions. Get to know your medical startup community while coming up with new ideas and networking.</span>
-              </div>
-              <div class="mdl-card__actions">
-                 <a class="enventure-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
-                   RSVP
-                   <i class="material-icons">chevron_right</i>
-                 </a>
+              <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__media byob"></div>
+                <div class="mdl-card__title">
+                   <h4 class="mdl-card__title-text">BYOBrainstorm</h4>
+                </div>
+                <div class="mdl-card__supporting-text">
+                  <span class="mdl-typography--font-light mdl-typography--subhead">BYOBrainstorms are mini-hack events centered around medical topics that need fresh and creative solutions. Get to know your medical startup community while coming up with new ideas and networking.</span>
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                   <a class="enventure-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
+                     RSVP
+                     <i class="material-icons">chevron_right</i>
+                   </a>
+                </div>
               </div>
             </div>
           </div>
@@ -405,7 +397,7 @@
               <div class="sign-up__form-wrapper">
                 <form action="http://enventure.us5.list-manage.com/subscribe/post?u=ef4088dbaa790eaf363197ef4&id=7335f3f183" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="sign-up__form formbox" data-analytics-event-label="email-submission-footer" data-reset-form-on-success="true" target="_blank">
                   <div class="formbox__success">
-                    <img class="email-success" src="../images//emaildone.svg">
+                    <img class="email-success" src="./images//emaildone.svg">
                     Thanks! We'll keep in touch.
                   </div>
                   <ul class="formbox__errors"></ul>
@@ -422,6 +414,66 @@
                     <span class="sign-up__subtitle mdl-checkbox__label">I accept the <a href="/terms/" target="_blank">Terms and Conditions</a> and acknowledge that my information will be used in accordance with Google's <a href="http://www.google.com/policies/privacy/" target="_blank">Privacy Policy</a>.</span>
                   <span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple is-animating" style="width: 103.823px; height: 103.823px; transform: translate(-50%, -50%) translate(18px, 18px);"></span></span></label> -->
                 </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="env-section--test">
+          <div class="mdl-grid fixed-width">
+            <div class="mdl-cell mdl-cell--8-col">
+              <h3>Since 2012, we've helped lorem ipsum dolor sit amet.</h3>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <ul class="mdl-list">
+                <li class="mdl-list__item">
+                  <span class="mdl-list__item-primary-content">
+                    <div class="material-icons mdl-list__item-icon mdl-badge mdl-badge--overlap" data-badge="999">account_box</div>
+                    Members
+                  </span>
+                </li>
+                <li class="mdl-list__item">
+                  <span class="mdl-list__item-primary-content">
+                    <div class="material-icons mdl-list__item-icon mdl-badge mdl-badge--overlap" data-badge="125">account_box</div>
+                    Events
+                  </span>
+                </li>
+                <li class="mdl-list__item">
+                  <span class="mdl-list__item-primary-content">
+                    <div class="material-icons mdl-list__item-icon mdl-badge mdl-badge--overlap" data-badge="4">account_box</div>
+                    Startups
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="env-section--test__cards">
+            <div class="mdl-grid fixed-width">
+              <div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--16dp">
+                <div class="mdl-card__media"></div>
+                <div class="mdl-card__supporting-text">
+                  <blockquote>Enventure did something to help us.</blockquote>
+                  <cite>Bala Raja, Founder<br><a href="">BioVentures</a> Class of 2014</cite>  
+                </div>
+              </div>
+
+              <div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--16dp">
+                <div class="mdl-card__media"></div>
+                <div class="mdl-card__supporting-text">
+                  <blockquote>Enventure did something to help us.</blockquote>
+                  <cite>Bala Raja, Founder<br><a href="">BioVentures</a> Class of 2014</cite>  
+                </div>
+              </div>
+
+              <div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--16dp">
+                <div class="mdl-card__media"></div>
+                <!-- <div class="mdl-card__title">
+                   <h4 class="mdl-card__title-text">Luminostics</h4>
+                </div> -->
+                <div class="mdl-card__supporting-text">
+                  <!-- <span class="mdl-typography--font-light mdl-typography--subhead"></span> -->              <blockquote>Enventure did something to help us.</blockquote>
+                  <cite>Bala Raja, Founder<br><a href="">BioVentures</a> Class of 2014</cite>                  
+                </div>
               </div>
             </div>
           </div>
@@ -460,29 +512,6 @@
 
           <div class="mdl-mega-footer--middle-section">
             <p class="mdl-typography--font-light">Enventure is a not for profit organization run by volunteers like you.</p>
-          </div>
-
-          <div class="mdl-mega-footer--bottom-section">
-            <a class="enventure-link enventure-link-menu mdl-typography--font-light" id="version-dropdown">
-              Programming
-              <i class="material-icons">arrow_drop_up</i>
-            </a>
-            <ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="version-dropdown">
-              <li class="mdl-menu__item"><a href="https://sites.google.com/site/mgmt633/">ENTR 101</a></li>
-              <li class="mdl-menu__item"><a href="/foundations/index.html">Foundations</a></li>
-              <li class="mdl-menu__item"><a href="/bioventures/index.html">BioVentures</a></li>
-              <!-- <li class="mdl-menu__item"><a href="">BYOBrainstorm</a></li> -->
-            </ul>
-            <a class="enventure-link enventure-link-menu mdl-typography--font-light" id="developers-dropdown">
-              Community
-              <i class="material-icons">arrow_drop_up</i>
-            </a>
-            <ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="developers-dropdown">
-              <li class="mdl-menu__item"><a href="http://www.biohouston.org">BioHouston</a></li>
-              <li class="mdl-menu__item"><a href="http://www.tmc.edu/innovation/innovation-programs/tmcx/">TMCx</a></li>
-<!-- </a>              <li class="mdl-menu__item"><a href="">Health 2.0</a></li> -->
-            </ul>
-            <a class="enventure-link mdl-typography--font-light" href="/about/index.html">About Us</a>
           </div>
 
         </footer>
