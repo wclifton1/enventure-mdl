@@ -1,3 +1,11 @@
+// TODO
+// env-section--test negative margins
+// sass source mdl
+// optimize css
+// optimize images
+// fix calendar script for all day events
+// BEM-ize
+
 /* overrides */
 h1, h2, h3, h4, h5, h6, .mdl-typography--display-1, .mdl-typography--display-1-color-contrast, .mdl-typography--display-2, .mdl-typography--display-2-color-contrast, .mdl-typography--display-3, .mdl-typography--display-3-color-contrast, .mdl-typography--display-4, .mdl-typography--display-4-color-contrast, .mdl-typography--headline, .mdl-typography--headline-color-contrast, .mdl-typography--subhead, .mdl-typography--subhead-color-contrast, .mdl-typography--title, .mdl-typography--title-color-contrast, .mdl-typography--body-1, .mdl-typography--body-2, .mdl-typography--body-2-color-contrast-color-contrast, .mdl-typography--body-2-force-preferred-font, .mdl-typography--caption, .mdl-typography--caption-color-contrast, .mdl-typography--menu, .mdl-button, .mdl-layout__title, .mdl-chip, .mdl-layout__title, .mdl-layout-title, blockquote, .mdl-badge[data-badge]:after, .mdl-list__item {
   font-family: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -68,6 +76,7 @@ lora, .lora {
 
 .fixed-width {
   max-width: 1200px;
+  margin:auto;
 }
 
 cite{
@@ -281,7 +290,7 @@ a img{
   height: 800px;
   //width: auto;
   background-color: #f3f3f3;
-  background: url('../images/houston.svg') center center no-repeat;
+  background: url('../images/houstonWC.svg') center center no-repeat;
   background-size: cover;
 
   // $gradient-angle: 0deg;
@@ -353,8 +362,10 @@ a img{
   color:white;
   font-weight: 700;
   text-shadow: 0 2px 2px rgba(0,0,0,.14),0 3px 1px rgba(0,0,0,.2),0 1px 5px rgba(0,0,0,.12);
+  // text-shadow: 0 16px 24px rgba(0,0,0,.14),0 6px 30px rgba(0,0,0,.12),0 8px 10px rgba(0,0,0,.2);
   @media (max-width: 1024px) {
     font-size: 48px;
+    text-align: center;
     // margin: 0 16px;
     // padding-top: 8px;
   }
@@ -483,6 +494,9 @@ a img{
   background: url('../images/sky.jpg') center center no-repeat;
   background-size: cover;
   height: 800px;
+  @media screen and (max-width: 480px){
+    height:600px;
+  }
 }
 
 .enventure-wear-band {
@@ -541,7 +555,7 @@ a img{
 
 .enventure-customized-section {
   text-align: center;
-  background: url('../images/grass.svg') center bottom no-repeat;
+  background: url('../images/grassWC.svg') center bottom no-repeat;
   background-size: 100%;
   height: 450px;
   background-color:color(light-blue,lighten-5);
@@ -560,17 +574,13 @@ a img{
   }
 
 .enventure-customized-section-image {
-  background: url('../images/grass.svg') center top no-repeat;
+  background: url('../images/grassWC.svg') center top no-repeat;
   background-size: cover;
   height: 400px;
 }
 
 .enventure-more-section {
-  padding: 80px 0;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  background:$env-color--bg;
+  padding-bottom:40px;
 }
   .enventure-more-section .enventure-section-title {
     margin-left: 16px;
@@ -598,7 +608,6 @@ a img{
     margin-right: 16px;
     border-bottom:1px solid rgba(0, 0, 0, 0.1);
     border-top: 1px solid rgba(0, 0, 0, 0.1);
-    text-transform: uppercase;
   }
 
   .enventure-card-container .mdl-card__title-text {
@@ -1353,4 +1362,67 @@ $avatars: (bryan, gray, will, amy, trip, sarah, joanna);
       }
     }
   }
+
+  .mdl-list__item-icon, .mdl-list__item-icon.material-icons {
+    height: 48px;
+    width: 48px;
+    font-size: 48px;
+  }
+  .mdl-badge[data-badge]:after{
+    top:-7px;
+    width: 26px;
+    height: 26px;
+  }
+
+  .mdl-badge.mdl-badge--overlap:after {
+    right: -7px;
+  }
+}
+
+.env-section--programs{
+  height:500px;
+  background-color:$env-color;
+  position: relative;
+  top:250px;
+  color:white;
+  .env-shape{
+    position:relative;
+    top:-45px;
+    width:80px;
+    height:80px;
+    border:solid white 5px;
+    i{
+      color:white;
+      width:72px;
+      height:72px;
+      font-size:72px;
+      margin:4px;
+
+    }
+  }
+}
+.env-shape{
+  &::hover{
+    // @extend .mdl-shadow--3dp;
+  }
+  &--yellow{
+    background-color:unquote("rgb(#{$palette-yellow-400})");
+  }
+  &--pink{
+    background-color:unquote("rgb(#{$palette-pink-400})");
+  }
+  &--light-green{
+    background-color:unquote("rgb(#{$palette-light-green-400})");
+  }
+  &--circle{
+    border-radius:50%;
+  }
+}
+.env-layout--50{
+  width:50%;
+  margin:auto;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-around;
 }

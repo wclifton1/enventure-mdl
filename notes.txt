@@ -15,6 +15,8 @@ section-shadow
 no spacing
 	padding 0
 	margin l105 r105 t0 b48
+	cell
+		margin 0
 
 mdl-cell--hide-desktop 840 and up
 mdl-cell--hide-tablet 840 and down to phone
