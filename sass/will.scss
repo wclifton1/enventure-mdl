@@ -5,10 +5,19 @@
 // optimize images
 // fix calendar script for all day events
 // BEM-ize
+//replace fonts with body {font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
 
 /* overrides */
 h1, h2, h3, h4, h5, h6, .mdl-typography--display-1, .mdl-typography--display-1-color-contrast, .mdl-typography--display-2, .mdl-typography--display-2-color-contrast, .mdl-typography--display-3, .mdl-typography--display-3-color-contrast, .mdl-typography--display-4, .mdl-typography--display-4-color-contrast, .mdl-typography--headline, .mdl-typography--headline-color-contrast, .mdl-typography--subhead, .mdl-typography--subhead-color-contrast, .mdl-typography--title, .mdl-typography--title-color-contrast, .mdl-typography--body-1, .mdl-typography--body-2, .mdl-typography--body-2-color-contrast-color-contrast, .mdl-typography--body-2-force-preferred-font, .mdl-typography--caption, .mdl-typography--caption-color-contrast, .mdl-typography--menu, .mdl-button, .mdl-layout__title, .mdl-chip, .mdl-layout__title, .mdl-layout-title, blockquote, .mdl-badge[data-badge]:after, .mdl-list__item {
   font-family: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6, .mdl-typography--title, .mdl-typography--title-color-contrast, .mdl-typography--headline, .mdl-typography--headline-color-contrast {
+  font-weight: 700;
+}
+
+.mdl-list__item{
+  font-weight: 300;
 }
 
 .mdl-typography--display-1-color-contrast{
@@ -16,14 +25,10 @@ h1, h2, h3, h4, h5, h6, .mdl-typography--display-1, .mdl-typography--display-1-c
   opacity:1;
 }
 
-.mdl-typography--headline{
-  font-weight: 700;
-}
-
-.mdl-typography--headline-color-contrast{
-  color: $env-color--b3;
+.env-typography--mission{
+  color: $env-color--b1;
   opacity: 1;
-  font-weight: 700;
+  font-weight: 300;
 }
 
 body {
@@ -59,7 +64,7 @@ lora, .lora {
 .enventure, .logo-font, enventure{
   @extend .lora;
   color: $env-color;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .env-color--light{
@@ -90,6 +95,10 @@ cite{
     left: -.5em;
     content: '-';
   }
+}
+
+.mdl-grid{
+  justify-content: space-around;
 }
 
 // .mdl-card__actions {
@@ -293,6 +302,10 @@ a img{
   background: url('../images/houstonWC.svg') center center no-repeat;
   background-size: cover;
 
+  .mdl-typography--display-4 {
+    @extend .enventure-sub-slogan;
+  }
+
   // $gradient-angle: 0deg;
   // $hero-background-top: rgba(white, 0.9); 
   // $hero-background-bottom: rgba($env-color, .25);
@@ -309,28 +322,29 @@ a img{
   @extend .section;
   flex-direction: column;
   padding: 20px;
-  @media only screen and (max-width: 1024px){
+  @media only screen and (max-width: 839px){
     padding: 0 8px;
   }
 }
 
 .enventure-top-section .mdl-grid .section__block {
   margin: 0;
-  @media only screen and (max-width: 1024px){
-    width: 100%;
-  }
   &.section__block--left {
     padding: 16px;
     height: 350px;
-    @media only screen and (min-width: 1025px){
+    @media only screen and (min-width: 840px){
       width: 60%;
       height: 800px;
-      padding: 50px;
+      padding: 50px 32px;
+    }
+    @media only screen and (min-width: 1024px){
+      padding:50px;
     }
   }
   &.section__block--right {
-    background-color: rgba(color("light-blue","lighten-5"),.8);
-    padding: 50px;
+    background: rgba(color("light-blue","lighten-5"),.8);
+    background: linear-gradient(rgba(white,.75), rgba(white,.2), rgba(white,.2));
+    padding: 50px 16px;
     width: 40%;
     margin:0;
     height: 800px;
@@ -338,6 +352,9 @@ a img{
     &::-webkit-scrollbar { 
     /* This is the magic bit */
     display: none;
+    }
+    @media (min-width: 1024px) {
+      padding:50px;
     }
   }
 }
@@ -347,8 +364,9 @@ a img{
   //font-size: 60px;
   font-weight: 300;
   color:white;
-  @media (max-width: 1024px) {
+  @media (max-width: 839px) {
     font-size: 26px;
+    text-align: center;
     // margin: 0 16px;
     // padding-top: 24px;
     // padding-bottom: 12px;
@@ -363,7 +381,8 @@ a img{
   font-weight: 700;
   text-shadow: 0 2px 2px rgba(0,0,0,.14),0 3px 1px rgba(0,0,0,.2),0 1px 5px rgba(0,0,0,.12);
   // text-shadow: 0 16px 24px rgba(0,0,0,.14),0 6px 30px rgba(0,0,0,.12),0 8px 10px rgba(0,0,0,.2);
-  @media (max-width: 1024px) {
+  font-size:90px;
+  @media (max-width: 839px) {
     font-size: 48px;
     text-align: center;
     // margin: 0 16px;
@@ -371,8 +390,14 @@ a img{
   }
 }
 
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 839px){
   .hide-small {
+      display: none!important;
+  }
+}
+
+@media only screen and (min-width: 839px){
+  .hide-large {
       display: none!important;
   }
 }
@@ -395,12 +420,9 @@ a img{
   background-image:linear-gradient($gradient-angle, $hero-background-top, $hero-background-top, $hero-background-top, $hero-background-top, $hero-background-bottom);
 }
 
-.enventure-screen-section {
+.env-section--mission {
   position: relative;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  padding-left:10%;
-  padding-right:10%;
+  padding: 60px 0;
 }
 
 .enventure-screens {
@@ -493,8 +515,8 @@ a img{
   position: relative;
   background: url('../images/sky.jpg') center center no-repeat;
   background-size: cover;
-  height: 800px;
-  @media screen and (max-width: 480px){
+  height: 600px;
+  @media screen and (max-width: 479px){
     height:600px;
   }
 }
@@ -504,19 +526,30 @@ a img{
   bottom: 0;
   width: 100%;
   text-align: center;
-  $band-color:color("blue-grey","darken-3");
-  $hero-background-top: rgba($band-color, .2); 
-  $hero-background-bottom: rgba($band-color, .7);
-  $gradient-angle: 0deg;
-  background-image:linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top);
+  // $band-color:color("blue-grey","darken-3");
+  // $hero-background-topest: rgba($band-color, 0);
+  // $hero-background-top: rgba($band-color, .2); 
+  // $hero-background-bottom: rgba($band-color, .7);
+  // $gradient-angle: 0deg;
+  // background-image:linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top, $hero-background-top,$hero-background-topest);
 }
 
 .enventure-wear-band-text {
-  max-width: 800px;
-  margin-left: 25%;
+  // max-width: 800px;
+  margin-left: 77%;
   padding: 24px;
   text-align: left;
   color: white;
+  background:rgba(0,0,0,.4);
+
+  // @media (max-width: 1299px) {
+  //   margin-left: 25%;
+  // }
+
+  @media (max-width: 1299px) {
+    margin-left:0%;
+    padding: 16px;
+  }
 }
 
   .enventure-wear-band-text p {
@@ -579,13 +612,9 @@ a img{
   height: 400px;
 }
 
-.enventure-more-section {
-  padding-bottom:40px;
+.env-section--programs-cards {
+  padding-bottom: 48px;
 }
-  .enventure-more-section .enventure-section-title {
-    margin-left: 16px;
-    padding-bottom: 24px;
-  }
 
 .enventure-card-container {
 }
@@ -680,7 +709,7 @@ a img{
 
 
 /**** Mobile layout ****/
-@media (max-width: 1024px) {
+@media (max-width: 839px) {
   .enventure-navigation-container {
     display: none;
   }
@@ -730,10 +759,7 @@ a img{
     height: 12px;
   }
 
-  .enventure-wear-band-text {
-    margin-left: 0;
-    padding: 16px;
-  }
+
 
   .enventure-footer .mdl-mega-footer--bottom-section {
     display: none;
@@ -1012,10 +1038,10 @@ a img{
 }
 
 .mdl-layout__drawer {
-  width:75%;
+  width:90%;
   transform: translateX(-100%);
-  @media screen and (max-width: 480px){
-    width:95%;
+  @media screen and (min-width: 480px){
+    width:75%;
   }
 }
 
@@ -1037,7 +1063,7 @@ a img{
     color: #757575;
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 839px){
   .enventure-drawer--calendar {
     padding: 16px;
   }
@@ -1055,7 +1081,7 @@ a img{
 .promo {
   padding-bottom:40px;
   i {
-    color: $env-color--light;
+    color: $env-color;
     font-size: 7rem;
     display: block;
   }
@@ -1070,7 +1096,7 @@ a img{
 
 .env-course .mdl-layout__header-row {
   padding-left: 40px;
-  @media screen and (max-width: 1024px){
+  @media screen and (max-width: 839px){
     padding-left: 16px;
   }
 }
@@ -1285,11 +1311,17 @@ $avatars: (bryan, gray, will, amy, trip, sarah, joanna);
   }
 }
 
-.env-layout__title, .env-layout-title {
+.env-layout__title, .env-layout--title {
   font-size: 25px;
   color:$env-color--b3;
   enventure{
     font-size: 32px;
+  }
+}
+
+.enventure-drawer{
+  .env-layout__title enventure, .env-layout--title enventure{
+    color:white;
   }
 }
 
@@ -1322,47 +1354,21 @@ $avatars: (bryan, gray, will, amy, trip, sarah, joanna);
 }
 
 .env-section--test{
+  padding-bottom:75px;
   background-color:$env-color;
   color:white;
   h3{
-    font-weight: 300;
+    font-weight: 200;
     margin-bottom: 48px;
   }
   .mdl-list__item-icon, .mdl-list__item-icon.material-icons {
-    // height: 24px;
-    // width: 24px;
-    // font-size: 24px;
+    font-weight: 300;
     color: white;
   }
   .mdl-list__item{
     color:white;
     font-size:2em;
   }
-  &__cards{
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    $hero-background-top: rgba(color(blue-grey,darken-3), .5); 
-    $hero-background-bottom: rgba(color(blue-grey,darken-3), .4);
-    $gradient-angle: 0deg;
-    $hero-image: '../images/byob-sm.jpg';
-    @include background-image(linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), url($hero-image));
-    margin-bottom: -50px;
-    @media (max-width:839px){
-      background-image:none;
-    }
-    .mdl-card{
-      .mdl-card__media{
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 75%;
-        height: 150px;
-        background-color:#f5f5f5;
-        background-image:url("../images/mm-sm.png");
-      }
-    }
-  }
-
   .mdl-list__item-icon, .mdl-list__item-icon.material-icons {
     height: 48px;
     width: 48px;
@@ -1373,18 +1379,144 @@ $avatars: (bryan, gray, will, amy, trip, sarah, joanna);
     width: 26px;
     height: 26px;
   }
-
   .mdl-badge.mdl-badge--overlap:after {
     right: -7px;
   }
 }
 
+.env-section--test2{
+  background-color:$env-color;
+  color:white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  $hero-background-top: rgba(color(blue-grey,darken-3), .2); 
+  $hero-background-bottom: rgba(color(blue-grey,darken-3), .1);
+  $gradient-angle: 0deg;
+  $hero-image: '../images/byob-sm.jpg';
+  @include background-image(linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), url($hero-image));
+  @media (max-width:839px){
+    background: $env-color;
+  }
+  
+  &__cards{
+    .mdl-card{
+      overflow: visible;
+    }
+    margin-bottom: -40px;
+    .featured-quote{
+      &:first-child{
+        margin-top: -100px;
+      }
+      background-color: rgba(color("light-blue", "darken-4"),.7);
+      min-height: 50px;
+      flex-direction: row;
+      align-items: center;
+      @media (max-width:839px){
+        flex-direction: column;
+      }
+      .image {
+        min-width: initial;
+        width: 30%;
+        @media (max-width:839px){
+          height: initial;
+          width: 50%;
+        }
+        img {
+          border-radius: 50%;
+          width: 100%;
+        }
+      }
+      .attributor {
+        padding: 25px 0;
+        width: 35%;
+        @media (max-width:839px){
+          padding: 0 25px;
+          width: calc(100% - 50px);
+        }
+        .name {
+          margin-top: 0;
+        }
+        .title {
+          margin: 0;
+          font-size: 16px;
+        }
+      }
+      .content {
+        height: initial;
+        padding: 25px;
+        blockquote{
+          color: white;
+          font-size: 18px;
+          @media screen and (max-width: 479px){
+            margin: 18px;
+          }
+        }
+        cite{
+          // color: $env-color--b2;
+          color:$env-color--w2;
+          a{
+            color:white;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .featured-quote--small{
+      background-color: rgba(color("light-blue", "darken-4"),.7);
+      color:white;
+      flex-direction: column;
+      .image {
+        height: initial;
+        width: 50%;
+        // background-color: #f5f5f5;
+      }
+      .attributor {
+        padding: 0 25px;
+        width: calc(100% - 50px);
+      }
+      .content {
+        blockquote{
+          // color: $env-color--b2;
+          // font-size: 18px;
+          margin: 8px;
+        }
+        
+      }
+    }
+
+    .env-card--test{
+      .mdl-card__media{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 75%;
+        height: 150px;
+        background-color:#f5f5f5;
+        &.mm{
+          background-image:url("../images/mm-sm.png");
+        }
+        &.bala{
+          background-image:url("../images/lindsay.jpg");
+        }
+      }
+    }
+  }
+}
+
 .env-section--programs{
-  height:500px;
+  height:250px;
   background-color:$env-color;
   position: relative;
-  top:250px;
+  margin-top:190px;
   color:white;
+  h3{
+    font-weight: 700;
+    margin:12px 0;
+  }
+  .mdl-typography--subhead{
+    font-weight: 300;
+  }
   .env-shape{
     position:relative;
     top:-45px;
@@ -1400,29 +1532,90 @@ $avatars: (bryan, gray, will, amy, trip, sarah, joanna);
 
     }
   }
+  .env-section__title{
+    position:absolute;
+    top: -190px;
+    width:100%;
+  }
 }
 .env-shape{
   &::hover{
     // @extend .mdl-shadow--3dp;
   }
   &--yellow{
-    background-color:unquote("rgb(#{$palette-yellow-400})");
+    background-color:unquote("rgb(#{$palette-yellow-A400})");
   }
   &--pink{
-    background-color:unquote("rgb(#{$palette-pink-400})");
+    background-color:unquote("rgb(#{$palette-pink-A200})");
   }
-  &--light-green{
-    background-color:unquote("rgb(#{$palette-light-green-400})");
+  &--teal{
+    background-color:unquote("rgb(#{$palette-teal-A400})");
   }
   &--circle{
     border-radius:50%;
   }
 }
-.env-layout--50{
-  width:50%;
+.env-layout--60{
+  width:60%;
   margin:auto;
   display: flex;
   box-sizing: border-box;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-around;
+  @media only screen and (max-width: 839px){
+    width: 95%;
+  }
+}
+
+
+.mdl-tooltip{
+  background:white;
+  color:$env-color--b1;
+  font-size: 12px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+  padding: inherit, 8px;
+}
+
+.mdl-tooltip .arrow{
+  width: 70px;
+  height: 16px;
+  overflow: hidden;
+  position: absolute;
+  left: 33%;
+  margin-left: -35px;
+  bottom: -16px;
+}
+
+.mdl-tooltip .arrow:after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: -20px;
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  transform: rotate(45deg);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+
+}
+
+.social-btn__facebook {
+    background-image: url(../images/fb.png);
+    background-size: contain;
+    cursor:pointer;
+}
+
+.social-btn__twitter {
+    background-image: url(../images/twitter.svg);
+    background-size: contain;
+    cursor:pointer;
+}
+
+.social-btn__eventbrite {
+    background-image: url(https://www.gstatic.com/images/icons/material/system/2x/post_twitter_black_24dp.png);
+    cursor:pointer;
+}
+
+.mdl-mega-footer--social-btn, .mdl-mega-footer__social-btn {
+  background-color:transparent;
 }

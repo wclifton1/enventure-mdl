@@ -1,3 +1,15 @@
+http://stackoverflow.com/questions/32035052/material-design-lite-and-jquery-smooth-scroll-not-working
+
+The reason you are not seeing anything happen is because you are scrolling on the body node. MDL handles the overflow within the mdl-layout__content, this is the element you should scroll on.
+
+So this -
+
+$("html, body").animate({scrollTop:position}, speed, "swing");
+Now becomes-
+
+$(".mdl-layout__content").animate({scrollTop:position}, speed, "swing");
+Heres a codepen example - http://codepen.io/mdlhut/pen/BNeoVa
+
 standard
 section
 	padding 8
@@ -18,8 +30,10 @@ no spacing
 	cell
 		margin 0
 
+phone 480
 mdl-cell--hide-desktop 840 and up
 mdl-cell--hide-tablet 840 and down to phone
+
 mdl-layout--small-screen-only
 mdl-layout--large-screen-only
 	toggles js is-small-screen @1024
@@ -274,3 +288,4 @@ typo-icon() {
   word-wrap: normal;
   font-feature-settings: 'liga';
 }
+

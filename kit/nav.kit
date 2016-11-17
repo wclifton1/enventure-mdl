@@ -3,7 +3,7 @@
       <header class="enventure-header mdl-layout__header mdl-layout__header--waterfall">
         <div id="primaryButton" aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button mdl-layout--small-screen-only"><i class="material-icons">menu</i></div>
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title env-layout-title">
+          <span class="mdl-layout-title env-layout--title">
             <enventure>enventure.</enventure>2016
           </span>
           <!-- Add spacer, to align navigation to the right in desktop -->
@@ -19,11 +19,12 @@
           <!-- Navigation -->
           <div class="enventure-navigation-container">
             <nav class="enventure-navigation mdl-navigation">
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/about/index.html">About</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="about.html">About</a>
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="https://sites.google.com/site/mgmt633/">ENTR 101</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/foundations/index.html">Foundations</a>
-              <!-- <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/bioventures/index.html">BioVentures</a> -->
-              <!-- <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">BYOBrainstorm</a> -->
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="foundations.html">Foundations</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="http://www.eventbrite.com/o/enventure-7960884822">BYOBrainstorm</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="bioventures.html">BioVentures</a>
+              
             </nav>
           </div>
           <!-- <span class="enventure-mobile-title mdl-layout-title">
@@ -43,18 +44,18 @@
       </header>
 
       <div class="enventure-drawer mdl-layout__drawer mdl-layout--small-screen-only">
-        <span class="mdl-layout-title">
-          <span><lora>enventure.</lora><lato-sm>2016</lato-sm></span>
-        </span>
+        <div class="mdl-layout-title env-layout--title">
+            <span><enventure>enventure.</enventure>2016</span>
+        </div>
         <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href=""><i class="material-icons mdl-list__item-icon">event</i> Calendar</a>
+          <a class="mdl-navigation__link" href="https://calendar.google.com/calendar/render?cid=40gskl3c1kh46nrbeg9p1gnlj0%40group.calendar.google.com"><i class="material-icons mdl-list__item-icon">event</i> Calendar</a>
           <a class="mdl-navigation__link" href="https://sites.google.com/site/mgmt633/"><i class="material-icons mdl-list__item-icon">school</i> ENTR 101</a>
-          <a class="mdl-navigation__link" href="/foundations/index.html"><i class="material-icons mdl-list__item-icon">account_balance</i> Foundations</a>
-          <!-- <a class="mdl-navigation__link" href="/bioventures/index.html"><i class="material-icons mdl-list__item-icon">spa</i> BioVentures</a> -->
+          <a class="mdl-navigation__link" href="foundations.html"><i class="material-icons mdl-list__item-icon">account_balance</i> Foundations</a>
+          <a class="mdl-navigation__link" href="bioventures.html"><i class="material-icons mdl-list__item-icon">spa</i> BioVentures</a>
           <!-- <a class="mdl-navigation__link" href=""><i class="material-icons">lightbulb_outline</i> BYOBrainstorm</a> -->
           <div class="enventure-drawer-separator"></div>
           <div class="enventure-drawer--calendar">
-            <h3 class="lora">Upcoming Events</h3>
+            <h3>Upcoming Events</h3>
             <div id="myEvent2" class="event"></div>
             <a href="https://calendar.google.com/calendar/render?cid=40gskl3c1kh46nrbeg9p1gnlj0%40group.calendar.google.com"><div class="subscribe-image" style="display:inline-block;" title="Add to Google Calendar"><div class="logo-plus-button"><div class="logo-plus-button-plus-icon"></div><div class="logo-plus-button-lockup"><span class="logo-plus-button-lockup-text">Calendar</span></div></div></div></a>
           </div>
