@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- <link href="reset.css" rel="stylesheet"/> -->
+        <!-- <link href="style.css" rel="stylesheet"/> -->
+
+        <!-- offline -->
+        <link rel="stylesheet" href="../offline/material-design-icons/iconfont/material-icons.css">
+        <link rel="stylesheet" href="../offline/material-design-lite/dist/material.light_blue-pink.min.css">
+        <link rel="stylesheet" href="../css/style.css">
+
+        <title>Enventure Community Map</title>
+    </head>
+    <body>
+
+      <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+        <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
+          <div class="mdl-layout__header-row mdl-layout__header-row--no-pad">
+            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" onclick="history.go(-1);""><i class="material-icons">arrow_back</i></button>
+            <div class="mdl-layout__title">&nbsp<enventure>enventure</enventure>&nbspCommunity Map</div>
+            
+            
+            <!-- <div class="mdl-layout-spacer"></div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+              <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+                <i class="material-icons">search</i>
+              </label>
+              <div class="mdl-textfield__expandable-holder">
+                <input class="mdl-textfield__input" type="text" id="search">
+                <label class="mdl-textfield__label" for="search">Enter your query...</label>
+              </div>
+              
+            </div> -->
+          </div>
+        </header>
+        <div class="demo-ribbon"></div>
+        <main class="demo-main mdl-layout__content">
+          
+          <form class="controls">
+            <h3>I want to...</h3>
+
+            <fieldset data-filter-group class="checkbox-group">
+              <div class="checkbox mdl-button mdl-js-button">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+                  <input type="checkbox" value=".green" id="checkbox-1" class="mdl-checkbox__input"/>
+                  <span class="mdl-checkbox__label">learn about med entrepreneurship</span>
+                </label>
+              </div>
+
+              <div class="checkbox mdl-button mdl-js-button">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+                  <input type="checkbox" value=".blue" id="checkbox-2" class="mdl-checkbox__input"/>
+                  <span class="mdl-checkbox__label">build a company</span>
+                </label>
+              </div>
+
+              <div class="checkbox mdl-button mdl-js-button">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-3">
+                  <input type="checkbox" value=".pink" id="checkbox-3" class="mdl-checkbox__input"/>
+                  <span class="mdl-checkbox__label">help my company succeed</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset data-filter-group class="checkbox-group">
+              <div class="checkbox">
+                <label class="checkbox-label">Square</label>
+                <input type="checkbox" value=".square"/>
+              </div>
+
+              <div class="checkbox">
+                <label class="checkbox-label">Circle</label>
+                <input type="checkbox" value=".circle"/>
+              </div>
+
+              <div class="checkbox">
+                <label class="checkbox-label">Triangle</label>
+                <input type="checkbox" value=".triangle"/>
+              </div>
+            </fieldset>
+
+            <fieldset data-filter-group class="checkbox-group">
+              <label class="checkbox-group-label">Size</label>
+
+              <div class="checkbox">
+                <label class="checkbox-label">Small</label>
+                <input type="checkbox" value=".small"/>
+              </div>
+
+              <div class="checkbox">
+                <label class="checkbox-label">Medium</label>
+                <input type="checkbox" value=".medium"/>
+              </div>
+
+              <div class="checkbox">
+                <label class="checkbox-label">Large</label>
+                <input type="checkbox" value=".large"/>
+              </div>
+            </fieldset>
+
+            <fieldset data-filter-group class="checkbox-group">
+              <div class="checkbox">
+                <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
+                  <input type="checkbox" value=".local" id="switch-1" class="mdl-switch__input"/>
+                  <span class="mdl-switch__label">Local</span>
+                </label>
+              </div>
+            </fieldset>
+<!-- 
+            <div class="control-group">
+              <button type="button" class="control control-sort" data-sort="default:asc">Asc</button>
+              <button type="button" class="control control-sort" data-sort="default:desc">Desc</button>
+            </div> -->
+            
+            <div class="mdl-layout-spacer"></div>
+
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+              <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+                <i class="material-icons">search</i>
+              </label>
+              <div class="mdl-textfield__expandable-holder" data-filter-group>
+                <input class="mdl-textfield__input" id="search" type="text" data-search-attribute="class" />
+                <label class="mdl-textfield__label" for="search">Enter your query...</label>
+              </div>
+            </div>
+
+
+
+            <!-- <button type="reset" class="control control-text">Reset</button> -->
+          </form>
+
+          <div class="container">
+              <div class="mix mix-5 green"><h1>intro explanation</h1><p>Lorem ipsum dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus eos, sunt nisi aut aperiam facilis alias voluptate minus consequatur quo labore quos veniam iure dolorum dolor voluptatem laudantium, dolorem omnis. Sed cupiditate architecto, saepe voluptatem n</p></div>
+              <div class="mix green small square"></div>
+              <div class="mix mix-5 green medium square"></div>
+              <div class="mix blue large triangle"></div>
+              <div class="mix mix-4 pink large circle"></div>
+              <div class="mix green small circle"></div>
+              <div class="mix blue medium triangle"></div>
+              <div class="mix mix-3 pink medium square"></div>
+              <div class="mix blue medium triangle"></div>
+              <div class="mix pink small circle"></div>
+              <div class="mix mix-2 green large triangle"></div>
+              <div class="mix blue small square"></div>
+              <div class="mix pink small square"></div>
+              <div class="mix mix-3 green large square"></div>
+              <div class="mix mix-2 blue large circle"></div>
+
+              <div class="gap"></div>
+              <div class="gap"></div>
+              <div class="gap"></div>
+              <div class="gap"></div>
+              <!-- <div class="gap"></div> -->
+          </div>
+
+          <footer class="demo-footer mdl-mini-footer">
+            <div class="mdl-mini-footer--left-section">
+              <ul class="mdl-mini-footer--link-list">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Privacy and Terms</a></li>
+                <li><a href="#">User Agreement</a></li>
+              </ul>
+            </div>
+          </footer>
+        </main>
+      </div>
+
+      <script src="../js/mixitup.min.js"></script>
+      <script src="../js/mixitup-multifilter.min.js"></script>
+
+      <script>
+        var containerEl = document.querySelector('.container');
+
+        var mixer = mixitup(containerEl, {
+            multifilter: {
+                enable: true
+            },
+            animation: {
+                effects: 'fade translateZ(-100px)',
+                animateResizeTargets: true
+            }
+
+        });
+      </script>
+      <script src="../offline/material-design-lite/material.min.js"></script>
+    </body>
+</html>
