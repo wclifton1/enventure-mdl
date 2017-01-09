@@ -1563,9 +1563,6 @@ a img {
   -webkit-transform: translateY(-3px) rotate(-135deg);
           transform: translateY(-3px) rotate(-135deg); }
 
-.mixitup-control-active {
-  background: #393939; }
-
 .control:first-of-type {
   border-radius: 3px 0 0 3px; }
 
@@ -1634,6 +1631,95 @@ a img {
   margin-bottom: 1rem;
   position: relative;
   color: transparent; }
+  .mix .mdl-card {
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    min-height: 360px; }
+    .mix .mdl-card h3 {
+      margin: 0 a;
+        margin-text-decoration: none; }
+    .mix .mdl-card .mdl-card__media a, .mix .mdl-card .mdl-card__title a {
+      color: inherit; }
+    .mix .mdl-card .mdl-card__supporting-text {
+      width: 100%;
+      padding: 16px;
+      min-height: 64px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .mix .mdl-card .mdl-card__supporting-text:not(:last-child) {
+      box-sizing: border-box;
+      min-height: 76px; }
+    .mix .mdl-card .mdl-card__media {
+      box-sizing: border-box;
+      background-size: cover;
+      padding: 24px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-flex: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: end;
+          -ms-flex-align: end;
+              align-items: flex-end;
+      cursor: pointer; }
+    .mix .mdl-card.shopping .mdl-card__media {
+      background-image: url(../images/will.jpg); }
+    .mix .mdl-card .mdl-card__supporting-text ~ .mdl-card__supporting-text {
+      border-top: 1px solid rgba(0, 0, 0, 0.1); }
+    .mix .mdl-card .meta > * {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+    .mix .mdl-card .meta {
+      box-sizing: border-box;
+      padding: 16px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      height: auto; }
+    .mix .mdl-card .meta > *:first-child {
+      margin-right: 16px; }
+    .mix .mdl-card .minilogo {
+      width: 44px;
+      height: 44px;
+      background-image: url(../images/default.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 50%;
+      border-radius: 22px;
+      background-color: #F5F5F5; }
 
 .mix:before {
   content: '';

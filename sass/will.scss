@@ -1690,9 +1690,9 @@ $avatars: (bryan, "gray", will, amy, trip, sarah, joanna);
     transform:  translateY(-3px) rotate(-135deg);
 }
 
-.mixitup-control-active {
-    background: #393939;
-}
+// .mixitup-control-active {
+//     background: #393939;
+// }
 
 .control:first-of-type {
     border-radius: 3px 0 0 3px;
@@ -1778,6 +1778,75 @@ $avatars: (bryan, "gray", will, amy, trip, sarah, joanna);
     margin-bottom: 1rem;
     position: relative;
     color:transparent;
+    .mdl-card{
+      width:auto;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      min-height: 360px;
+      h3{
+        margin:0
+        a {
+          text-decoration: none;
+        }
+      }
+      .mdl-card__media a, .mdl-card__title a {
+        color: inherit;
+      }
+      .mdl-card__supporting-text {
+        width: 100%;
+        padding: 16px;
+        min-height: 64px;
+        display: flex;
+        align-items: center;
+      }
+      .mdl-card__supporting-text:not(:last-child) {
+        box-sizing: border-box;
+        min-height: 76px;
+      }
+      .mdl-card__media{
+        box-sizing: border-box;
+        background-size: cover;
+        padding: 24px;
+        display: flex;
+        flex-grow: 1;
+        flex-direction: row;
+        align-items: flex-end;
+        cursor: pointer;
+      }
+      &.shopping .mdl-card__media {
+        background-image: url(../images/will.jpg);
+      }
+      .mdl-card__supporting-text ~ .mdl-card__supporting-text {
+          border-top: 1px solid rgba(0,0,0,0.1);
+      }
+      .meta > * {
+        display: flex;
+        flex-direction: column;
+      }
+      .meta {
+          box-sizing: border-box;
+          padding: 16px;
+          display: flex;
+          flex-direction: row;          
+          align-items: center;
+          justify-content: flex-start;
+          height: auto;
+      }
+      .meta > *:first-child {
+          margin-right: 16px;
+      }
+      .minilogo {
+          width: 44px;
+          height: 44px;
+          background-image: url(../images/default.png);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 50%;
+          border-radius: 22px;
+          background-color: #F5F5F5;
+      }
+    }
 }
 
 .mix:before {
@@ -1785,6 +1854,7 @@ $avatars: (bryan, "gray", will, amy, trip, sarah, joanna);
     display: inline-block;
     padding-top: 8rem; //doing this in :before is so the shape background image maintains aspect ratio (100% for shapes)
 }
+
 
 .mix.green {
     color: #91e6c7;
