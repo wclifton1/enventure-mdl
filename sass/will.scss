@@ -1229,7 +1229,7 @@ a img{
   text-decoration: none;
 }
 
-$avatars: (bryan, gray, will, amy, trip, sarah, joanna);
+$avatars: (bryan, "gray", will, amy, trip, sarah, joanna);
 
 @each $speaker in $avatars{
     .photo-#{$speaker}{

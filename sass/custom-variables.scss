@@ -141,8 +141,11 @@ $banana:#fbc02d; //yellow darken-2
 $pumpkin:#ef6c00; //orange darken-3
 $grid-item-colors: $radish, $wisteria, $teal, $sage, $indigo, $banana, $pumpkin, $radish, $wisteria, $teal, $sage, $indigo, $banana, $pumpkin;
 
+
 $sans-serif: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serif: 'Lora', 'Georgia', Times, "Times New Roman", serif;
+
+$preferred_font: $sans-serif;
 
 $icon-size: 56px;
 
