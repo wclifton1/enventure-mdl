@@ -10,6 +10,7 @@
 /* overrides */
 h1, h2, h3, h4, h5, h6, .mdl-typography--display-1, .mdl-typography--display-1-color-contrast, .mdl-typography--display-2, .mdl-typography--display-2-color-contrast, .mdl-typography--display-3, .mdl-typography--display-3-color-contrast, .mdl-typography--display-4, .mdl-typography--display-4-color-contrast, .mdl-typography--headline, .mdl-typography--headline-color-contrast, .mdl-typography--subhead, .mdl-typography--subhead-color-contrast, .mdl-typography--title, .mdl-typography--title-color-contrast, .mdl-typography--body-1, .mdl-typography--body-2, .mdl-typography--body-2-color-contrast-color-contrast, .mdl-typography--body-2-force-preferred-font, .mdl-typography--caption, .mdl-typography--caption-color-contrast, .mdl-typography--menu, .mdl-button, .mdl-layout__title, .mdl-chip, .mdl-layout__title, .mdl-layout-title, blockquote, .mdl-badge[data-badge]:after, .mdl-list__item {
   font-family: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
 }
 
 h1,h2,h3,h4,h5,h6, .mdl-typography--title, .mdl-typography--title-color-contrast, .mdl-typography--headline, .mdl-typography--headline-color-contrast {
@@ -972,29 +973,62 @@ a img{
   color: #fff;
 }
 
-.chip {
-    display: inline-block;
-    height: 32px;
-    font-size: 13px;
-    font-weight: 500;
-    color: rgba(0, 0, 0, 0.6);
-    line-height: 32px;
-    padding: 0 12px;
-    border-radius: 16px;
-    background-color: #E4E4E4;
+.card-cm.mdl-card {
+  width:100%;
+  height:100%
 }
+.card-cm > .mdl-card__actions {
+  // border-color: rgba(255, 255, 255, 0.2);
+}
+.card-cm > .mdl-card__title {
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.card-cm > .mdl-card__title > h4 {
+  margin-top: 0;
+}
+
+.card-cm > .mdl-card__supporting-text {
+  color:$env-color--b2;
+  // flex-grow: 10;
+}
+
+.card-cm > .mdl-card__actions {
+  display: flex;
+  box-sizing:border-box;
+  align-items: center;
+}
+.card-cm > .mdl-card__actions > .material-icons {
+  padding-right: 10px;
+}
+.card-cm > .mdl-card__title,
+.card-cm > .mdl-card__actions, {
+  color: $env-color--b1;
+}
+
+// .chip {
+//     display: inline-block;
+//     height: 32px;
+//     font-size: 13px;
+//     font-weight: 500;
+//     color: rgba(0, 0, 0, 0.6);
+//     line-height: 32px;
+//     padding: 0 12px;
+//     border-radius: 16px;
+//     background-color: #E4E4E4;
+// }
 
 .right {
     float: right !important;
 }
 
-.chip img {
-    float: left;
-    margin: 0 8px 0 -12px;
-    height: 32px;
-    width: 32px;
-    border-radius: 50%;
-}
+// .chip img {
+//     float: left;
+//     margin: 0 8px 0 -12px;
+//     height: 32px;
+//     width: 32px;
+//     border-radius: 50%;
+// }
 
 .logo-plus-button {
     height: 18px;
@@ -1334,21 +1368,21 @@ $avatars: (bryan, "gray", will, amy, trip, sarah, joanna);
     max-width: 844px;
 }
 
-@media (max-width: 839px){
-.mdl-grid.mdl-grid--no-spacing {
-  margin:16px;
-}}
+// @media (max-width: 839px){
+// .mdl-grid.mdl-grid--no-spacing {
+//   margin:16px;
+// }}
 
-.mdl-grid.mdl-grid--no-spacing .mdl-cell {
-  background:white;
-}
+// .mdl-grid.mdl-grid--no-spacing .mdl-cell {
+//   background:white;
+// }
 
 .mdl-card__supporting-text .material-icons {
   line-height: inherit;
   font-size: inherit;
 }
 
-.mdl-chip{
+.home .mdl-chip{
   background:color(light-blue,darken-4);
   color: white;
 }
@@ -1815,7 +1849,7 @@ $avatars: (bryan, "gray", will, amy, trip, sarah, joanna);
         cursor: pointer;
       }
       &.shopping .mdl-card__media {
-        background-image: url(../images/will.jpg);
+        background-image: url(../images/grass.svg);
       }
       .mdl-card__supporting-text ~ .mdl-card__supporting-text {
           border-top: 1px solid rgba(0,0,0,0.1);
@@ -2018,9 +2052,91 @@ $avatars: (bryan, "gray", will, amy, trip, sarah, joanna);
 // end mixitup styles
 
 //flex-box
-.col{
-  flex:1;
-  align-items:center;
+.Grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items:stretch;
+  justify-content: space-between;
+  align-content:flex-start;
+  opacity:0;
+}
+
+.Grid-cell {
+  flex: 1;
+}
+
+.Grid-cell--large{
+  flex-grow: 2!important;
+}
+
+.Grid-cell--small{
+  flex-shrink: 2!important;
+}
+
+/* With gutters */
+.Grid--gutters {
+  margin: -1em 0 0 -1em;
+}
+.Grid--gutters > .Grid-cell {
+  padding: 1em 0 0 1em;
+}
+
+
+
+/* Base classes for all media */
+.Grid--fit > .Grid-cell {
+  flex: 1;
+}
+.Grid--full > .Grid-cell {
+  flex: 0 0 100%;
+}
+.Grid--1of2 > .Grid-cell {
+  flex: 0 0 50%
+}
+.Grid--1of3 > .Grid-cell {
+  flex: 0 0 33.3333%
+}
+.Grid--1of4 > .Grid-cell {
+  flex: 0 0 25%
+}
+
+/* Small to medium screens */
+@media (min-width: 24em) {
+  .small-Grid--fit > .Grid-cell {
+    flex: 1;
+  }
+  .small-Grid--full > .Grid-cell {
+    flex: 0 0 100%;
+  }
+  .small-Grid--1of2 > .Grid-cell {
+    flex: 0 0 50%
+  }
+  .small-Grid--1of3 > .Grid-cell {
+    flex: 0 0 33.3333%
+  }
+  .small-Grid--1of4 > .Grid-cell {
+    flex: 0 0 25%
+  }
+}
+
+/* Large screens */
+@media (min-width: 48em) {
+  .large-Grid--fit > .Grid-cell {
+    flex: 1;
+  }
+  .large-Grid--full > .Grid-cell {
+    flex: 0 0 100%;
+  }
+  .large-Grid--1of2 > .Grid-cell {
+    flex: 0 0 50%
+  }
+  .large-Grid--1of3 > .Grid-cell {
+    flex: 0 0 33.3333%
+  }
+  .large-Grid--1of4 > .Grid-cell {
+    flex: 0 0 25%
+  }
 }
 
 .mdl-layout__header-row--no-pad{
@@ -2036,4 +2152,47 @@ $avatars: (bryan, "gray", will, amy, trip, sarah, joanna);
   &.blue{
     background:blue;
   }
+}
+
+//community map styles from mdl docs site
+.mdl-layout__content.docs-layout-content {
+  overflow: visible;
+}
+
+.mdl-button--raised.mdl-button--colored {
+    color: white;
+}
+
+.mdl-components .mdl-components__nav{
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.docs-readme{
+  animation: fadein 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.Grid{
+  animation: fadeinleft 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: 0.3s;
+}
+
+.mdl-components__classname{
+  opacity:0;
+  animation: fadein 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: 0.7s;
+}
+
+@keyframes fadein {
+    from { opacity: 0}
+    to   { opacity: 1}
+}
+
+@keyframes fadeinup {
+    from { opacity: 0; transform:translateY(100vh)}
+    to   { opacity: 1; transform:translateY(0px)}
+}
+
+@keyframes fadeinleft {
+    from { opacity: 0; transform:translateX(100vw)}
+    to   { opacity: 1; transform:translateY(0px)}
 }

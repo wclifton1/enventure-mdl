@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link href="reset.css" rel="stylesheet"/> -->
+    <!-- <link href="style.css" rel="stylesheet"/> -->
+
+    <!-- Page styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.light_blue-pink.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,700|Lora:400,700&amp;lang=en">
+    <link rel="stylesheet" href="<!-- @path_css-->style.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    <!-- offline -->
+    <link rel="stylesheet" href="../offline/material-design-icons/iconfont/material-icons.css">
+    <link rel="stylesheet" href="../offline/material-design-lite/dist/material.light_blue-pink.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Enventure Community Map</title>
+  </head>
+  <body class="components">
+    <div class="mdl-layout__container">
+      <div class="docs-layout mdl-layout mdl-js-layout">
+        <header class="docs-layout-header mdl-layout__header is-casting-shadow">
+          <div class="mdl-layout__header-row">
+            <span class="docs-layout-title mdl-layout-title logo-font">            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" onclick="history.go(-1);""><i class="material-icons">arrow_back</i></button>
+            <a href="../">enventure.</a></span>
+            <!-- <span class="docs-layout-title mdl-layout-title">Community</span> -->
+            <span class="docs-layout-title mdl-layout-title">Community Map</span>
+          </div>
+          <div class="docs-navigation__container">
+            <nav class="docs-navigation mdl-navigation">
+              <!-- <p class="mdl-navigation__link">i need...</p> -->
+              <!-- <a href="../index.html" class="mdl-navigation__link about">Guides</a> -->
+              <!-- <a href="../started/index.html" class="mdl-navigation__link started">For My Idea</a> -->
+              <!-- <a href="../templates/index.html" class="mdl-navigation__link templates">For My Company</a> -->
+              <a href="" class="mdl-navigation__link components">By Category</a>
+              <a href="" class="mdl-navigation__link styles" disabled>Guides coming soon...</a>
+              <!-- <a href="../customize/index.html" class="mdl-navigation__link customize">Customize</a>
+              <a href="../showcase/index.html" class="mdl-navigation__link showcase">Showcase</a>
+              <a href="../faq/index.html" class="mdl-navigation__link faq">FAQ</a> -->
+              <!-- <fieldset data-filter-group class="checkbox-group">
+                <div class="checkbox">
+                  <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
+                    <input type="checkbox" value=".local" id="switch-1" class="mdl-switch__input"/>
+                    <span class="mdl-switch__label">Local</span>
+                  </label>
+                </div>
+              </fieldset> -->
+              <div class="mdl-layout-spacer"></div>
+              <!-- <a href="https://github.com/google/material-design-lite" class="mdl-navigation__link mdl-navigation__link--icon github"><i class="material-icons">link</i><span>GitHub</span></a> -->
+              <!-- <a href="../started/index.html#download" class="mdl-navigation__link mdl-navigation__link--icon download">
+                <i class="material-icons"></i><span>Download</span>
+                <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--fab mdl-button--mini-fab mdl-color--lime-A200" data-upgraded=",MaterialButton,MaterialRipple">
+                  <i class="material-icons"></i>
+                <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>
+              </a> -->
+              <!-- <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+                  <i class="material-icons">search</i>
+                </label>
+                <div class="mdl-textfield__expandable-holder" data-filter-group>
+                  <input class="mdl-textfield__input" id="search" type="text" data-search-attribute="class" />
+                  <label class="mdl-textfield__label" for="search">Enter your query...</label>
+                </div>
+              </div> -->
+            </nav>
+          </div>
+          <i class="material-icons scrollindicator scrollindicator--right disabled"></i>
+          <i class="material-icons scrollindicator scrollindicator--left disabled"></i>
+        </header>
+        <main class="docs-layout-content mdl-layout__content mdl-color-text--grey-600">
+          <div id="content" class="content mdl-grid mdl-grid--no-spacing">
+            <div class="subpageheader mdl-cell--12-col">Components</div>
+            <div class="mdl-components mdl-js-components mdl-cell mdl-cell--12-col">
+              <aside class="mdl-components__nav docs-text-styling mdl-shadow--4dp">
+                <a href="#accelerators" class="mdl-components__link mdl-component badges">
+                  <div class="mdl-components__link-image" style="background-image: url('../assets/comp_snackbar.png')">
+                  </div>
+                  <span class="mdl-components__link-text">Accelerators</span>
+                </a>
+
+                <a href="#bizplandev" class="mdl-components__link mdl-component badges">
+                  <div class="mdl-components__link-image" style="background-image: url('../assets/comp_badges.png')">
+                  </div>
+                  <span class="mdl-components__link-text">Biz Plan Dev</span>
+                </a>
+                
+                <a href="#clinical" class="mdl-components__link mdl-component buttons">
+                  <div class="mdl-components__link-image" style="background-image: url('../assets/comp_buttons.png')">
+                  </div>
+                  <span class="mdl-components__link-text">Clinical</span>
+                </a>
+                
+                <a href="#education" class="mdl-components__link mdl-component cards">
+                  <div class="mdl-components__link-image" style="background-image: url('../assets/comp_cards.png')">
+                  </div>
+                  <span class="mdl-components__link-text">Education</span>
+                </a>
+
+                <a href="#hr" class="mdl-components__link mdl-component tooltips">
+                  <div class="mdl-components__link-image" style="background-image: url('../assets/comp_tooltips.png')">
+                  </div>
+                  <span class="mdl-components__link-text">HR</span>
+                </a>
+                
+                <a href="#investors" class="mdl-components__link mdl-component chips">
+                  <div class="mdl-components__link-image" style="background-image: url('../assets/comp_chips.png')">
+                  </div>
+                  <span class="mdl-components__link-text">Investors</span>
+                </a>
+                
+                <a href="#jobs" class="mdl-components__link mdl-component dialog">
+                  <div class="mdl-components__link-image" style="background-image: url('../assets/comp_dialog.png')">
+                  </div>
+                  <span class="mdl-components__link-text">Jobs</span>
+                </a>
+                
+                <a href="#legal" class="mdl-components__link mdl-component layout">
+                  <div class="mdl-components__link-image" style="background-image: url('../assets/comp_layout.png')">
+                  </div>
+                  <span class="mdl-components__link-text">Legal</span>
+                </a>
+                
+                <a href="#mentors" class="mdl-components__link mdl-component lists">
+                  <div class="mdl-components__link-image" style="background-image: url('../assets/comp_lists.png')">
+                  </div>
+                  <span class="mdl-components__link-text">Mentors</span>
+                </a>
+                
+                <a href="#networking" class="mdl-components__link mdl-component loading">
+                  <div class="mdl-components__link-image" style="background-image: url('../assets/comp_loading.png')">
+                  </div>
+                  <span class="mdl-components__link-text">Networking</span>
+                </a>
+                
+                <a href="#preclinical" class="mdl-components__link mdl-component menus">
+                  <div class="mdl-components__link-image" style="background-image: url('../assets/comp_menus.png')">
+                  </div>
+                  <span class="mdl-components__link-text">Preclinical</span>
+                </a>
+                
+                <a href="#pd" class="mdl-components__link mdl-component sliders">
+                  <div class="mdl-components__link-image" style="background-image: url('../assets/comp_sliders.png')">
+                  </div>
+                  <span class="mdl-components__link-text">Product Dev</span>
+                </a>
+                
+                <a href="#quality" class="mdl-components__link mdl-component snackbar">
+                  <div class="mdl-components__link-image" style="background-image: url('../assets/comp_snackbar.png')">
+                  </div>
+                  <span class="mdl-components__link-text">Quality</span>
+                </a>
+                
+                <a href="#regulatory" class="mdl-components__link mdl-component toggles">
+                  <div class="mdl-components__link-image" style="background-image: url('../assets/comp_toggles.png')">
+                  </div>
+                  <span class="mdl-components__link-text">Regulatory</span>
+                </a>
+                
+                <a href="#reimbursement" class="mdl-components__link mdl-component tables">
+                  <div class="mdl-components__link-image" style="background-image: url('../assets/comp_tables.png')">
+                  </div>
+                  <span class="mdl-components__link-text">Reimbursement</span>
+                </a>
+                
+                <a href="#Startups" class="mdl-components__link mdl-component textfields">
+                  <div class="mdl-components__link-image" style="background-image: url('../assets/comp_textfields.png')">
+                  </div>
+                  <span class="mdl-components__link-text">Startups</span>
+                </a>
+                
+              </aside>
+              <main class="mdl-components__pages">
+                <section id="index-section" class="mdl-components-index mdl-components__page">
+                  <div class="mdl-components-index-text mdl-grid">
+                    <div class="mdl-components-text docs-text-styling about-panel about-panel--text mdl-cell mdl-cell--12-col">
+                      <dl class="mdl-components-dl">
+                        <dt class="mdl-components-dt">COMMUNITY MAP</dt>
+                        <dd class="mdl_components-dd">
+                          Community Map is a free resource provided by <a href="../">Enventure</a> designed to help you navigate the medical startup ecosystem. Start by selecting whether you're looking to educate yourself, get your idea off the ground, or find resources for your company. Next, use the menu of options to select which type of resource you're looking for. You can also search for resources or flip the "local" switch to limit your results to Houston.<br><br>
+                          Have a suggestion or thought of something we've missed?<br>
+                          <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Submit Feedback</button><br><br>
+                          Looking for something that's not listed? If we don't have the answers, maybe we know someone who does.<br>
+                          <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Contact Us</button>
+                        </dd>
+                      </dl>
+                    </div>
+                  </div>
+                  <div class="mdl-components-img"></div>
+                </section>
+
+                <section id="education" class="mdl-components__page mdl-grid">
+                  <div class="mdl-cell mdl-cell--12-col">
+                    <div class="docs-text-styling docs-readme">
+                      <h2 id="introduction">Education</h2>
+                      <p>The Material Design Lite (MDL) <strong>layout</strong> component is a comprehensive approach to page layout that uses MDL development tenets, allows for efficient use of MDL components, and automatically adapts to different browsers, screen sizes, and devices.</p><p>Appropriate and accessible layout is a critical feature of all user interfaces, regardless of a site's content or function. Page design and presentation is therefore an important factor in the overall user experience. See the layout component's <a href="http://www.google.com/design/spec/layout/principles.html">Material Design specifications page</a> for details.</p>
+                      <h3 id="to-include-a-basic-mdl-layout-component-">To include a basic MDL <strong>layout</strong> component:</h3>
+                      <p>&nbsp;1. Code a <code>&lt;div&gt;</code> element. This is the "outer" div that holds the entire layout.</p>
+                      
+                    </div>
+                    
+                    <span class="docs-text-styling">
+                      <h1 class="mdl-components__classname" id="layout-section/layout">Classes</h1>
+                    </span>
+
+                    <div class="Grid Grid--gutters Grid--full large-Grid--fit">
+
+                      <div class="Grid-cell Grid-cell--large">
+                        <div class="card-cm mdl-card mdl-shadow--2dp">
+                          <div class="mdl-card__title mdl-card--expand">
+                            <div class="mdl-typography--headline">MGMT 633: Life Science Entrepreneurship</div>
+                          </div>
+                          <div class="mdl-card__supporting-text">
+                            <p>It's 2017!!! Start the New Year right! Come have a glass of great wine and let's discuss the great things that will be happening in 2017!</p>
+                          </div>
+                          <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href=" #" target="_blank">Learn More + RSVP</a>
+                            <div class="mdl-layout-spacer"></div>
+                            <span class="mdl-chip mdl-chip--contact">
+                              <img class="mdl-chip__contact" src="../images/alert.jpg" alt="Required" onerror="this.src='../images/default.png'">
+                              <span class="mdl-chip__text">Required</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="Grid-cell">
+                        <div class="card-cm mdl-card mdl-shadow--2dp">
+                          <div class="mdl-card__title mdl-card--expand">
+                            <div class="mdl-typography--headline"> New Year's Happy Hour</div>
+                          </div>
+                          <div class="mdl-card__supporting-text">
+                            
+                            <p>It's 2017!!! Start the New Year right! Come have a glass of great wine and let's discuss the great things that will be happening in 2017!</p>
+                          </div>
+                          <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href=" https://www.eventbrite.com/e/new-years-happy-hour-with-enventure-and-awis-tickets-30528790434" target="_blank">Learn More + RSVP</a>
+                            <div class="mdl-layout-spacer"></div>
+                            <span class="mdl-chip mdl-chip--contact">
+                              <img class="mdl-chip__contact" src="../images/Enventure.jpg" alt="Enventure" onerror="this.src='../images/default.png'">
+                              <span class="mdl-chip__text">Enventure</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="Grid-cell">
+                        <div class="card-cm mdl-card mdl-shadow--2dp">
+                          <div class="mdl-card__title mdl-card--expand">
+                            <div class="mdl-typography--headline"> New Year's Happy Hour</div>
+                          </div>
+                          <div class="mdl-card__supporting-text">
+                            
+                            <p>It's 2017!!! Start the New Year right! Come have a glass of great wine and let's discuss the great things that will be happening in 2017!</p>
+                          </div>
+                          <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href=" https://www.eventbrite.com/e/new-years-happy-hour-with-enventure-and-awis-tickets-30528790434" target="_blank">Learn More + RSVP</a>
+                            <div class="mdl-layout-spacer"></div>
+                            <span class="mdl-chip mdl-chip--contact">
+                              <img class="mdl-chip__contact" src="../images/Enventure.jpg" alt="Enventure" onerror="this.src='../images/default.png'">
+                              <span class="mdl-chip__text">Enventure</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="Grid-cell Grid-cell--large">
+                        <div class="card-cm mdl-card mdl-shadow--2dp">
+                          <div class="mdl-card__title mdl-card--expand">
+                            <div class="mdl-typography--headline"> New Year's Happy Hour</div>
+                          </div>
+                          <div class="mdl-card__supporting-text">
+                            
+                            <p>It's 2017!!! Start the New Year right! Come have a glass of great wine and let's discuss the great things that will be happening in 2017!</p>
+                          </div>
+                          <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href=" https://www.eventbrite.com/e/new-years-happy-hour-with-enventure-and-awis-tickets-30528790434" target="_blank">Learn More + RSVP</a>
+                            <div class="mdl-layout-spacer"></div>
+                            <span class="mdl-chip mdl-chip--contact">
+                              <img class="mdl-chip__contact" src="../images/Enventure.jpg" alt="Enventure" onerror="this.src='../images/default.png'">
+                              <span class="mdl-chip__text">Enventure</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+
+                    
+
+                  </div>                  
+                </section>
+
+                
+
+                <section id="layout-section" class="mdl-components__page mdl-grid">
+                  <div class="mdl-cell mdl-cell--12-col">
+                    <div class="docs-text-styling component-title">
+                      <h3>Layout</h3>
+                      <p>Building blocks for constructing a page layout.</p>
+                    </div>
+                    <section class="docs-toc docs-text-styling">
+                      <nav class="section-content">
+                        <ul>
+                          
+                            <li><a href="#layout-section/layout">Navigation layouts</a></li>
+                          
+                            <li><a href="#layout-section/grid">Grid</a></li>
+                          
+                            <li><a href="#layout-section/tabs">Tabs</a></li>
+                          
+                            <li><a href="#layout-section/footer">Footer</a></li>
+                          
+                        </ul>
+                      </nav>
+                    </section>
+                    <span class="docs-text-styling">
+                      <h1 class="mdl-components__classname" id="layout-section/layout">Navigation layouts</h1>
+                    </span>
+                    <div class="snippet-group is-full-width">
+
+                      <div class="snippet-header">
+                        
+                        <div class="snippet-captions">
+                          <div class="snippet-caption-padding"></div>
+                          
+                            <div class="snippet-caption">
+                              Transparent header
+                            </div>
+                          <div class="snippet-caption-padding"></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="docs-text-styling docs-readme">
+                      <h2 id="introduction">Introduction</h2>
+                      <p>The Material Design Lite (MDL) <strong>layout</strong> component is a comprehensive approach to page layout that uses MDL development tenets, allows for efficient use of MDL components, and automatically adapts to different browsers, screen sizes, and devices.</p><p>Appropriate and accessible layout is a critical feature of all user interfaces, regardless of a site's content or function. Page design and presentation is therefore an important factor in the overall user experience. See the layout component's <a href="http://www.google.com/design/spec/layout/principles.html">Material Design specifications page</a> for details.</p>
+                      <h3 id="to-include-a-basic-mdl-layout-component-">To include a basic MDL <strong>layout</strong> component:</h3>
+                      <p>&nbsp;1. Code a <code>&lt;div&gt;</code> element. This is the "outer" div that holds the entire layout.</p>
+                      <pre class=" language-markup">
+                        <code class=" language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+                      </code>
+                      </pre>             
+                      <blockquote>
+                        <p><strong>Note:</strong> The layout cannot be applied directly on the <code>&lt;body&gt;</code> element. Always create a nested <code>&lt;div&gt;</code> element.</p>
+                      </blockquote>
+                      <p>The layout component is ready for use.</p>
+                      <h4 id="examples">Examples</h4>
+                      <p>A layout with a fixed header for larger screens and a collapsible drawer for smaller screens.</p>
+                      <h2 id="configuration-options">Configuration options</h2>
+                      <p>The MDL CSS classes apply various predefined visual and behavioral enhancements to the layout. The table below lists the available classes and their effects.</p>
+                      <table>
+                        <thead>
+                        <tr>
+                        <th>MDL class</th>
+                        <th>Effect</th>
+                        <th>Remarks</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                        <td><code>mdl-layout</code></td>
+                        <td>Defines container as an MDL component</td>
+                        <td>Required on outer div element</td>
+                        </tr>
+                        <tr>
+                        <td><code>mdl-js-layout</code></td>
+                        <td>Assigns basic MDL behavior to layout</td>
+                        <td>Required on outer div element</td>
+                        </tr>
+                        <tr>
+                        <td><code>mdl-layout__header</code></td>
+                        <td>Defines container as an MDL component</td>
+                        <td>Required on header element</td>
+                        </tr>
+                        <tr>
+                        <td><code>mdl-layout--fixed-tabs</code></td>
+                        <td>Uses fixed tabs instead of the default scrollable tabs</td>
+                        <td>Optional; goes on outer div element (not div inside header)</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                  </div>                  
+                </section>
+              </main>
+            </div>
+          </div>
+          <footer class="docs-text-styling docs-footer mdl-mini-footer mdl-color--grey-900">
+            <ul>
+              <li class="mdl-mini-footer--social-btn">
+                <a href="https://twitter.com/enventuremed" class="social-btn social-btn__twitter" role="button" title="Twitter"></a>
+              </li>
+              <!-- <li class="mdl-mini-footer--social-btn">
+                <a href="https://github.com/google/material-design-lite" class="social-btn social-btn__github" role="button" title="GitHub"></a>
+              </li> -->
+              <li class="mdl-mini-footer--social-btn">
+                <a href="https://www.facebook.com/enventuremed" class="social-btn social-btn__gplus" role="button" title="Facebook"></a>
+              </li>
+            </ul>
+            <ul class="docs-link-list">
+              <li><a class="mdl-color-text--grey-600" href="https://developers.google.com/web/starter-kit/">Suggest an Addition</a></li>
+              <li><a class="mdl-color-text--grey-600" href="https://github.com/google/material-design-lite/issues">Feedback</a></li>
+            </ul>
+          </footer>
+        </main>
+      </div>
+    </div>
+    <!-- <script src="../offline/material-design-lite/material.min.js"></script> -->
+    <script src="components.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
