@@ -2051,436 +2051,124 @@ a img {
     opacity: 1;
     -webkit-transform: translateY(0px);
             transform: translateY(0px); } }
-/**
- * Copyright 2015 Google Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-/*------------------------------------*\
-    $CONTENTS
-\*------------------------------------*/
-/**
- * STYLE GUIDE VARIABLES------------------Declarations of Sass variables
- * -----Typography
- * -----Colors
- * -----Textfield
- * -----Switch
- * -----Spinner
- * -----Radio
- * -----Menu
- * -----List
- * -----Layout
- * -----Icon toggles
- * -----Footer
- * -----Column
- * -----Checkbox
- * -----Card
- * -----Button
- * -----Animation
- * -----Progress
- * -----Badge
- * -----Shadows
- * -----Grid
- * -----Data table
- * -----Dialog
- * -----Snackbar
- * -----Tooltip
- * -----Chip
- *
- * Even though all variables have the `!default` directive, most of them
- * should not be changed as they are dependent one another. This can cause
- * visual distortions (like alignment issues) that are hard to track down
- * and fix.
- */
-/* ==========  TYPOGRAPHY  ========== */
-/* We're splitting fonts into "preferred" and "performance" in order to optimize
-   page loading. For important text, such as the body, we want it to load
-   immediately and not wait for the web font load, whereas for other sections,
-   such as headers and titles, we're OK with things taking a bit longer to load.
-   We do have some optional classes and parameters in the mixins, in case you
-   definitely want to make sure you're using the preferred font and don't mind
-   the performance hit.
-   We should be able to improve on this once CSS Font Loading L3 becomes more
-   widely available.
-*/
-/* ==========  COLORS  ========== */
-/**
-*
-* Material design color palettes.
-* @see http://www.google.com/design/spec/style/color.html
-*
-**/
-/* ==========  Color Palettes  ========== */
-/* colors.scss */
-/**
- * Copyright 2015 Google Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-/* stylelint-disable */
-/* stylelint-enable */
-/* ==========  IMAGES  ========== */
-/* ==========  Color & Themes  ========== */
-/* ==========  Typography  ========== */
-/* ==========  Components  ========== */
-/* ==========  Standard Buttons  ========== */
-/* ==========  Icon Toggles  ========== */
-/* ==========  Radio Buttons  ========== */
-/* ==========  Ripple effect  ========== */
-/* ==========  Layout  ========== */
-/* ==========  Content Tabs  ========== */
-/* ==========  Checkboxes  ========== */
-/* ==========  Switches  ========== */
-/* ==========  Spinner  ========== */
-/* ==========  Text fields  ========== */
-/* ==========  Card  ========== */
-/* ==========  Sliders ========== */
-/* ========== Progress ========== */
-/* ==========  List ========== */
-/* ==========  Item ========== */
-/* ==========  Dropdown menu ========== */
-/* ==========  Tooltips  ========== */
-/* ==========  Footer  ========== */
-/* TEXTFIELD */
-/* SWITCH */
-/* SPINNER */
-/* RADIO */
-/* MENU */
-/* LIST */
-/* LAYOUT */
-/* ICON TOGGLE */
-/* FOOTER */
-/*mega-footer*/
-/*mini-footer*/
-/* CHECKBOX */
-/* CARD */
-/* Card dimensions */
-/* Cover image */
-/* BUTTON */
-/**
- *
- * Dimensions
- *
- */
-/* ANIMATION */
-/* PROGRESS */
-/* BADGE */
-/* SHADOWS */
-/* GRID */
-/* DATA TABLE */
-/* DIALOG */
-/* SNACKBAR */
-/* TOOLTIP */
-/* CHIP */
-/**
- * Copyright 2016 Leif Olsen. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-/**
- * Copyright 2015 Google Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-/* stylelint-disable */
-/* stylelint-enable */
-/* ==========   Sticky Header   ========== */
-/* stylelint-disable */
-/* stylelint-enable */
-/* ==========     Accordion     ========== */
-/* ==========     Dialog     ========== */
-/* ==========     Lightbox     ========== */
-/* ==========  Lightboard  ========== */
-/* ==========  Carousel  ========== */
-/* ==========  Bordered fields  ========== */
-/* ==========  Color Themes  ========== */
-/**
- * Copyright 2015 Google Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-/* Typography */
-/* Shadows */
-/* Animations */
-/* Dialog */
-/**
- * Copyright 2015 Google Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-/* stylelint-disable */
-/* stylelint-enable */
-/**
- * @license
- * Copyright 2016 Leif Olsen. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- *
- * This code is built with Google Material Design Lite,
- * which is Licensed under the Apache License, Version 2.0
- */
-.mdlext-aria-expanded-plus-minus {
-  font-family: inherit;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 24px;
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-  vertical-align: middle;
-  -webkit-font-smoothing: antialiased;
-  -webkit-font-feature-settings: 'liga';
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: 'liga'; }
-  .mdlext-aria-expanded-plus-minus::after {
-    content: "+";
-    margin-left: 0; }
-  [aria-expanded='true'] > .mdlext-aria-expanded-plus-minus::after {
-    content: "-";
-    margin-left: 0; }
+/* -------------------------------- 
 
-.mdlext-aria-expanded-more-less {
-  font-family: "Material Icons";
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 24px;
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-  vertical-align: middle;
-  -webkit-font-smoothing: antialiased;
-  -webkit-font-feature-settings: 'liga';
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: 'liga'; }
-  .mdlext-aria-expanded-more-less::after {
-    content: "expand_more";
-    margin-left: 0; }
-  [aria-expanded='true'] > .mdlext-aria-expanded-more-less::after {
-    content: "expand_less";
-    margin-left: 0; }
+Primary style
 
-.mdlext-menu-button {
-  box-sizing: border-box;
-  font-family: "Lato", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
-  letter-spacing: 0;
-  text-transform: none;
+-------------------------------- */
+.cd-words-wrapper {
+  display: inline-block;
   position: relative;
-  height: 36px;
-  padding: 0 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-item-align: stretch;
-      align-self: stretch; }
-  .mdlext-menu-button > * {
-    margin: 0;
-    padding: 0 0 0 8px; }
-  .mdlext-menu-button > *:first-child {
-    padding-left: 0; }
-  .mdlext-menu-button > *:last-child:not(:only-child):not(.mdlext-menu__item__caption) {
-    margin-left: auto; }
-
-.mdlext-menu-button__caption {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  line-height: 1.2; }
-
-.mdlext-menu,
-.mdlext-menu__item {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-.mdlext-menu {
-  position: absolute;
-  background: rgb(255,255,255);
-  z-index: 1000;
-  min-width: 124px;
-  border-radius: 2px;
-  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 0;
-  overflow: hidden;
-  overflow-y: auto; }
-  .mdlext-menu:focus {
-    outline-offset: -1px;
-    outline-width: 1px; }
-  .mdlext-menu[hidden] {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
+  text-align: left; }
+  .cd-words-wrapper b {
+    display: inline-block;
     position: absolute;
-    width: 1px;
-    pointer-events: none; }
-  .mdlext-menu__item {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0;
-    color: rgba(0,0,0, 0.87);
-    background-color: rgb(255,255,255);
+    left: 0;
+    top: 0; }
+    .cd-words-wrapper b.is-visible {
+      position: relative; }
+  .no-js .cd-words-wrapper b {
+    opacity: 0; }
+    .no-js .cd-words-wrapper b.is-visible {
+      opacity: 1; }
+
+.cd-headline.type .cd-words-wrapper::after {
+  /* vertical bar */
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 90%;
+  width: 2px;
+  background-color: rgba(0, 0, 0, 0.54); }
+.cd-headline.type .cd-words-wrapper.waiting::after {
+  -webkit-animation: cd-pulse 1s infinite;
+          animation: cd-pulse 1s infinite; }
+.cd-headline.type .cd-words-wrapper.selected {
+  background-color: #b3d4fc; }
+  .cd-headline.type .cd-words-wrapper.selected::after {
+    visibility: hidden; }
+.cd-headline.type b {
+  visibility: hidden; }
+  .cd-headline.type b.is-visible {
+    visibility: visible; }
+.cd-headline.type i {
+  position: absolute;
+  visibility: hidden;
+  font-style: normal; }
+  .cd-headline.type i.in {
     position: relative;
-    padding: 0 16px 0 24px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-item-align: stretch;
-        -ms-grid-row-align: stretch;
-        align-self: stretch;
-    text-decoration: none;
-    cursor: pointer;
-    white-space: nowrap;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    min-height: 40px;
-    overflow: hidden; }
-    .mdlext-menu__item[aria-selected='true'] {
-      background-color: rgb(224,224,224); }
-    .mdlext-menu__item[aria-selected='true']::before {
-      content: '\2713';
-      position: absolute;
-      font-size: 1.4em;
-      left: 4px;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-              transform: translateY(-50%);
-      pointer-events: none; }
-    .mdlext-menu__item:hover:not([disabled]) {
-      background-color: rgb(238,238,238); }
-    .mdlext-menu__item:focus {
-      outline-offset: -2px;
-      outline-width: 1px;
-      outline-color: rgb(189,189,189);
-      background-color: rgb(238,238,238); }
-    .mdlext-menu__item::-moz-focus-inner {
-      border: 0; }
-    .mdlext-menu__item[disabled] {
-      color: rgb(189,189,189);
-      background-color: transparent;
-      cursor: auto;
-      pointer-events: none; }
-      .mdlext-menu__item[disabled] > * {
-        color: rgb(189,189,189); }
-    .mdlext-menu__item__caption {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis; }
-    .mdlext-menu__item > * {
-      margin: 0;
-      padding: 0 0 0 8px; }
-    .mdlext-menu__item > *:first-child {
-      padding-left: 0; }
-    .mdlext-menu__item > *:last-child:not(:only-child):not(.mdlext-menu__item__caption) {
-      margin-left: auto; }
-  .mdlext-menu__item-separator {
-    margin: 0;
-    padding: 0;
-    border-bottom: 1px solid rgba(0,0,0, 0.12); }
+    visibility: visible; }
+
+@-webkit-keyframes cd-pulse {
+  0% {
+    -webkit-transform: translateY(-50%) scale(1);
+            transform: translateY(-50%) scale(1);
+    opacity: 1; }
+  40% {
+    -webkit-transform: translateY(-50%) scale(0.9);
+            transform: translateY(-50%) scale(0.9);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(-50%) scale(0);
+            transform: translateY(-50%) scale(0);
+    opacity: 0; } }
+
+@keyframes cd-pulse {
+  0% {
+    -webkit-transform: translateY(-50%) scale(1);
+            transform: translateY(-50%) scale(1);
+    opacity: 1; }
+  40% {
+    -webkit-transform: translateY(-50%) scale(0.9);
+            transform: translateY(-50%) scale(0.9);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(-50%) scale(0);
+            transform: translateY(-50%) scale(0);
+    opacity: 0; } }
+/* -------------------------------- 
+
+xloading-bar 
+
+-------------------------------- */
+/* -------------------------------- 
+
+xslide 
+
+-------------------------------- */
+/* -------------------------------- 
+
+xclip 
+
+-------------------------------- */
+.cd-headline.clip span {
+  display: inline-block;
+  padding: .2em 0; }
+.cd-headline.clip .cd-words-wrapper {
+  overflow: hidden;
+  vertical-align: top; }
+  .cd-headline.clip .cd-words-wrapper::after {
+    /* line */
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background-color: white; }
+.cd-headline.clip b {
+  opacity: 0; }
+  .cd-headline.clip b.is-visible {
+    opacity: 1; }
+
+/* -------------------------------- 
+
+xzoom 
+
+-------------------------------- */
 
 /*# sourceMappingURL=style.css.map */

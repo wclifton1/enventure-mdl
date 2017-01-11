@@ -36,9 +36,9 @@ body.about .docs-layout.is-small-screen .docs-layout-header.mdl-layout__header {
 
 .docs-layout-header>.mdl-layout__header-row {
     padding: 0;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    align-items: flex-start;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     height: auto;
     justify-content:space-between;
 }
@@ -57,7 +57,13 @@ body.about .docs-layout.is-small-screen .docs-layout-header.mdl-layout__header {
 
 .docs-layout .docs-layout-title a {
     font-weight: inherit;
-    color: #fff
+    color: #fff;
+    font-size:3rem;
+    vertical-align: middle;
+}
+
+.docs-layout.is-small-screen .docs-layout-title a {
+    font-size:2rem;
 }
 
 .docs-layout-header .mdl-textfield .mdl-button {

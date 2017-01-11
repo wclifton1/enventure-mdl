@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- <link href="reset.css" rel="stylesheet"/> -->
+        <!-- <link href="style.css" rel="stylesheet"/> -->
+
+        <!-- offline -->
+        <link rel="stylesheet" href="../offline/material-design-icons/iconfont/material-icons.css">
+        <link rel="stylesheet" href="../offline/material-design-lite/dist/material.light_blue-pink.min.css">
+        <link rel="stylesheet" href="../css/style.css">
+
+        <title>Enventure Community Map</title>
+    </head>
+    <body>
+
+      <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+        <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
+          <div class="mdl-layout__header-row mdl-layout__header-row--no-pad">
+            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" onclick="history.go(-1);""><i class="material-icons">arrow_back</i></button>
+            <div class="mdl-layout__title">&nbsp<enventure>enventure</enventure>&nbspCommunity Map</div>
+            
+            
+            <!-- <div class="mdl-layout-spacer"></div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+              <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+                <i class="material-icons">search</i>
+              </label>
+              <div class="mdl-textfield__expandable-holder">
+                <input class="mdl-textfield__input" type="text" id="search">
+                <label class="mdl-textfield__label" for="search">Enter your query...</label>
+              </div>
+              
+            </div> -->
+          </div>
+        </header>
+        <div class="demo-ribbon"></div>
+        <main class="demo-main mdl-layout__content">
+          
+          <form class="controls">
+            <h3>I want to...</h3>
+            
+            <fieldset data-filter-group>
+              <button data-filter="all" id="aria-demo-button" class="mdl-button mdl-button--raised mdl-js-ripple-effect mdl-js-button mdlext-js-menu-button" role="button" aria-haspopup="true" aria-controls="menu-example-dropdown" aria-expanded="false" tabindex="0">
+                <span class="mdlext-menu-button__caption">I want to...</span>
+                <i class="mdlext-aria-expanded-more-less"></i>
+              </button>
+              <script>
+                document.querySelector('#aria-demo-button').addEventListener('menuselect', function(event) {
+                  this.querySelector('span').innerHTML = event.detail.source.innerHTML;
+                  this.setAttribute('data-filter', event.detail.source.getAttribute('data-filter'));
+                });
+              </script>
+              <ul id="menu-example-dropdown" class="mdlext-menu" role="menu" hidden="">
+                <li data-filter=".pink" class="mdlext-menu__item" role="menuitem">Learn about entrepreneurship</li>
+                <!-- <li class="mdlext-menu__item-separator" role="separator"></li> -->
+                <li data-filter=".blue" class="mdlext-menu__item" role="menuitem">Build a company</li>
+                <li data-filter=".green" class="mdlext-menu__item" role="menuitem">Help my company succeed</li>
+                <!-- <li class="mdlext-menu__item" role="menuitem">Large</li> -->
+                <!-- <li class="mdlext-menu__item-separator" role="separator"></li> -->
+                <!-- <li class="mdlext-menu__item" role="menuitem">X Large</li> -->
+                <!-- <li class="mdlext-menu__item" role="menuitem">XXX Large</li> -->
+              </ul>
+            </fieldset>
+
+            <!-- <fieldset data-filter-group class="checkbox-group">
+              <div class="checkbox mdl-button mdl-js-button">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+                  <input type="checkbox" value=".green" id="checkbox-1" class="mdl-checkbox__input"/>
+                  <span class="mdl-checkbox__label">learn about med entrepreneurship</span>
+                </label>
+              </div>
+
+              <div class="checkbox mdl-button mdl-js-button">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+                  <input type="checkbox" value=".blue" id="checkbox-2" class="mdl-checkbox__input"/>
+                  <span class="mdl-checkbox__label">build a company</span>
+                </label>
+              </div>
+
+              <div class="checkbox mdl-button mdl-js-button">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-3">
+                  <input type="checkbox" value=".pink" id="checkbox-3" class="mdl-checkbox__input"/>
+                  <span class="mdl-checkbox__label">help my company succeed</span>
+                </label>
+              </div>
+            </fieldset> -->
+
+            <!-- <fieldset data-filter-group class="checkbox-group">
+              <div class="checkbox">
+                <label class="checkbox-label">Square</label>
+                <input type="checkbox" value=".square"/>
+              </div>
+
+              <div class="checkbox">
+                <label class="checkbox-label">Circle</label>
+                <input type="checkbox" value=".circle"/>
+              </div>
+
+              <div class="checkbox">
+                <label class="checkbox-label">Triangle</label>
+                <input type="checkbox" value=".triangle"/>
+              </div>
+            </fieldset>
+
+            <fieldset data-filter-group class="checkbox-group">
+              <label class="checkbox-group-label">Size</label>
+
+              <div class="checkbox">
+                <label class="checkbox-label">Small</label>
+                <input type="checkbox" value=".small"/>
+              </div>
+
+              <div class="checkbox">
+                <label class="checkbox-label">Medium</label>
+                <input type="checkbox" value=".medium"/>
+              </div>
+
+              <div class="checkbox">
+                <label class="checkbox-label">Large</label>
+                <input type="checkbox" value=".large"/>
+              </div>
+            </fieldset> -->
+
+            <fieldset data-filter-group class="checkbox-group">
+              <div class="checkbox">
+                <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
+                  <input type="checkbox" value=".local" id="switch-1" class="mdl-switch__input"/>
+                  <span class="mdl-switch__label">Local</span>
+                </label>
+              </div>
+            </fieldset>
+
+            
+<!-- 
+            <div class="control-group">
+              <button type="button" class="control control-sort" data-sort="default:asc">Asc</button>
+              <button type="button" class="control control-sort" data-sort="default:desc">Desc</button>
+            </div> -->
+            
+            <div class="mdl-layout-spacer"></div>
+
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+              <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+                <i class="material-icons">search</i>
+              </label>
+              <div class="mdl-textfield__expandable-holder" data-filter-group>
+                <input class="mdl-textfield__input" id="search" type="text" data-search-attribute="class" />
+                <label class="mdl-textfield__label" for="search">Enter your query...</label>
+              </div>
+            </div>
+            <!-- <button type="reset" class="control control-text">Reset</button> -->
+          </form>
+
+          <div class="container">
+              <div class="mix mix-2 green"><h1>intro explanation</h1><p>Lorem ipsum dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus eos, sunt nisi aut aperiam facilis alias voluptate minus consequatur quo labore quos veniam iure dolorum dolor voluptatem laudantium, dolorem omnis. Sed cupiditate architecto, saepe voluptatem n</p></div>
+              <div class="mix green small square"></div>
+              <div class="mix mix-2 green medium square"></div>
+              <div class="mix blue large triangle"></div>
+              <div class="mix mix-2 pink large circle"></div>
+              <div class="mix green small circle"></div>
+              <div class="mix blue medium triangle"></div>
+              <div class="mix pink medium square"></div>
+              <div class="mix mix-3">
+                <div class="mdl-card shopping">
+                  <div class="mdl-card__media mdl-color-text--grey-50">
+                    <h3><a href="entry.html">Resource</a></h3>
+                  </div>
+                  <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+                    Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
+                  </div>
+                  <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+                    <div class="minilogo"></div>
+                    <div>
+                      <strong>Source</strong>
+                      <span>2 days ago</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mix pink small circle"></div>
+              <div class="mix mix-2 green large triangle"></div>
+              <div class="mix blue small square"></div>
+              <div class="mix pink small square"></div>
+              <div class="mix mix-3 green large square"></div>
+              <div class="mix mix-2 blue large circle"></div>
+
+              <div class="gap"></div>
+              <div class="gap"></div>
+              <div class="gap"></div>
+              <div class="gap"></div>
+              <!-- <div class="gap"></div> -->
+          </div>
+
+          <footer class="demo-footer mdl-mini-footer">
+            <div class="mdl-mini-footer--left-section">
+              <ul class="mdl-mini-footer--link-list">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Privacy and Terms</a></li>
+                <li><a href="#">User Agreement</a></li>
+              </ul>
+            </div>
+          </footer>
+        </main>
+      </div>
+
+      <script src="../js/mixitup.min.js"></script>
+      <script src="../js/mixitup-multifilter.min.js"></script>
+
+      <script>
+        var containerEl = document.querySelector('.container');
+
+        var mixer = mixitup(containerEl, {
+            multifilter: {
+                enable: true
+            },
+            animation: {
+                effects: 'fade translateZ(-100px)',
+                animateResizeTargets: true
+            }
+
+        });
+      </script>
+      <script src="../offline/material-design-lite/material.min.js"></script>
+      <script src="../js/menu-button.js"></script>
+
+      <!-- <script src="scripts/dialog-polyfill.js" type="text/javascript" charset="utf-8"></script> -->
+<!-- <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script> -->
+<!-- <script src="scripts/eq.min.js" type="text/javascript" charset="utf-8"></script> -->
+<!-- <script src="https://code.getmdl.io/1.2.1/material.min.js" type="text/javascript" charset="utf-8"></script> -->
+<script src="../js/mdl-ext.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script>
+  (function() {
+    'use strict';
+    document.addEventListener('DOMContentLoaded', function() {
+      var title = document.querySelector('#header-title');
+      if(title) {
+        title.innerHTML = 'Menu Button';
+      }
+    });
+  }());
+</script>
+    </body>
+</html>
