@@ -167,7 +167,7 @@
                   <span class="mdl-components__link-text">Reimbursement</span>
                 </a>
                 
-                <a href="#Startups" class="mdl-components__link mdl-component textfields">
+                <a href="#startups" class="mdl-components__link mdl-component textfields">
                   <div class="mdl-components__link-image" style="background-image: url('../assets/comp_textfields.png')">
                   </div>
                   <span class="mdl-components__link-text">Startups</span>
@@ -178,6 +178,7 @@
                 <section id="index-section" class="mdl-components-index mdl-components__page">
                   <div class="mdl-components-index-text mdl-grid">
                     <div class="mdl-components-text docs-text-styling about-panel about-panel--text mdl-cell mdl-cell--12-col">
+                      
                       <dl class="mdl-components-dl">
                         <dt class="mdl-components-dt">COMMUNITY MAP</dt>
                         <dd class="mdl_components-dd">
@@ -467,6 +468,7 @@
           var regulatory = [];
           var reimbursement = [];
           var startups = [];
+          var temp = [];
           var categories = ["accelerators", "bizplandev", "clinical", "education", "hr", "investors", "jobs", "legal", "mentors", "networking", "preclinical", "pd", "quality", "regulatory", "reimbursement", "startups"];
 
           var range = response.result;
@@ -478,12 +480,18 @@
               var cat = row[1];
               // var cat = "education";
               // console.log(cat);
-              eval(cat).push("<div class=\"Grid-cell "+row[5]+"\"><div class=\"card-cm mdl-card mdl-shadow--2dp\"><div class=\"mdl-card__title mdl-card--expand\"><div class=\"mdl-typography--headline\">"+row[0]+"</div></div><div class=\"mdl-card__supporting-text\"><p>"+row[2]+"</p></div><div class=\"mdl-card__actions mdl-card--border\"><a class=\"mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect\" href=\""+row[3]+"\" target=\"_blank\">Learn More + RSVP</a><div class=\"mdl-layout-spacer\"></div>");
-              if (row[4] != null){
-                eval(cat).push("<span class=\"mdl-chip mdl-chip--contact\"><img class=\"mdl-chip__contact\" src=\"../images/"+row[4]+".jpg\" alt=\""+row[4]+"\" onerror=\"this.src=\'../images/default.png\'\"><span class=\"mdl-chip__text\">"+row[4]+"</span></span>");
+              eval(cat).push("<div class=\"Grid-cell "+row[6]+"\"><div class=\"card-cm mdl-card mdl-shadow--2dp\"><div class=\"mdl-card__title mdl-card--expand\"><div class=\"mdl-typography--headline\">"+row[0]+"</div></div><div class=\"mdl-card__supporting-text\"><p>"+row[2]+"</p></div>");
+              if (row[3] != null || row[5] != null){
+                eval(cat).push("<div class=\"mdl-card__actions mdl-card--border\">");
+              }
+              if (row[3] != null){
+                eval(cat).push("<button class=\"mdl-button mdl-js-button mdl-button--icon\"><a href='mailto:"+row[3]+"' target='_blank'\"><i class=\"material-icons\">email</i></a></button>");
+              }
+              if (row[5] != null){
+                eval(cat).push("<div class=\"mdl-layout-spacer\"></div><a href=\""+row[4]+"\" class=\"mdl-chip mdl-chip--contact\"><img class=\"mdl-chip__contact\" src=\"../images/"+row[5]+".jpg\" alt=\""+row[5]+"\" onerror=\"this.src=\'../images/default.png\'\"><span class=\"mdl-chip__text\">"+row[5]+"</span></a>");
               }
 
-                eval(cat).push("</div></div></div>");
+              eval(cat).push("</div></div></div>");
             }
           } else {
           }

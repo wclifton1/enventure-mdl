@@ -2196,3 +2196,7 @@ $avatars: (bryan, "gray", will, amy, trip, sarah, joanna);
     from { opacity: 0; transform:translateX(100vw)}
     to   { opacity: 1; transform:translateY(0px)}
 }
+
+.components .mdl-button .material-icons{
+  color:$env-color--b3;
+}
