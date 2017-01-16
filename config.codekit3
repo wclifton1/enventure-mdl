@@ -644,6 +644,76 @@
 		"oF": 0,
 		"opt": 0
 		},
+	"\/assets\/ic_assignment_ind_white_24px.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/ic_assignment_ind_white_24px.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/ic_assignment_white_24px.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/ic_assignment_white_24px.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/ic_domain_48px.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/ic_domain_48px.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/ic_done_all_white_24px.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/ic_done_all_white_24px.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/ic_done_white_24px.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/ic_done_white_24px.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/ic_mood_48px.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/ic_mood_48px.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/ic_sentiment_very_satisfied_48px.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/ic_sentiment_very_satisfied_48px.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/cm-test.html": {
 		"ft": 8192,
 		"oA": 2,
@@ -797,6 +867,24 @@
 		"oAP": "\/css\/style-min.css",
 		"oF": 0,
 		"oS": 0
+		},
+	"\/css\/style.css.map": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/css\/style.css.map",
+		"oF": 0
+		},
+	"\/enrich\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/enrich\/index.html",
+		"oF": 0
+		},
+	"\/enrich\/index.kit": {
+		"ft": 2048,
+		"oA": 0,
+		"oAP": "\/enrich\/index.html",
+		"oF": 0
 		},
 	"\/favicon-160x160.png": {
 		"ft": 32768,
@@ -1091,6 +1179,14 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"\/images\/emily.jpg": {
+		"ft": 16384,
+		"iS": 35599,
+		"oA": 0,
+		"oAP": "\/images\/emily.jpg",
+		"oF": 0,
+		"opt": 0
 		},
 	"\/images\/Enventure.jpg": {
 		"ft": 16384,
@@ -6045,7 +6141,7 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 0,
+		"ma": 1,
 		"oA": 0,
 		"oAP": "\/css\/style.css",
 		"oF": 2,

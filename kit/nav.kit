@@ -3,9 +3,9 @@
       <header class="enventure-header mdl-layout__header mdl-layout__header--waterfall">
         <div id="primaryButton" aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button mdl-layout--small-screen-only"><i class="material-icons">menu</i></div>
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title env-layout--title">
+          <a href="../" class="mdl-layout-title env-layout--title">
             <enventure>enventure.</enventure>2016
-          </span>
+          </a>
           <!-- Add spacer, to align navigation to the right in desktop -->
           <div class="mdl-layout-spacer"></div>
           <!-- <div class="enventure-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
@@ -19,28 +19,52 @@
           <!-- Navigation -->
           <div class="enventure-navigation-container">
             <nav class="enventure-navigation mdl-navigation">
-              <!-- <a class="mdl-navigation__link mdl-typography--text-uppercase" href="cm/index.html">Guide</a> -->
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="https://sites.google.com/site/mgmt633/">ENTR 101</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="foundations.html">Foundations</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="http://www.eventbrite.com/o/enventure-7960884822">BYOBrainstorm</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="bioventures.html">BioVentures</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="about.html">About</a>
+              
+              <a id="ideation-menu-lower-left" class="mdl-navigation__link mdl-typography--text-uppercase">
+                Explore <i class="material-icons">arrow_drop_down</i>
+              </a>
+
+              <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+                  for="ideation-menu-lower-left">
+                
+                <li disabled class="mdl-menu__item">Networking</li>
+                <li class="mdl-menu__item mdl-menu__item--full-bleed-divider"><a href="../#subscribe-section">Get Conencted</a></li>
+                <li disabled class="mdl-menu__item">Ideation</li>
+                <li class="mdl-menu__item mdl-menu__item--full-bleed-divider"><a href="http://www.eventbrite.com/o/enventure-7960884822">BYOBrainstorm</a></li>
+                <li disabled class="mdl-menu__item">Speaker Series</li>
+                <li class="mdl-menu__item"><a href="http://www.eventbrite.com/o/enventure-7960884822">Dialog</a></li>
+              </ul>
+
+              <a id="education-menu-lower-left" class="mdl-navigation__link mdl-typography--text-uppercase">
+                Learn <i class="material-icons">arrow_drop_down</i>
+              </a>
+
+              <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+                  for="education-menu-lower-left">
+                <li disabled class="mdl-menu__item">Spring</li>
+                <li class="mdl-menu__item mdl-menu__item--full-bleed-divider"><a href="https://sites.google.com/site/mgmt633/">ENTR 101: Life Science Entrepreneurship</a></li>
+                <li disabled class="mdl-menu__item">Summer-Fall</li>
+                <li class="mdl-menu__item"><a href="../foundations.html">Foundations</a></li>
+              </ul>
+
+              <a id="bizdev-menu-lower-left" class="mdl-navigation__link mdl-typography--text-uppercase">
+                Launch <i class="material-icons">arrow_drop_down</i>
+              </a>
+
+              <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+                  for="bizdev-menu-lower-left">
+                <li disabled class="mdl-menu__item">Accelerator</li>
+                <li class="mdl-menu__item mdl-menu__item--full-bleed-divider"><a href="../bioventures.html">BioVentures</a></li>
+                <li disabled class="mdl-menu__item">Consulting</li>
+                <li class="mdl-menu__item"><a href="../enrich">Enrich Fellowship</a></li>
+              </ul>
+
+             
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="../cm">Guide</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="../about.html">About</a>
               
             </nav>
-          </div>
-          <!-- <span class="enventure-mobile-title mdl-layout-title">
-            enventure.
-          </span> -->
-          <!-- <div aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button mdl-layout--small-screen-only"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored"><i class="material-icons">event</i></button></div> -->
-          <!-- <button class="enventure-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
-            <i class="material-icons">more_vert</i>
-          </button>
-          <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
-            <li class="mdl-menu__item">Item 1</li>
-            <li class="mdl-menu__item">Item 2</li>
-            <li disabled class="mdl-menu__item">Item 3</li>
-            <li class="mdl-menu__item">About Enventure</li>
-          </ul> -->
+          </div>         
         </div>
       </header>
 
@@ -49,10 +73,48 @@
             <span><enventure>enventure.</enventure>2016</span>
         </div>
         <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="https://calendar.google.com/calendar/render?cid=40gskl3c1kh46nrbeg9p1gnlj0%40group.calendar.google.com"><i class="material-icons mdl-list__item-icon">event</i> Calendar</a>
-          <a class="mdl-navigation__link" href="https://sites.google.com/site/mgmt633/"><i class="material-icons mdl-list__item-icon">school</i> ENTR 101</a>
-          <a class="mdl-navigation__link" href="foundations.html"><i class="material-icons mdl-list__item-icon">account_balance</i> Foundations</a>
-          <a class="mdl-navigation__link" href="bioventures.html"><i class="material-icons mdl-list__item-icon">spa</i> BioVentures</a>
+          <a id="ideation-menu-lower-left2" class="mdl-navigation__link mdl-typography--text-uppercase">
+                Explore <i class="material-icons">arrow_drop_down</i>
+              </a>
+
+              <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+                  for="ideation-menu-lower-left2">
+                
+                <li disabled class="mdl-menu__item">Networking</li>
+                <li class="mdl-menu__item mdl-menu__item--full-bleed-divider"><a href="../#subscribe-section">Get Connected</a></li>
+                <li disabled class="mdl-menu__item">Ideation</li>
+                <li class="mdl-menu__item mdl-menu__item--full-bleed-divider"><a href="http://www.eventbrite.com/o/enventure-7960884822">BYOBrainstorm</a></li>
+                <li disabled class="mdl-menu__item">Speaker Series</li>
+                <li class="mdl-menu__item"><a href="http://www.eventbrite.com/o/enventure-7960884822">Dialog</a></li>
+              </ul>
+
+              <a id="education-menu-lower-left2" class="mdl-navigation__link mdl-typography--text-uppercase">
+                Study <i class="material-icons">arrow_drop_down</i>
+              </a>
+
+              <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+                  for="education-menu-lower-left2">
+                <li disabled class="mdl-menu__item">Spring</li>
+                <li class="mdl-menu__item mdl-menu__item--full-bleed-divider"><a href="https://sites.google.com/site/mgmt633/">ENTR 101: Life Science Entrepreneurship</a></li>
+                <li disabled class="mdl-menu__item">Summer-Fall</li>
+                <li class="mdl-menu__item"><a href="../foundations.html">Foundations</a></li>
+              </ul>
+
+              <a id="bizdev-menu-lower-left2" class="mdl-navigation__link mdl-typography--text-uppercase">
+                Launch <i class="material-icons">arrow_drop_down</i>
+              </a>
+
+              <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+                  for="bizdev-menu-lower-left2">
+                <li disabled class="mdl-menu__item">Accelerator</li>
+                <li class="mdl-menu__item mdl-menu__item--full-bleed-divider"><a href="../bioventures.html">BioVentures</a></li>
+                <li disabled class="mdl-menu__item">Consulting</li>
+                <li class="mdl-menu__item"><a href="../enrich">Enrich Fellowship</a></li>
+              </ul>
+
+             
+              <!-- <a class="mdl-navigation__link mdl-typography--text-uppercase" href="../cm">Guide</a> -->
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="../about.html">About</a>
           <!-- <a class="mdl-navigation__link" href=""><i class="material-icons">lightbulb_outline</i> BYOBrainstorm</a> -->
           <div class="enventure-drawer-separator"></div>
           <div class="enventure-drawer--calendar">
