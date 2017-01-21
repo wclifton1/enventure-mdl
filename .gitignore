@@ -6,3 +6,9 @@ materialize-env-archive/
 *.codekit
 
 *.codekit
+
+config.codekit3
+
+*.sublime-workspace
+
+*.codekit3
