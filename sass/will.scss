@@ -2300,11 +2300,11 @@ section .about-panel--templates {
   padding:40px;
 }
 
-.about-panel--text p {
-    width: 640px;
-    margin: 0 auto;
-    line-height: 2em
-}
+// .about-panel--text p {
+//     width: 640px;
+//     margin: 0 auto;
+//     line-height: 2em
+// }
 
 .about-panel--text dl {
     width: 100%;
@@ -2358,7 +2358,7 @@ section .about-panel--templates {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    padding: 40px;
+    // padding: 40px;
     // color: #fff;
     text-transform: none;
     font-size: 1.4rem;
@@ -2380,7 +2380,7 @@ section .about-panel--templates {
     margin-bottom: 0
 }
 
-.about-panel--templates {
+.enrich .about-panel--templates {
     // background-color: #B3E0E1;
     // background-image: url(templates.svg);
     // background-size: 287px auto;
@@ -2489,3 +2489,11 @@ dd .mdl-card{
   margin: auto;
 }
 
+.started .white-bg{
+  background:#fafafa;
+}
+
+.enrich section.about-panel, 
+.enrich section.docs-text-styling{
+  padding:40px;
+}

@@ -797,6 +797,16 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/cm\/main1.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/cm\/main1-min.css",
+		"oF": 0,
+		"oS": 0
+		},
 	"\/cm\/mixitup.html": {
 		"ft": 8192,
 		"oA": 2,
@@ -5031,6 +5041,24 @@
 		"oA": 2,
 		"oAP": "\/offline\/material-design-lite\/material.min.js.map",
 		"oF": 0
+		},
+	"\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
 		},
 	"\/sass\/.sass-cache\/370ed60ab52338ee3d71ecf156db4d34ce627042\/_settings.scssc": {
 		"ft": 8192,
