@@ -960,7 +960,7 @@ code[class*=language-],pre[class*=language-] {
 
 .started .content,.styles .content,.faq .content {
     /*padding: 40px;*/
-    display: inline-block;
+    /*display: inline-block;*/
     text-align: left;
     width: 100%;
     box-sizing: border-box
@@ -1076,9 +1076,9 @@ code[class*=language-],pre[class*=language-] {
         padding: 0 3%
     }
 
-    .started .content {
+    /*.started .content {
         display: block
-    }
+    }*/
 
     .started .snippet-group {
         margin-left: -40px;

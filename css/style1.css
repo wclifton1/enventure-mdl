@@ -871,7 +871,7 @@ section .about-panel--templates { padding: 0 40px; }
 
 .about-panel--components, .about-panel--styles, .about-panel--customize, .about-panel--templates { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; text-transform: none; font-size: 1.4rem; width: auto; background-repeat: no-repeat; background-position: center center; cursor: pointer; }
 
-.about-panel--templates { height: 500px; }
+.about-panel--templates { height: 300px; height: 50vh; max-height: 500px; }
 
 .docs-layout-content .about-panel--start > p { color: #424242; text-transform: uppercase; font-size: 1.6rem; margin-top: 20px; margin-bottom: 0; }
 

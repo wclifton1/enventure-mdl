@@ -2369,7 +2369,9 @@ section .about-panel--templates {
 }
 
 .about-panel--templates {
-    height: 500px
+    height: 300px;
+    height: 50vh;
+    max-height: 500px;
 }
 
 .docs-layout-content .about-panel--start>p {
