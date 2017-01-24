@@ -851,7 +851,7 @@ section .about-panel--templates { padding: 0 40px; }
 
 .about-panel { box-sizing: border-box; width: 100%; -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; }
 
-.about-panel--text { padding: 100px; background-color: white; }
+.about-panel--text { padding: 100px; }
 
 .is-small-screen .about-panel--text { padding: 40px; }
 
@@ -881,7 +881,7 @@ section .about-panel--templates { padding: 0 40px; }
 
 .about-panel--components:hover { background-image: url(../assets/ic_done_all_white_24px.svg); }
 
-.about-panel--styles { background-color: #8F4099; background-image: url(../assets/ic_assignment_ind_white_24px.svg); background-size: 252px auto; }
+.about-panel--styles { background-color: #8F4099; background-image: url(../assets/ic_assignment_ind_white_24px.svg); background-size: 252px auto; color: white; -webkit-transition: all 0.3s ease; transition: all 0.3s ease; }
 
 .about-panel--styles:hover { background-image: url(../assets/ic_assignment_white_24px.svg); }
 
@@ -902,8 +902,12 @@ body.enrich { background: -webkit-linear-gradient(223deg, #ffffff, #0098ea, #b3e
   100% { background-position: 0% 50%; } }
 .mdl-list__item--three-line { height: initial; }
 .mdl-list__item--three-line .mdl-list__item-primary-content { height: initial; }
+.mdl-list__item--three-line .mdl-list__item-primary-content .mdl-list__item-text-body { height: initial; }
 
 .mdl-list__item-avatar, .mdl-list__item-avatar.material-icons { background-color: inherit; background-size: cover; background-repeat: no-repeat; background-position: center; }
+
+.mdl-list__item-avatar, .mdl-list__item-avatar.material-icons { width: 150px; height: 150px; }
+.is-small-screen .mdl-list__item-avatar, .is-small-screen .mdl-list__item-avatar.material-icons { width: 50px; height: 50px; }
 
 .beta-badge { position: absolute; right: 18px; top: -16px; padding: 2px 3px; border-radius: 2px; background: #fe6363; color: #fff; font-size: 10px; font-weight: 500; }
 
@@ -911,9 +915,17 @@ dd .mdl-card { width: inherit; }
 
 .mdl-data-table { margin: auto; }
 
-.started .white-bg { background: #fafafa; }
+.started .white-bg { background: -webkit-radial-gradient(top, circle, #ffffff, #fafafa); background: radial-gradient(circle at top, #ffffff, #fafafa); }
 
 .enrich section.about-panel, .enrich section.docs-text-styling { padding: 40px; }
+
+@media only screen and (max-width: 480px) { table, thead, tbody, th, td, tr { display: block; }
+  thead { display: none; }
+  .mdl-data-table tbody tr { height: auto; }
+  .mdl-data-table tbody tr:nth-child(even) { background-color: #eee; }
+  .mdl-data-table td:before { position: absolute; top: 6px; left: 6px; width: 45%; padding: 6px 18px 0; white-space: nowrap; content: attr(data-label); text-align: left; color: rgba(0, 0, 0, 0.541176); font-weight: bold; font-family: Helvetica, Arial, sans-serif; font-size: 12px; }
+  .mdl-data-table td:last-of-type { padding-right: 18px; } }
+.enrich blockquote { font-size: 1.5em; }
 
 /* -------------------------------- 
 

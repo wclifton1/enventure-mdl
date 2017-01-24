@@ -2291,8 +2291,8 @@ section .about-panel--templates {
 }
 
 .about-panel--text {
-    padding: 100px;
-    background-color:white;
+  padding: 100px;
+  // background-color:white;
 
 }
 
@@ -2410,7 +2410,9 @@ section .about-panel--templates {
 .about-panel--styles {
     background-color: #8F4099;
     background-image: url(../assets/ic_assignment_ind_white_24px.svg);
-    background-size: 252px auto
+    background-size: 252px auto;
+    color:white;
+    transition: all 0.3s ease;
 }
 
 .about-panel--styles:hover {
@@ -2459,6 +2461,9 @@ body.enrich{
   height:initial;
   .mdl-list__item-primary-content {
     height:initial;
+    .mdl-list__item-text-body{
+      height:initial;
+    }
   }
 }
 
@@ -2467,6 +2472,15 @@ body.enrich{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.mdl-list__item-avatar, .mdl-list__item-avatar.material-icons{
+  width:150px;
+  height:150px;
+  .is-small-screen &{
+    width:50px;
+    height:50px;
+  }
 }
 
 .beta-badge {
@@ -2490,10 +2504,61 @@ dd .mdl-card{
 }
 
 .started .white-bg{
-  background:#fafafa;
+  background:radial-gradient(circle at top,#ffffff, #fafafa)
 }
 
 .enrich section.about-panel, 
 .enrich section.docs-text-styling{
   padding:40px;
+}
+
+// responsive table
+@media only screen and (max-width: 480px) {
+
+  table, thead, tbody, th, td, tr {
+      display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  // mdl specifics
+
+  .mdl-data-table tbody tr {
+    height: auto;
+  }
+  
+  .mdl-data-table tbody tr:nth-child(even) {
+    background-color: #eee;
+  }
+
+  .mdl-data-table td,
+  .mdl-data-table td:first-of-type {
+    // padding-left: 50%;
+  }
+
+  .mdl-data-table td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding: 6px 18px 0;
+    white-space: nowrap;
+    content: attr(data-label);
+    text-align: left;
+    color: rgba(0, 0, 0, 0.541176);
+    font-weight: bold;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+  }
+  
+  .mdl-data-table td:last-of-type {
+    padding-right: 18px;
+  }
+  
+}
+
+.enrich blockquote{
+  font-size:1.5em
 }
