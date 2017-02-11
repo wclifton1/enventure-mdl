@@ -161,7 +161,7 @@
 /* ==========  Color Palettes  ========== */
 /* colors.scss */
 /* overrides */
-h1, h2, h3, h4, h5, h6, .mdl-typography--display-1, .mdl-typography--display-1-color-contrast, .mdl-typography--display-2, .mdl-typography--display-2-color-contrast, .mdl-typography--display-3, .mdl-typography--display-3-color-contrast, .mdl-typography--display-4, .mdl-typography--display-4-color-contrast, .mdl-typography--headline, .mdl-typography--headline-color-contrast, .mdl-typography--subhead, .mdl-typography--subhead-color-contrast, .mdl-typography--title, .mdl-typography--title-color-contrast, .mdl-typography--body-1, .mdl-typography--body-2, .mdl-typography--body-2-color-contrast-color-contrast, .mdl-typography--body-2-force-preferred-font, .mdl-typography--caption, .mdl-typography--caption-color-contrast, .mdl-typography--menu, .mdl-button, .mdl-layout__title, .mdl-chip, .mdl-layout__title, .mdl-layout-title, blockquote, .mdl-badge[data-badge]:after, .mdl-list__item { font-family: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 300; }
+h1, h2, h3, h4, h5, h6, p, .mdl-typography--display-1, .mdl-typography--display-1-color-contrast, .mdl-typography--display-2, .mdl-typography--display-2-color-contrast, .mdl-typography--display-3, .mdl-typography--display-3-color-contrast, .mdl-typography--display-4, .mdl-typography--display-4-color-contrast, .mdl-typography--headline, .mdl-typography--headline-color-contrast, .mdl-typography--subhead, .mdl-typography--subhead-color-contrast, .mdl-typography--title, .mdl-typography--title-color-contrast, .mdl-typography--body-1, .mdl-typography--body-2, .mdl-typography--body-2-color-contrast-color-contrast, .mdl-typography--body-2-force-preferred-font, .mdl-typography--caption, .mdl-typography--caption-color-contrast, .mdl-typography--menu, .mdl-button, .mdl-layout__title, .mdl-chip, .mdl-layout__title, .mdl-layout-title, blockquote, .mdl-badge[data-badge]:after, .mdl-list__item { font-family: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 300; }
 
 h1, h2, h3, h4, h5, h6, .mdl-typography--title, .mdl-typography--title-color-contrast, .mdl-typography--headline, .mdl-typography--headline-color-contrast, .mdl-badge[data-badge]:after { font-weight: 700; }
 
@@ -359,7 +359,7 @@ a img { border: 0px; }
 
 .enventure-card-container .mdl-card__actions a { border-top: none; font-size: 16px; }
 
-.enventure-footer { color: inherit; background-color: #fafafa; background-image: -webkit-linear-gradient(bottom, #90a4ae, #546e7a); background-image: linear-gradient(0deg, #90a4ae, #546e7a); background-image: linear-gradient(0deg, #90a4ae, #546e7a); position: relative; }
+.enventure-footer { color: white; background-color: #fafafa; background-image: -webkit-linear-gradient(bottom, #0277bd, #01579b); background-image: linear-gradient(0deg, #0277bd, #01579b); background-image: linear-gradient(0deg, #0277bd, #01579b); position: relative; }
 
 .enventure-footer a:hover { color: #0091ea; }
 
@@ -837,7 +837,7 @@ a img { border: 0px; }
   to { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px); } }
 @keyframes fadeinleft { from { opacity: 0; -webkit-transform: translateX(100vw); transform: translateX(100vw); }
   to { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px); } }
-.components .mdl-button .material-icons { color: rgba(0, 0, 0, 0.4); }
+.mdl-button .material-icons { color: rgba(0, 0, 0, 0.4); }
 
 .mdl-chip { background-color: rgba(0, 0, 0, 0.06); -webkit-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
 .mdl-chip:hover { background-color: rgba(0, 0, 0, 0.1); }
@@ -851,9 +851,7 @@ section .about-panel--templates { padding: 0 40px; }
 
 .about-panel { box-sizing: border-box; width: 100%; -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; }
 
-.about-panel--text { padding: 100px; }
-
-.is-small-screen .about-panel--text { padding: 40px; }
+.enrich .about-panel--text { padding: 100px; }
 
 .about-panel--text dl { width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; }
 
@@ -917,7 +915,7 @@ dd .mdl-card { width: inherit; }
 
 .started .white-bg { background: -webkit-radial-gradient(top, circle, #ffffff, #fafafa); background: radial-gradient(circle at top, #ffffff, #fafafa); }
 
-.enrich section.about-panel, .enrich section.docs-text-styling { padding: 40px; }
+section.about-panel, section.docs-text-styling { padding: 40px; }
 
 @media only screen and (max-width: 480px) { table, thead, tbody, th, td, tr { display: block; }
   thead { display: none; }
@@ -927,6 +925,10 @@ dd .mdl-card { width: inherit; }
   .mdl-data-table td:last-of-type { padding-right: 18px; } }
 .enrich blockquote { font-size: 1.5em; }
 
+.docs-layout-header { position: relative; }
+
+@media screen and (max-width: 1024px) { .mdl-layout__header { display: inherit; } }
+@media (max-width: 850px) { .guide main.mdl-components__pages { padding-top: 120px; } }
 /* -------------------------------- 
 
 Primary style

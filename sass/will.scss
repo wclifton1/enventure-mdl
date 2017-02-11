@@ -8,7 +8,7 @@
 //replace fonts with body {font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
 
 /* overrides */
-h1, h2, h3, h4, h5, h6, .mdl-typography--display-1, .mdl-typography--display-1-color-contrast, .mdl-typography--display-2, .mdl-typography--display-2-color-contrast, .mdl-typography--display-3, .mdl-typography--display-3-color-contrast, .mdl-typography--display-4, .mdl-typography--display-4-color-contrast, .mdl-typography--headline, .mdl-typography--headline-color-contrast, .mdl-typography--subhead, .mdl-typography--subhead-color-contrast, .mdl-typography--title, .mdl-typography--title-color-contrast, .mdl-typography--body-1, .mdl-typography--body-2, .mdl-typography--body-2-color-contrast-color-contrast, .mdl-typography--body-2-force-preferred-font, .mdl-typography--caption, .mdl-typography--caption-color-contrast, .mdl-typography--menu, .mdl-button, .mdl-layout__title, .mdl-chip, .mdl-layout__title, .mdl-layout-title, blockquote, .mdl-badge[data-badge]:after, .mdl-list__item {
+h1, h2, h3, h4, h5, h6, p, .mdl-typography--display-1, .mdl-typography--display-1-color-contrast, .mdl-typography--display-2, .mdl-typography--display-2-color-contrast, .mdl-typography--display-3, .mdl-typography--display-3-color-contrast, .mdl-typography--display-4, .mdl-typography--display-4-color-contrast, .mdl-typography--headline, .mdl-typography--headline-color-contrast, .mdl-typography--subhead, .mdl-typography--subhead-color-contrast, .mdl-typography--title, .mdl-typography--title-color-contrast, .mdl-typography--body-1, .mdl-typography--body-2, .mdl-typography--body-2-color-contrast-color-contrast, .mdl-typography--body-2-force-preferred-font, .mdl-typography--caption, .mdl-typography--caption-color-contrast, .mdl-typography--menu, .mdl-button, .mdl-layout__title, .mdl-chip, .mdl-layout__title, .mdl-layout-title, blockquote, .mdl-badge[data-badge]:after, .mdl-list__item {
   font-family: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
 }
@@ -670,11 +670,12 @@ a img{
   }
 
 .enventure-footer {
-  color: inherit;
+  color: white;
   background-color: #fafafa;
-  $band-color:color("blue-grey","darken-1");
+  $band-color:color("light-blue","darken-4");
+  // $band-color:rgba(black,.9);
   $hero-background-top: $band-color; 
-  $hero-background-bottom: color("blue-grey","lighten-2");
+  $hero-background-bottom: color("light-blue","darken-3");
   $gradient-angle: 0deg;
   @include background-image(linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top));
   position: relative;
@@ -1636,20 +1637,20 @@ $avatars: (bryan, "gray", will, amy, trip, sarah, joanna);
 }
 
 .social-btn__facebook {
-    background-image: url(../images/fb.png);
-    background-size: contain;
-    cursor:pointer;
+  background-image: url(../images/fb.png);
+  background-size: contain;
+  cursor:pointer;
 }
 
 .social-btn__twitter {
-    background-image: url(../images/twitter.svg);
-    background-size: contain;
-    cursor:pointer;
+  background-image: url(../images/twitter.svg);
+  background-size: contain;
+  cursor:pointer;
 }
 
 .social-btn__eventbrite {
-    background-image: url(https://www.gstatic.com/images/icons/material/system/2x/post_twitter_black_24dp.png);
-    cursor:pointer;
+  background-image: url(https://www.gstatic.com/images/icons/material/system/2x/post_twitter_black_24dp.png);
+  cursor:pointer;
 }
 
 .mdl-mega-footer--social-btn, .mdl-mega-footer__social-btn {
@@ -1662,68 +1663,68 @@ $avatars: (bryan, "gray", will, amy, trip, sarah, joanna);
 ---------------------------------------------------------------------- */
 
 .controls {
-    padding: 1rem;
-    // background: #333;
-    font-size: 0.1px;
+  padding: 1rem;
+  // background: #333;
+  font-size: 0.1px;
 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    flex-shrink: 0;
-    box-sizing: border-box;
-    align-self: stretch;
-    align-items: center;
-    // height: 64px;
-    margin: 0;
-    padding: 0 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  align-self: stretch;
+  align-items: center;
+  // height: 64px;
+  margin: 0;
+  padding: 0 1rem;
 }
 
 .control-group { //multi-filter
-    display: inline-block;
-    margin-left: .75rem;
-    vertical-align: top;
+  display: inline-block;
+  margin-left: .75rem;
+  vertical-align: top;
 }
 
 .control {
-    position: relative;
-    display: inline-block;
-    // width: 2.7rem;
-    // height: 2.7rem;
-    padding: .5rem;
-    background: #444;
-    cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: 800;
-    color: white;
-    transition: background 150ms;
+  position: relative;
+  display: inline-block;
+  // width: 2.7rem;
+  // height: 2.7rem;
+  padding: .5rem;
+  background: #444;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: white;
+  transition: background 150ms;
 }
 
 .control-text {
-    width: auto;
-    font-size: .9rem;
-    padding: 0 1rem;
-    // font-family: 'helvetica-neue', arial, sans-serif;
-    // font-weight: 700;
+  width: auto;
+  font-size: .9rem;
+  padding: 0 1rem;
+  // font-family: 'helvetica-neue', arial, sans-serif;
+  // font-weight: 700;
 }
 
 .control:not(.mixitup-control-active):hover {
-    background: #3f3f3f;
+  background: #3f3f3f;
 }
 
 .control-sort:after {
-    content: '';
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-top: 2px solid;
-    border-left: 2px solid;
-    top: calc(50% - 6px);
-    left: calc(50% - 6px);
-    transform:  translateY(2px) rotate(45deg);
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+  top: calc(50% - 6px);
+  left: calc(50% - 6px);
+  transform:  translateY(2px) rotate(45deg);
 }
 
 .control-sort[data-sort*=":desc"]:after {
-    transform:  translateY(-3px) rotate(-135deg);
+  transform:  translateY(-3px) rotate(-135deg);
 }
 
 // .mixitup-control-active {
@@ -1731,11 +1732,11 @@ $avatars: (bryan, "gray", will, amy, trip, sarah, joanna);
 // }
 
 .control:first-of-type {
-    border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
 }
 
 .control:last-of-type {
-    border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
 }
 
 .checkbox-group {
@@ -2215,7 +2216,7 @@ $avatars: (bryan, "gray", will, amy, trip, sarah, joanna);
     to   { opacity: 1; transform:translateY(0px)}
 }
 
-.components .mdl-button .material-icons{
+.mdl-button .material-icons{
   color:$env-color--b3;
 }
 
@@ -2290,15 +2291,15 @@ section .about-panel--templates {
     flex-grow: 1
 }
 
-.about-panel--text {
+.enrich .about-panel--text {
   padding: 100px;
   // background-color:white;
 
 }
 
-.is-small-screen .about-panel--text{
-  padding:40px;
-}
+// .is-small-screen .about-panel--text{
+//   padding:40px;
+// }
 
 // .about-panel--text p {
 //     width: 640px;
@@ -2509,8 +2510,8 @@ dd .mdl-card{
   background:radial-gradient(circle at top,#ffffff, #fafafa)
 }
 
-.enrich section.about-panel, 
-.enrich section.docs-text-styling{
+section.about-panel, 
+section.docs-text-styling{
   padding:40px;
 }
 
@@ -2563,4 +2564,20 @@ dd .mdl-card{
 
 .enrich blockquote{
   font-size:1.5em
+}
+
+.docs-layout-header{
+  position:relative;
+}
+
+@media screen and (max-width: 1024px){
+  .mdl-layout__header {
+      display: inherit;
+  }
+}
+
+@media (max-width: 850px) {
+  .guide main.mdl-components__pages{
+    padding-top:120px;
+  }
 }

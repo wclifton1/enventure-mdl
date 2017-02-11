@@ -720,16 +720,69 @@
 		"oAP": "\/cm-test.html",
 		"oF": 0
 		},
-	"\/cm\/cm-test.html": {
+	"\/cm\/archive\/cm-test.html": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/cm\/cm-test.html",
+		"oAP": "\/cm\/archive\/cm-test.html",
 		"oF": 0
 		},
-	"\/cm\/codepen.html": {
+	"\/cm\/archive\/codepen.html": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/cm\/codepen.html",
+		"oAP": "\/cm\/archive\/codepen.html",
+		"oF": 0
+		},
+	"\/cm\/archive\/index-test.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/cm\/archive\/index-test.html",
+		"oF": 0
+		},
+	"\/cm\/archive\/index-test.kit": {
+		"ft": 2048,
+		"oA": 0,
+		"oAP": "\/cm\/archive\/index-test.html",
+		"oF": 0
+		},
+	"\/cm\/archive\/mixitup.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/cm\/archive\/mixitup.html",
+		"oF": 0
+		},
+	"\/cm\/archive\/mixitup.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/cm\/archive\/mixitup.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/cm\/archive\/reset.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/cm\/archive\/reset-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/cm\/archive\/style.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/cm\/archive\/style-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/cm\/archive\/test-page.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/cm\/archive\/test-page.html",
 		"oF": 0
 		},
 	"\/cm\/components.js": {
@@ -741,22 +794,22 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"\/cm\/index-test.html": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/cm\/index-test.html",
-		"oF": 0
-		},
-	"\/cm\/index-test.kit": {
-		"ft": 2048,
-		"oA": 0,
-		"oAP": "\/cm\/index-test.html",
-		"oF": 0
-		},
 	"\/cm\/index.html": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/cm\/index.html",
+		"oF": 0
+		},
+	"\/cm\/index.kit": {
+		"ft": 2048,
+		"oA": 0,
+		"oAP": "\/cm\/index.html",
+		"oF": 0
+		},
+	"\/cm\/inventors.kit": {
+		"ft": 2048,
+		"oA": 0,
+		"oAP": "\/cm\/inventors.html",
 		"oF": 0
 		},
 	"\/cm\/main-min.css": {
@@ -817,45 +870,34 @@
 		"oF": 0,
 		"oS": 0
 		},
-	"\/cm\/mixitup.html": {
+	"\/cm\/started.html": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/cm\/mixitup.html",
+		"oAP": "\/cm\/started.html",
 		"oF": 0
 		},
-	"\/cm\/mixitup.min.js": {
-		"ft": 64,
-		"mi": 1,
+	"\/cm\/started.kit": {
+		"ft": 2048,
 		"oA": 0,
-		"oAP": "\/cm\/mixitup.min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
+		"oAP": "\/cm\/started.html",
+		"oF": 2
 		},
-	"\/cm\/reset.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/cm\/reset-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/cm\/style.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/cm\/style-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/cm\/test-page.html": {
+	"\/cm\/started\/index.html": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/cm\/test-page.html",
+		"oAP": "\/cm\/started\/index.html",
+		"oF": 0
+		},
+	"\/cm\/startups.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/cm\/startups.html",
+		"oF": 0
+		},
+	"\/cm\/startups.kit": {
+		"ft": 2048,
+		"oA": 0,
+		"oAP": "\/cm\/startups.html",
 		"oF": 0
 		},
 	"\/css\/animated-type.css": {
@@ -1869,6 +1911,12 @@
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
+		},
+	"\/kit\/cm-nav.kit": {
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/kit\/cm-nav.html",
+		"oF": 0
 		},
 	"\/kit\/first.kit": {
 		"ft": 2048,
@@ -5266,6 +5314,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/sass\/.sass-cache\/83a661bd6b19b136ef8d8c7307d30f2a4f880036\/styles.scssc",
+		"oF": 0
+		},
+	"\/sass\/.sass-cache\/83a661bd6b19b136ef8d8c7307d30f2a4f880036\/will 2.scssc": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/sass\/.sass-cache\/83a661bd6b19b136ef8d8c7307d30f2a4f880036\/will 2.scssc",
 		"oF": 0
 		},
 	"\/sass\/.sass-cache\/83a661bd6b19b136ef8d8c7307d30f2a4f880036\/will.scssc": {

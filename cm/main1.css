@@ -31,11 +31,10 @@ body.about .docs-layout.is-small-screen .docs-layout-header.mdl-layout__header {
 }
 
 .docs-layout-header>.mdl-layout__header-row {
-    padding: 0;
+    padding: 0 16px;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    height: auto;
     justify-content:space-between;
 }
 
@@ -106,8 +105,8 @@ body:not(.about) .docs-layout .docs-layout-header.mdl-layout__header {
 }
 
 .started .docs-layout-header.mdl-layout__header,.faq .docs-layout-header.mdl-layout__header {
-    background-color: #2E2E2E;
-    background-image: url('logo.png');
+    /*background-color: #2E2E2E;*/
+    /*background-image: url('logo.png');*/
     background-size: auto 32px
 }
 
@@ -143,7 +142,7 @@ body:not(.about) .docs-layout-title {
 .docs-navigation__container {
     overflow: hidden;
     position: absolute;
-    height: 64px;
+    height: 54px;
     width: 100%;
     bottom: 0;
     left: 0
@@ -153,7 +152,7 @@ body:not(.about) .docs-layout-title {
     box-shadow: none!important;
     border: 0!important;
     width: 100%;
-    height: 85px;
+    /*height: 85px;*/
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
@@ -186,7 +185,7 @@ body:not(.about) .docs-layout.is-small-screen .docs-layout-header {
 .docs-layout.mdl-layout.is-small-screen .docs-layout-header.mdl-layout__header {
     /*padding: 0;*/
     /*height: 64px;*/
-    padding: 20px;
+    /*padding: 20px;*/
     height: 100px;
 }
 
@@ -205,8 +204,8 @@ body:not(.about) .docs-layout.is-small-screen .docs-layout-header {
 .docs-layout .scrollindicator {
     position: absolute;
     bottom: 0;
-    line-height: 64px;
-    height: 64px;
+    line-height: 54px;
+    height: 54px;
     width: 48px;
     display: none;
     margin-right: 0;
@@ -236,7 +235,7 @@ body:not(.about) .docs-layout.is-small-screen .docs-layout-header {
 }
 
 .mdl-navigation__link--icon>span,.mdl-navigation__link--icon>.material-icons {
-    line-height: 64px;
+    line-height: 54px;
     margin-right: 8px;
     line-height: inherit
 }
@@ -252,7 +251,7 @@ body:not(.about) .docs-layout.is-small-screen .docs-layout-header {
     -moz-user-select: inherit;
     -ms-user-select: inherit;
     user-select: inherit;
-    height: 64px
+    height: 54px
 }
 
 .docs-navigation p.mdl-navigation__link{
@@ -272,7 +271,7 @@ body:not(.about) .docs-layout.is-small-screen .docs-layout-header {
     font-weight: 500;
     font-size: 13px;
     text-transform: uppercase;
-    line-height: 64px;
+    line-height: 54px;
     padding: 0 16px;
     color: #fff;
     box-sizing: border-box;
@@ -292,7 +291,7 @@ body:not(.about) .docs-layout.is-small-screen .docs-layout-header {
     opacity: .54
 }
 
-.about .docs-navigation .about,.templates .docs-navigation .templates,.showcase .docs-navigation .showcase,.started .docs-navigation .started,.styles .docs-navigation .styles,.components .docs-navigation .components,.faq .docs-navigation .faq,.customize .docs-navigation .customize {
+.inventors .docs-navigation .inventors,.startups .docs-navigation .startups,.about .docs-navigation .about,.templates .docs-navigation .templates,.showcase .docs-navigation .showcase,.started .docs-navigation .started,.styles .docs-navigation .styles,.components .docs-navigation .components,.faq .docs-navigation .faq,.customize .docs-navigation .customize {
     opacity: 1;
     border-bottom-color: #18FFFF
 }
@@ -923,7 +922,7 @@ code[class*=language-],pre[class*=language-] {
 }
 
 .started .docs-layout .content section {
-    max-width: 960px;
+    /*max-width: 960px;*/
     margin: 0 auto
 }
 
@@ -938,7 +937,8 @@ code[class*=language-],pre[class*=language-] {
     padding: 40px
 }
 
-.started .content h3,.started .content h4 {
+/*.started */
+.content h3,.started .content h4 {
     display: table-cell;
     font-size: 15px;
     padding-right: 60px;
@@ -946,7 +946,8 @@ code[class*=language-],pre[class*=language-] {
     text-transform: none
 }
 
-.started .content h3 {
+/*.started*/
+.content h3 {
     width: 140px
 }
 
@@ -954,11 +955,13 @@ code[class*=language-],pre[class*=language-] {
     margin-bottom: 30px
 }
 
-.started .section-content {
+/*.started */
+.section-content {
     display: table-cell
 }
 
-.started .content,.styles .content,.faq .content {
+/*.started*/
+.content,.styles .content,.faq .content {
     /*padding: 40px;*/
     /*display: inline-block;*/
     text-align: left;
@@ -982,7 +985,8 @@ code[class*=language-],pre[class*=language-] {
     font-size: 32px
 }
 
-.started .content p {
+/*.started*/
+.content p {
     margin-top: 10px;
     margin-bottom: 15px
 }
@@ -1043,12 +1047,14 @@ code[class*=language-],pre[class*=language-] {
         display:block
     }
 
-    .started .content h3,.started .content h4 {
+    /*.started */
+    .content h3,.started .content h4 {
         display: block;
         width: auto
     }
 
-    .started .section-content,.started pre {
+    /*.started*/
+    .section-content,.started pre {
         display: block
     }
 
@@ -1498,14 +1504,20 @@ code[class*=language-],pre[class*=language-] {
     margin-left: 40px
 }
 
-.mdl-components-img {
+/*.mdl-components-img {
     position: absolute;
     margin-top: -40px;
-    /*left: 40px;*/
     height: 100%;
     width: 100%;
-    /*max-height: 600px;*/
     background: url('../images/texas-coast2.svg') no-repeat top right/cover
+}*/
+
+#index-section {
+    /*position: absolute;*/
+    /*margin-top: -40px;*/
+    height: 100%;
+    /*width: 100%;*/
+    background: url('../images/texas-coast2.svg') no-repeat bottom right/cover
 }
 
 .mdl-components-text {
@@ -1547,7 +1559,7 @@ mdl-components-dd {
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
-    padding-bottom: 120px
+    /*padding-bottom: 120px*/
 }
 
 .mdl-components .mdl-components__link {
