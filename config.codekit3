@@ -769,6 +769,12 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"\/cm\/archive\/started\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/cm\/archive\/started\/index.html",
+		"oF": 0
+		},
 	"\/cm\/archive\/style.css": {
 		"aP": 0,
 		"bl": 0,
@@ -794,6 +800,15 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/cm\/guides.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/cm\/guides-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/cm\/index.html": {
 		"ft": 8192,
 		"oA": 2,
@@ -804,6 +819,12 @@
 		"ft": 2048,
 		"oA": 0,
 		"oAP": "\/cm\/index.html",
+		"oF": 0
+		},
+	"\/cm\/inventors.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/cm\/inventors.html",
 		"oF": 0
 		},
 	"\/cm\/inventors.kit": {
@@ -881,12 +902,6 @@
 		"oA": 0,
 		"oAP": "\/cm\/started.html",
 		"oF": 2
-		},
-	"\/cm\/started\/index.html": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/cm\/started\/index.html",
-		"oF": 0
 		},
 	"\/cm\/startups.html": {
 		"ft": 8192,
@@ -1038,6 +1053,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/images\/.chalk2.jpg.icloud",
+		"oF": 0
+		},
+	"\/images\/.grass.ai.icloud": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/images\/.grass.ai.icloud",
 		"oF": 0
 		},
 	"\/images\/.grass1.svg.icloud": {
@@ -1299,12 +1320,6 @@
 		"oAP": "\/images\/foundations.jpg",
 		"oF": 0,
 		"opt": 0
-		},
-	"\/images\/grass.ai": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/images\/grass.ai",
-		"oF": 0
 		},
 	"\/images\/grass.jpg": {
 		"ft": 16384,

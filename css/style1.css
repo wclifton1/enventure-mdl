@@ -929,6 +929,9 @@ section.about-panel, section.docs-text-styling { padding: 40px; }
 
 @media screen and (max-width: 1024px) { .mdl-layout__header { display: inherit; } }
 @media (max-width: 850px) { .guide main.mdl-components__pages { padding-top: 120px; } }
+footer a { color: #4fc3f7; }
+footer i.heart { position: relative; color: #FF4081; font-size: 16px; line-height: 16px; bottom: -4px; }
+
 /* -------------------------------- 
 
 Primary style

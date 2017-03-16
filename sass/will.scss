@@ -2581,3 +2581,15 @@ section.docs-text-styling{
     padding-top:120px;
   }
 }
+footer {
+  a{
+    color:color('light-blue','lighten-2')
+  }
+  i.heart{
+    position:relative;
+    color:$env-color--accent;
+    font-size:16px;
+    line-height: 16px;
+    bottom:-4px;
+  }
+}
