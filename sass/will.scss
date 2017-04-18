@@ -2384,12 +2384,12 @@ section .about-panel--templates {
 }
 
 .enrich .about-panel--templates {
-  // background: #B3E0E1;
-  // background-image: url("../images/tmcx2.jpg");
+  background: #B3E0E1;
+  background-image: url("../images/tmcx2.jpg");
   $gradient-angle: 0deg;
   $hero-background-bottom: rgba(white, 0.9); 
   $hero-background-top: rgba(white, 0);
-  background-image: linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top,$hero-background-top, $hero-background-top), url("../images/tmcx2.jpg");
+  background-image: linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top, $hero-background-top), url("../images/tmcx2.jpg");
     background-size: cover;
 
 }
