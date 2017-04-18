@@ -873,7 +873,7 @@ section .about-panel--templates { padding: 0 40px; }
 
 .docs-layout-content .about-panel--start > p { color: #424242; text-transform: uppercase; font-size: 1.6rem; margin-top: 20px; margin-bottom: 0; }
 
-.enrich .about-panel--templates { background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)); background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)); background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)); }
+.enrich .about-panel--templates { background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("../images/tmcx2.jpg"); background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("../images/tmcx2.jpg"); background-size: cover; }
 
 .about-panel--components { background-color: #E90974; background-image: url(../assets/ic_domain_48px.svg); background-size: 174px auto; color: white; -webkit-transition: all 0.3s ease; transition: all 0.3s ease; }
 
