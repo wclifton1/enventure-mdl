@@ -6,7 +6,7 @@
 <!-- @include ../kit/first -->
 <!-- @include ../kit/cm-nav -->
 
-        <main class="docs-layout-content mdl-layout__content mdl-color-text--grey-600">
+        <main id="top" class="docs-layout-content mdl-layout__content mdl-color-text--grey-600">
           <div id="content" class="content mdl-grid mdl-grid--no-spacing">
             <div class="subpageheader mdl-cell--12-col">Community Map</div>
             <div class="mdl-components mdl-js-components mdl-cell mdl-cell--12-col">
@@ -116,9 +116,9 @@
                         <div class="section-content">
                           Community Map is a free resource provided by <a href="../">Enventure</a> designed to help you navigate the medical startup ecosystem. Start by selecting whether you're looking to educate yourself, get your idea off the ground, or find resources for your company. Next, use the menu of options to select which type of resource you're looking for. You can also search for resources or flip the "local" switch to limit your results to Houston.<br><br>
                           Have a suggestion or thought of something we've missed?<br>Want to leave a review for one of the resources?<br>
-                          <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Submit Feedback</button><br><br>
+                          <a target="_blank" href="mailto:team@enventure.org?subject=Community%20Map%20Feedback" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Submit Feedback</a><br><br>
                           Looking for something that's not listed? If we don't have the answers, maybe we know someone who does.<br>
-                          <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Contact Us</button>
+                          <a target="_blank" href="mailto:team@enventure.org?subject=Community%20Map%20Question" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Contact Us</a>
                         </div>
                       </dl>
                     </div>
@@ -325,9 +325,40 @@
                     </div>
                   </div>
                 </section>
+
+
               </main>
+
             </div>
+
           </div>
+          <footer class="enventure-footer mdl-mega-footer">
+            <div class="mdl-mega-footer--top-section">
+              <div class="mdl-mega-footer--left-section">
+                <a href="http://www.facebook.com/enventuremed"><button class="mdl-mega-footer--social-btn social-btn__facebook" href="http://www.facebook.com/enventuremed"><span class="visuallyhidden">Facebook</span></button></a>
+                &nbsp;
+                <a href="http://www.twitter.com/enventuremed"><button class="mdl-mega-footer--social-btn social-btn__twitter"><span class="visuallyhidden">Twitter</span></button></a>
+                &nbsp;
+                <!-- <button class="mdl-mega-footer--social-btn social-btn__eventbrite"><span class="visuallyhidden">Eventbrite</span></button> -->
+              </div>
+              
+            </div>
+
+            <div class="mdl-mega-footer--middle-section">
+              <div class="mdl-mega-footer--left-section">
+                Enventure is a not for profit organization, made with <i class="material-icons heart">favorite</i> for Houston.<br>questions about entrepreneurship? <a href="mailto:team@enventure.org">email us</a>
+              </div>
+              <div class="mdl-mega-footer--right-section">
+                <a class="mdl-typography--font-light" class="smoothScroll" href="#top">
+                  Back to Top
+                  <i class="material-icons">expand_less</i>
+                </a>
+              </div>
+            </div>
+
+          </footer>
+        
+
          </main>
     
 	<!--  working without oauth-->
@@ -431,10 +462,57 @@
                 
       });
     }
-
   </script>
-  
   <script src="components.js"></script>
   <script src="main.js"></script>
 
-<!-- @import ../kit/last 
+      </div>
+    </div>
+    
+    <!--  Scripts-->
+    <script type="application/ld+json">
+      {
+      "@context" : "http://schema.org",
+      "@type" : "Organization",
+      "name" : "Enventure",
+      "url" : "http://www.enventure.org",
+      "sameAs" : [
+        "http://www.facebook.com/enventuremed",
+        "http://www.twitter.com/enventuremed",
+        "https://www.instagram.com/explore/tags/enventure/",
+        "https://www.linkedin.com/groups/4489096"
+      ]
+      }
+    </script>
+
+    <!-- analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-41228343-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+   
+    <script defer async src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+    <!-- smoothscroll -->
+    <script defer async type="text/javascript"> $(function() {
+      $('a[href*="#"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $(".mdl-layout__content").animate({
+              scrollTop: target.offset().top -120
+            }, 500);
+            return false;
+          }
+        }
+      });
+    });
+    </script>
+  </body>
+</html>

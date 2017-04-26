@@ -557,6 +557,23 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/assets\/accelerators.png": {
+		"ft": 32768,
+		"iS": 4016,
+		"oA": 0,
+		"oAP": "\/assets\/accelerators.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/accelerators.psd": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/assets\/accelerators.psd",
+		"oF": 0
+		},
 	"\/assets\/Artboard 1.pdf": {
 		"ft": 8192,
 		"oA": 2,
@@ -728,6 +745,29 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/assets\/env-paper-shadow.png": {
+		"ft": 32768,
+		"iS": 291713,
+		"oA": 0,
+		"oAP": "\/assets\/env-paper-shadow.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/env-paper-shadow.psb": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/assets\/env-paper-shadow.psb",
+		"oF": 0
+		},
+	"\/assets\/env-paper.psb": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/assets\/env-paper.psb",
+		"oF": 0
+		},
 	"\/assets\/houston_skyline_line web bkgd.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -808,6 +848,23 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/assets\/jobs.png": {
+		"ft": 32768,
+		"iS": 4928,
+		"oA": 0,
+		"oAP": "\/assets\/jobs.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/jobs.psd": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/assets\/jobs.psd",
+		"oF": 0
+		},
 	"\/assets\/linkedin.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -817,6 +874,51 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"\/assets\/mentors.png": {
+		"ft": 32768,
+		"iS": 4032,
+		"oA": 0,
+		"oAP": "\/assets\/mentors.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/mentors.psd": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/assets\/mentors.psd",
+		"oF": 0
+		},
+	"\/assets\/pd.png": {
+		"ft": 32768,
+		"iS": 5236,
+		"oA": 0,
+		"oAP": "\/assets\/pd.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/pd.psd": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/assets\/pd.psd",
+		"oF": 0
+		},
+	"\/assets\/pd@1x.png": {
+		"ft": 32768,
+		"iS": 5579,
+		"oA": 0,
+		"oAP": "\/assets\/pd@1x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/scattered icon export.svg": {
 		"ft": 2097152,

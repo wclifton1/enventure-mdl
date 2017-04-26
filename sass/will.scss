@@ -2216,10 +2216,6 @@ $avatars: (bryan, "gray", will, amy, trip, sarah, joanna);
     to   { opacity: 1; transform:translateY(0px)}
 }
 
-.mdl-button .material-icons{
-  color:$env-color--b3;
-}
-
 .mdl-chip{
   background-color:rgba(0,0,0,.06);
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
